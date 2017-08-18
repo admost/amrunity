@@ -84,7 +84,7 @@
         <aside class="col-sm-3 sidebar">
 
             <ul class="nav sidenav dropable sticky">
-                <li><a href="prerequisites">Prerequisites</a></li>
+                <li><a href="#prerequisites">Prerequisites</a></li>
                 <li>
                     <a href="#setup">Setup</a>
                 </li>
@@ -96,6 +96,10 @@
                         <li><a href="#interstitial-ads">Interstitial Ads</a></li>
                         <li><a href="#rewarded-ads">Rewarded Video Ads</a></li>
                     </ul>
+                </li>
+
+                <li>
+                    <a href="#testsuite">Test Suite </a>
                 </li>
 
             </ul>
@@ -775,6 +779,51 @@ public void OnVideoFail(string error) {}
 public void OnVideoDismiss(string message) {}
 public void OnVideoComplete(string message) {}
                 </code></pre>
+
+
+            </section>
+
+            <section>
+                <h2 id="testsuite">Test Suite</h2>
+
+                <p>
+                    You can use Test Suite to test your ad networks with your zone ids.
+                </p>
+
+                <p>
+                    To use Test Suite in your application, you can use following code;
+                </p>
+
+                <pre><code class="language-c">
+// Call method with tested zone ids
+#if UNITY_IPHONE
+AMR.AMRSDK.startTestSuite(new string[] {"IOS_ZONE_ID","ANOTHER_IOS_ZONE_ID"});
+#endif
+#if UNITY_ANDROID
+AMR.AMRSDK.startTestSuite(new string[] {"ANDROID_ZONE_ID","ANOTHER_ANDROID_ZONE_ID"});
+#endif
+                </code></pre>
+
+                <div class="row">
+<div class="col-md-6">
+        <div class="promo left small-icon">
+            <i class="fa fa-android"></i>
+            <h3>Android</h3>
+            <img class="img-responsive" src="assets/img/android_testsuite.png" alt="shadowed image">
+        </div>
+
+</div>
+                    <div class="col-md-6">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple"></i>
+                            <h3>iOS</h3>
+                            <img class="img-responsive" src="assets/img/ios_testsuite.png" alt="shadowed image">
+                        </div>
+
+                    </div>
+
+
+                </div>
 
 
             </section>

@@ -685,6 +685,9 @@ AMR.AMRSDK.startWithConfig(config);
                 <pre><code class="language-c">
 void OnApplicationPause(Boolean paused)
 {
+    if (!AMR.AMRSDK.initialized())
+        return;
+
 	if (paused)
 	{
 	    AMR.AMRSDK.onPause();
@@ -809,7 +812,7 @@ AMR.AMRSDK.startTestSuite(new string[] {"ANDROID_ZONE_ID","ANOTHER_ANDROID_ZONE_
         <div class="promo left small-icon">
             <i class="fa fa-android"></i>
             <h3>Android</h3>
-            <img class="img-responsive" src="assets/img/android_testsuite.png" alt="shadowed image">
+            <img class="img-responsive" src="https://admost.github.io/amrunity/assets/img/android_testsuite.png" alt="shadowed image">
         </div>
 
 </div>
@@ -817,7 +820,7 @@ AMR.AMRSDK.startTestSuite(new string[] {"ANDROID_ZONE_ID","ANOTHER_ANDROID_ZONE_
                         <div class="promo left small-icon">
                             <i class="fa fa-apple"></i>
                             <h3>iOS</h3>
-                            <img class="img-responsive" src="assets/img/ios_testsuite.png" alt="shadowed image">
+                            <img class="img-responsive" src="https://admost.github.io/amrunity/assets/img/ios_testsuite.png" alt="shadowed image">
                         </div>
 
                     </div>

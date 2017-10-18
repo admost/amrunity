@@ -98,10 +98,24 @@
                     </ul>
                 </li>
 
-                <li>
-                    <a href="#testsuite">Test Suite </a>
+                <li><a href="#extras">Extras</a>
+                    <ul>
+                        <li><a href="#testsuite">Test Suite</a></li>
+                        <li><a href="#iap">In App Purchase Tracking</a></li>
+                    </ul>
                 </li>
 
+                <li><a href="#release-notes">Release Notes</a>
+
+                    <ul>
+                        <li><a href="#updating-from-previous">Updating after 17.10.2017</a></li>
+                        <li>
+                            <a href="#versions">Versions</a>
+                        </li>
+                    </ul>
+
+
+                </li>
             </ul>
 
         </aside>
@@ -125,7 +139,14 @@
 
             <section>
                 <h2 id="setup">Setup</h2>
-                <p> You can import AMR core SDK and network adapter packages from <a href="https://github.com/admost/amrunity/tree/master/packages">AMR-UNITY-PACKAGES</a> folder. </p>
+
+                <div class="alert alert-danger" role="alert">
+                    <a href="#versions" class="alert-link">Updating after 17.10.2017</a>
+                </div>
+
+                <p> You can import AMR core SDK and network adapter packages from <a
+                        href="https://github.com/admost/amrunity/tree/master/packages">AMR-UNITY-PACKAGES</a> folder.
+                </p>
                 <p>Please refer to following table for required and optional packages for your target
                     platform.</p>
 
@@ -148,7 +169,7 @@
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/amr_unity_core.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-primary"><i
                                             style="padding-right: 16px;" class="fa fa-android"></i>/<i
-                                            style="padding-left: 16px;" class="fa fa-apple"></i></button>
+                                            style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.0.0</button>
                                 </a>
                             </td>
                         </tr>
@@ -160,13 +181,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_core.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.5.0</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_core.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.11</button>
                                 </a>
                             </td>
                         </tr>
@@ -178,13 +199,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_adcolony.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.3.2</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_adcolony.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.3.2.1</button>
                                 </a>
                             </td>
                         </tr>
@@ -197,32 +218,17 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_admob.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.10.0.1</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_admob.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.7.24.1</button>
                                 </a>
                             </td>
                         </tr>
 
-                        <tr>
-                            <td><span class="label label-success">Optional</span></td>
-                            <td>Adtrial</td>
-                            <td>amr_android_adtrial.unitypackage</td>
-
-                            <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_adtrial.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
-                                </a>
-                            </td>
-                            <td class="text-right">
-
-                            </td>
-                        </tr>
 
                         <tr>
                             <td><span class="label label-success">Optional</span></td>
@@ -232,13 +238,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_amazon.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.5.8.1.1</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_amazon.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.2.2.17</button>
                                 </a>
                             </td>
                         </tr>
@@ -251,13 +257,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_applovin.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.0</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_applovin.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.4.3.1</button>
                                 </a>
                             </td>
                         </tr>
@@ -270,13 +276,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_appnext.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.2.1.1.463</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_appnext.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.1.8.2</button>
                                 </a>
                             </td>
                         </tr>
@@ -290,13 +296,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_chartboost.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.7.0.0</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_chartboost.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.6.6.3</button>
                                 </a>
                             </td>
                         </tr>
@@ -309,13 +315,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_facebook.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.4.25</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_facebook.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.4.25.0</button>
                                 </a>
                             </td>
                         </tr>
@@ -328,13 +334,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_flurry.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.1</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_flurry.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.8.1.0</button>
                                 </a>
                             </td>
                         </tr>
@@ -347,13 +353,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_fyber.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.8.15.1</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_fyber.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.8.15.1</button>
                                 </a>
                             </td>
                         </tr>
@@ -366,13 +372,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_inmobi.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.6.2.4</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_inmobi.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.6.2.1</button>
                                 </a>
                             </td>
                         </tr>
@@ -385,13 +391,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_ironsource.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.6.6.4.1</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_ironsource.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.6.6.8</button>
                                 </a>
                             </td>
                         </tr>
@@ -404,13 +410,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_leadbolt.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.8.1</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_leadbolt.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.8.0.0</button>
                                 </a>
                             </td>
                         </tr>
@@ -423,13 +429,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_loopme.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.5.1.11</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_loopme.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.6.3.1</button>
                                 </a>
                             </td>
                         </tr>
@@ -442,13 +448,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_mobfox.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.3.2.7</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_mobfox.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.3.1.6</button>
                                 </a>
                             </td>
                         </tr>
@@ -463,7 +469,7 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_mobusi.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.2.3.3</button>
                                 </a>
                             </td>
                         </tr>
@@ -476,13 +482,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_mopub.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.4.14.0</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_mopub.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.4.13.1</button>
                                 </a>
                             </td>
                         </tr>
@@ -495,13 +501,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_nativex.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.5.5.9</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_nativex.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.5.5.9</button>
                                 </a>
                             </td>
                         </tr>
@@ -516,7 +522,7 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_nexage.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.6.4.0</button>
                                 </a>
                             </td>
                         </tr>
@@ -531,7 +537,7 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_pubnative.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.1.4.0</button>
                                 </a>
                             </td>
                         </tr>
@@ -544,13 +550,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_revmob.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.10.0.0</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_revmob.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.9.2.4</button>
                                 </a>
                             </td>
                         </tr>
@@ -563,7 +569,7 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_smaato.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.8.0.8</button>
                                 </a>
                             </td>
                         </tr>
@@ -575,13 +581,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_startapp.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.3.6.3</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_startapp.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.3.4.2</button>
                                 </a>
                             </td>
                         </tr>
@@ -593,13 +599,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_tapjoy.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.11.11.0</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_tapjoy.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.11.11.0</button>
                                 </a>
                             </td>
                         </tr>
@@ -612,7 +618,7 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_tappx.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.3.0.2</button>
                                 </a>
                             </td>
                         </tr>
@@ -624,13 +630,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_unityads.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.2.1.0</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_unity.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.2.1.1</button>
                                 </a>
                             </td>
                         </tr>
@@ -642,13 +648,13 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_vungle.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i></button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.5.1.0</button>
                                 </a>
                             </td>
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_vungle.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i></button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.5.1.0</button>
                                 </a>
                             </td>
                         </tr>
@@ -658,11 +664,14 @@
 
                 <div class="callout callout-danger" role="alert">
                     <h4></h4>
-                    <p>If you are integrating <span class="label label-success"><i class="fa fa-android"></i>&nbsp;Applovin</span> in your application. You have to edit <var>applovin.sdk.key</var> value inside <code>amr_applovin/AndroidManifest.xml</code></p>
+                    <p>If you are integrating <span class="label label-success"><i class="fa fa-android"></i>&nbsp;Applovin</span>
+                        in your application. You have to edit <var>applovin.sdk.key</var> value inside <code>Plugins/Android/amr_definition/AndroidManifest.xml</code>
+                    </p>
                 </div>
-<div class="callout callout-danger" role="alert">
+                <div class="callout callout-danger" role="alert">
                     <h4></h4>
-                    <p>If you are using <span class="label label-dark"><i class="fa fa-apple"></i>&nbsp;Applovin</span> add the following lines to your <code>plist</code> file.</p>
+                    <p>If you are using <span class="label label-dark"><i class="fa fa-apple"></i>&nbsp;Applovin</span>
+                        add the following lines to your <code>plist</code> file.</p>
                     <pre><code class="language-markup">&lt;key&gt;AppLovinSdkKey&lt;/key&gt;
 &lt;string&gt;YOUR_KEY&lt;/string&gt;</code></pre>
                 </div>
@@ -713,17 +722,19 @@ void OnApplicationPause(Boolean paused)
                 <pre><code class="language-c">
                     AMR.AMRSDK.loadBanner(AMR.Enums.AMRSDKBannerPosition.BannerPositionTop, true);
                 </code></pre>
-                <p>If you want to show a banner manually after it has loaded, pass false as the second parameter of loadBanner method and wait for the OnBannerReady callback. Then call showbanner method to show banner.
+                <p>If you want to show a banner manually after it has loaded, pass false as the second parameter of
+                    loadBanner method and wait for the OnBannerReady callback. Then call showbanner method to show
+                    banner.
 
                 </p>
 
-                <p>Call <code>hideBanner</code>  method to hidethe banner;</p>
+                <p>Call <code>hideBanner</code> method to hidethe banner;</p>
 
                 <pre><code class="language-c">
 AMR.AMRSDK.hideBanner();
                 </code></pre>
 
-<p>You can subscribe onBannerReady callback functions to catch banner event.</p>
+                <p>You can subscribe onBannerReady callback functions to catch banner event.</p>
 
                 <pre><code class="language-c">
 // Banner Callbacks - Optional
@@ -749,7 +760,8 @@ if (AMR.AMRSDK.isInterstitialReady())
 	AMR.AMRSDK.showInterstitial();
                 </code></pre>
 
-                <p>You can subscribe to 3 callback functions onInterstitialReady, onInterstitialFail and onInterstitialDismiss to catch interstitial events.</p>
+                <p>You can subscribe to 3 callback functions onInterstitialReady, onInterstitialFail and
+                    onInterstitialDismiss to catch interstitial events.</p>
 
                 <pre><code class="language-c">
 // Interstitial Callbacks - Optional
@@ -764,22 +776,24 @@ public void onInterstitialDismiss(string message) {}
 
                 <h3 id="rewarded-ads">Rewerded Ads</h3>
 
-                <p>Rewarded video ads' integration is pretty similar to Interstitial ads with 1 additional event rewardedVideoComplete to reward the user.</p>
+                <p>Rewarded video ads' integration is pretty similar to Interstitial ads with 1 additional event
+                    rewardedVideoComplete to reward the user.</p>
 
-                <p>  To load an rewarded video ad, run the following code;</p>
+                <p> To load an rewarded video ad, run the following code;</p>
 
                 <pre><code class="language-c">
 AMR.AMRSDK.loadRewardedVideo();
                 </code></pre>
 
-                <p>  To load an rewarded video ad, run the following code;</p>
+                <p> To load an rewarded video ad, run the following code;</p>
 
                 <pre><code class="language-c">
 if (AMR.AMRSDK.isRewardedVideoReady())
 	AMR.AMRSDK.showRewardedVideo();
                 </code></pre>
 
-                <p>You can subscribe to 4 callback functions OnVideoReady, OnVideoFail, OnVideoDismiss and OnVideoComplete to catch rewarded video events.</p>
+                <p>You can subscribe to 4 callback functions OnVideoReady, OnVideoFail, OnVideoDismiss and
+                    OnVideoComplete to catch rewarded video events.</p>
                 <pre><code class="language-c">
 // Rewarded Video Callbacks - Optional
 AMR.AMRSDK.setOnRewardedVideoReady(OnVideoReady);
@@ -796,18 +810,17 @@ public void OnVideoComplete(string message) {}
 
             </section>
 
-            <section>
-                <h2 id="testsuite">Test Suite</h2>
+            <h2 id="extras">Extras</h2>
+            <h3 id="testsuite">Test Suite</h3>
+            <p>
+                You can use Test Suite to test your ad networks with your zone ids.
+            </p>
 
-                <p>
-                    You can use Test Suite to test your ad networks with your zone ids.
-                </p>
+            <p>
+                To use Test Suite in your application, you can use following code;
+            </p>
 
-                <p>
-                    To use Test Suite in your application, you can use following code;
-                </p>
-
-                <pre><code class="language-c">
+            <pre><code class="language-c">
 // Call method with tested zone ids
 #if UNITY_IPHONE
 AMR.AMRSDK.startTestSuite(new string[] {"IOS_ZONE_ID","ANOTHER_IOS_ZONE_ID"});
@@ -817,29 +830,199 @@ AMR.AMRSDK.startTestSuite(new string[] {"ANDROID_ZONE_ID","ANOTHER_ANDROID_ZONE_
 #endif
                 </code></pre>
 
-                <div class="row">
-<div class="col-md-6">
-        <div class="promo left small-icon">
-            <i class="fa fa-android"></i>
-            <h3>Android</h3>
-            <img class="img-responsive" src="https://admost.github.io/amrunity/assets/img/android_testsuite.png" alt="shadowed image">
-        </div>
-
-</div>
-                    <div class="col-md-6">
-                        <div class="promo left small-icon">
-                            <i class="fa fa-apple"></i>
-                            <h3>iOS</h3>
-                            <img class="img-responsive" src="https://admost.github.io/amrunity/assets/img/ios_testsuite.png" alt="shadowed image">
-                        </div>
-
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="promo left small-icon">
+                        <i class="fa fa-android"></i>
+                        <h3>Android</h3>
+                        <img class="img-responsive"
+                             src="https://admost.github.io/amrunity/assets/img/android_testsuite.png"
+                             alt="shadowed image">
                     </div>
 
+                </div>
+                <div class="col-md-6">
+                    <div class="promo left small-icon">
+                        <i class="fa fa-apple"></i>
+                        <h3>iOS</h3>
+                        <img class="img-responsive"
+                             src="https://admost.github.io/amrunity/assets/img/ios_testsuite.png"
+                             alt="shadowed image">
+                    </div>
 
                 </div>
 
 
+            </div>
+
+            <h3 id="iap">In App Purchase Tracking&nbsp;<span class="label label-teal">New</span></h3>
+            <p>
+                The following call is used to track purchases with receipt validation:
+            </p>
+
+            <div class="promo left small-icon">
+                <i class="fa fa-android" style="color: #00af97"></i>
+                <h3>Android</h3>
+            </div>
+
+            <pre><code class="language-c">
+                //Product refers UnityEngine.Purchasing class object
+AMR.AMRSDK.trackPurchaseForAndroid( product.receipt,
+                                    product.metadata.localizedPrice,
+                                    product.metadata.isoCurrencyCode);
+                </code></pre>
+
+            <p>Explanation of parameters:</p>
+            <ul>
+                <li><b>receipt</b> – The purchase receipt for this product
+                </li>
+                <li><b>localizedPrice</b> – Decimal product price denominated in the currency indicated by isoCurrencySymbol.
+
+                </li>
+
+                <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
+
+                </li>
+
+
+            </ul>
+
+            <div class="promo left small-icon">
+                <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                <h3>iOS</h3>
+            </div>
+
+            <pre><code class="language-c">
+                //Product refers UnityEngine.Purchasing class object
+AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
+                                product.metadata.localizedPrice,
+                                product.metadata.isoCurrencyCode);
+                </code></pre>
+            <ul>
+                <li><b>transactionID</b> – A unique identifier for this product's transaction
+                </li>
+                <li><b>localizedPrice</b> – Decimal product price denominated in the currency indicated by isoCurrencySymbol.
+
+                </li>
+
+                <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
+
+                </li>
+
+
+            </ul>
+
+            <h2 id="release-notes">Release Notes</h2>
+
+            <header>
+
+                <p>In this page, you can find a record of all the changes made to this project such as bug fixes,
+                    new features, etc.</p>
+
+                <ol class="toc">
+                    <li><a href="#v.1.0.0"> Version 1.0.0</a></li>
+                </ol>
+            </header>
+
+            <section id="updating-from-previous">
+                <h3>Updating after 17.10.2017</h3>
+
+                <p>From 17.10.2017 our package system is completely revised. We deployed all of our SDK files in same
+                    folder.</p>
+                <p>If you are using previous version you are able to achieve same goal via new packaging system.
+                </p>
+
+                <div class="callout callout-danger" role="alert">
+                    <p class="text-danger">You have to delete all packages related to AMR SDK before using v.1.0.0</p>
+                </div>
             </section>
+
+            <section id="versions">
+
+                <h3 id="v1.0.0">Version 1.0.0
+                    <small class="release-date">October 18, 2017</small>
+                </h3>
+                <br>
+
+                <section id="changelog-unity-1.0.0">
+                    <ul class="changelog">
+                        <li class="ch-added">In App Purchase Tracking
+                            <small>&nbsp;&nbsp;<a href="#iap"><i class="fa fa-link"></i></a></small>
+                        </li>
+                        <li class="ch-added">
+                            <code>Assets/AMR</code>
+                        </li>
+
+                        <li class="ch-removed">
+                            <code>Assets/AMRSdkWrapper</code>
+                        </li>
+
+
+                        <li class="ch-moved">
+                            <code>Assets/Scenes/AMRDemoScene.unity</code> to <code>Assets/AMR/SampleCode/AMRDemoScene.unity</code>
+                        </li>
+
+                        <li class="ch-moved">
+                            <code>Assets/Scripts/AMRDemoScript.cs</code> to <code>Assets/AMR/SampleCode/AMRDemoScript.cs</code>
+                        </li>
+
+
+                        <li class="ch-added"> <code>Assets/AMR/AMRPlugin.dll</code>
+                        </li>
+                        <li class="ch-moved"><code>Assets/Plugins/iOS/AMRSDKWrapper.mm</code> to
+                            <code>Assets/AMR/Plugins/iOS/AMRSDKWrapper.mm</code>
+                        </li>
+                    </ul>
+                </section>
+
+
+                <section id="changelog-android-1.0.0">
+                    <div class="promo left small-icon">
+                        <i class="fa fa-android" style="color: #00af97"></i>
+                        <h3>Android</h3>
+                    </div>
+                    <ul class="changelog">
+                        <li class="ch-updated">AMR Android Sdk Updated to 1.5.0
+                        </li>
+                        <li class="ch-updated">AMR Unity Plugin  Updated to 1.5.0
+                        </li>
+                        <li class="ch-moved">All ad network .aar and .jar files moved from <code>Assets/Plugins/Android</code> to
+                            <code>Assets/AMR/Plugins/Android</code>
+                        </li>
+                        <li class="ch-removed">Adtrial Adnetwork
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="changelog-ios-1.0.0">
+                    <div class="promo left small-icon">
+                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                        <h3>iOS</h3>
+                    </div>
+                    <ul class="changelog">
+                        <li class="ch-updated">AMR iOS Sdk Updated to 1.3.11
+                        </li>
+                        <li class="ch-removed"> <code>Assets/Editor/PostProcessorAMR.mm</code>
+                        </li>
+                        <li class="ch-added"><code>Assets/AMR/Editor/AMRPostProcessor.mm</code>
+                        </li>
+                        <li class="ch-moved"><code>Assets/Frameworks</code> to
+                            <code>Assets/AMR/Frameworks</code>
+                        </li>
+                        <li class="ch-moved"><code>Assets/Resources</code> to
+                            <code>Assets/AMR/Resources</code>
+                        </li>
+                        <li class="ch-moved">All ad network related AMRAdaptors* moved from <code>Assets/Plugins/iOS</code> to
+                            <code>Assets/AMR/Plugins/iOS</code>
+                        </li>
+                        <li class="ch-moved"><code>Assets/Plugins/iOS/AMRSDKWrapper.mm</code> to
+                            <code>Assets/AMR/Plugins/iOS/AMRSDKWrapper.mm</code>
+                        </li>
+                    </ul>
+                </section>
+
+            </section>
+
         </article>
         <!-- END Main content -->
     </div>

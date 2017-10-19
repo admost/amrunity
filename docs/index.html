@@ -187,7 +187,7 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_core.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.11</button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.12</button>
                                 </a>
                             </td>
                         </tr>
@@ -321,7 +321,7 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_facebook.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.4.25.0</button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.4.26.0</button>
                                 </a>
                             </td>
                         </tr>
@@ -340,7 +340,7 @@
                             <td class="text-right">
                                 <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_flurry.unitypackage">
                                     <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.8.1.0</button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.8.3.0</button>
                                 </a>
                             </td>
                         </tr>
@@ -938,6 +938,69 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
             </section>
 
             <section id="versions">
+
+                <h3 id="v1.0.1">Version 1.0.1
+                    <small class="release-date">October 19, 2017</small>
+                </h3>
+                <br>
+
+                <section id="changelog-unity-1.0.1">
+                    <ul class="changelog">
+                        <li class="ch-updated">
+                            <code>AMRPlugin.dll</code> updated to 1.0.1
+                        </li>
+
+                        <li class="ch-added">
+                             You can see current version of AMR SDK in log with filter <var>"&lt;AMRSDK&gt;"</var>
+                        </li>
+                    </ul>
+                </section>
+                <section id="changelog-android-1.0.1">
+                    <div class="promo left small-icon">
+                        <i class="fa fa-android" style="color: #00af97"></i>
+                        <h3>Android</h3>
+                    </div>
+                    <ul class="changelog">
+
+                        <li class="ch-updated">
+                            <pre><code class="added"><span class="text-success">AMR.AMRSDK.trackPurchaseForAndroid(String, Decimal, String);</span></code></pre>
+                            <pre><code class="removed"><span class="text-danger">AMR.AMRSDK.trackPurchaseForAndroid(String, Double, String);</span></code></pre>
+                        </li>
+
+                    </ul>
+                </section>
+
+                <section id="changelog-ios-1.0.1">
+                    <div class="promo left small-icon">
+                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                        <h3>iOS</h3>
+                    </div>
+                    <ul class="changelog">
+
+                        <li class="ch-updated">
+                            <pre><code class="added"><span class="text-success">AMR.AMRSDK.trackPurchaseForIOS(String, Decimal, String);</span></code></pre>
+                            <pre><code class="removed"><span class="text-danger">AMR.AMRSDK.trackPurchaseForIOS(String, Double, String);</span></code></pre>
+                        </li>
+                        <li class="ch-updated">
+                            AMRSDK 1.3.12
+                        </li>
+                        <li class="ch-updated">
+                            Facebook 4.26.0.0
+                        </li>
+                        <li class="ch-updated">
+                            Flurry 8.3.0.0
+                        </li>
+                        <li class="ch-updated">
+                            Vungle 5.1.0.2
+                        </li>
+
+
+
+                    </ul>
+                </section>
+
+
+
 
                 <h3 id="v1.0.0">Version 1.0.0
                     <small class="release-date">October 18, 2017</small>

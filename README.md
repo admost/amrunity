@@ -1,2 +1,2 @@
 # AMR Unity
-* [Integration Guide ]  (https://admost.github.io/amrunity/)
+* [Integration Guide]  (https://admost.github.io/amrunity/)

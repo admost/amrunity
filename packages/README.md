@@ -1,6 +1,6 @@
 
 
-| Integration                         | Android | iOS |
+| Integration                         | Android | IOS |
 |-------------------------------------|---------|-----|
 | amr_unity_core.unitypackage         |    R    |  R  |
 | amr_android_core.unitypackage       |    R    |  -  |

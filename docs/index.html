@@ -1241,6 +1241,16 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 	var allSelectedNetworks = [];
 	
 	
+	function includes(container, value)
+	{
+		var returnValue = false;
+		var pos = container.indexOf(value);
+		if (pos >= 0) {
+			returnValue = true;
+		}
+		return returnValue;
+	}
+	
 	function downloadPackage()
 	{
 		if(andrArr.length + iosArr.length == 1 && uFlag == 0)
@@ -1425,10 +1435,16 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 		
 		for(var i=0; i< iosArr.length;i++)
 		{
-			if(allSelectedNetworks.includes(iosArr[i])==false)
+			/*if(allSelectedNetworks.includes(iosArr[i])==false)
+			{
+				allSelectedNetworks.push(iosArr[i]);
+			}*/
+			
+			if(includes(allSelectedNetworks,iosArr[i])==false)
 			{
 				allSelectedNetworks.push(iosArr[i]);
 			}
+			
 		}
 		allSelectedNetworks.sort();
 		
@@ -1447,10 +1463,10 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 
 		}
 		
-		if(allSelectedNetworks.includes("Platform Related Core"))
+		if(includes(allSelectedNetworks,"Platform Related Core"))
 		{
-			var ifand = andrArr.includes("Platform Related Core");
-			var ifios = iosArr.includes("Platform Related Core");
+			var ifand = includes(andrArr,"Platform Related Core");
+			var ifios = includes(iosArr,"Platform Related Core");
 			var row = table.insertRow(table.rows.length);
 			var cell1 = row.insertCell(0);
 			var cell2 = row.insertCell(0);
@@ -1482,8 +1498,8 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 		
 		for (var i=0;i<allSelectedNetworks.length;i++)
 		{
-			var ifand = andrArr.includes(allSelectedNetworks[i]);
-			var ifios = iosArr.includes(allSelectedNetworks[i]);
+			var ifand = includes(andrArr,allSelectedNetworks[i]);
+			var ifios = includes(iosArr,allSelectedNetworks[i]);
 			var row = table.insertRow(table.rows.length);
 			var cell1 = row.insertCell(0);
 			var cell2 = row.insertCell(0);
@@ -1525,7 +1541,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 		
 		if(item == "p")
 		{
-			if(andrArr.includes("Platform Related Core") )
+			if(includes(andrArr,"Platform Related Core") )
 			{
 				var but = document.getElementById("a1");
 				andrArr.splice(andrArr.indexOf("Platform Related Core"),1);
@@ -1534,7 +1550,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 				but.blur();
 				selectedIDS.splice(selectedIDS.indexOf("a1"),1);
 			}
-			if(iosArr.includes("Platform Related Core"))
+			if(includes(iosArr,"Platform Related Core"))
 			{
 				var but = document.getElementById("i1");
 				iosArr.splice(andrArr.indexOf("Platform Related Core"),1);
@@ -1547,8 +1563,8 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 		
 		else
 		{
-			var ifAndroid = andrArr.includes(item);
-			var ifIos = iosArr.includes(item);
+			var ifAndroid = includes(andrArr,item);
+			var ifIos = includes(iosArr,item);
 			
 			if(ifAndroid)
 			{
@@ -1643,13 +1659,13 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 			if(ifAndroid == true)
 			{			
 				var listElement = document.getElementById("myTable").rows[parseInt(buttonAndSpanId)+1].cells[1].innerHTML;
-				if(andrArr.includes(listElement) == false)
+				if(includes(andrArr,listElement) == false)
 				{
 					but.style.backgroundColor = "#43A047";
 					but.style.color = "#ffffff";
 					andrArr.push(listElement);
 					selectedIDS.push(id);
-					if(andrArr.includes("Platform Related Core")==false) 
+					if(includes(andrArr,"Platform Related Core")==false) 
 					{
 						toggleAdNetworkStatus("a1");
 					}
@@ -1672,14 +1688,14 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 			else
 			{
 				var listElement = document.getElementById("myTable").rows[parseInt(buttonAndSpanId)+1].cells[1].innerHTML;	
-				if(iosArr.includes(listElement) == false)
+				if(includes(iosArr,listElement) == false)
 				{
 					but.style.backgroundColor = "#777777"
 					but.style.color = "#ffffff";
 					iosArr.push(listElement);
 					
 					selectedIDS.push(id);
-					if(iosArr.includes("Platform Related Core")==false)
+					if(includes(iosArr,"Platform Related Core")==false)
 					{
 						toggleAdNetworkStatus("i1");
 					}

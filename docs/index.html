@@ -169,7 +169,7 @@
                                
 								<button type="button" onclick="toggleAdNetworkStatus('u1');" id="u1" class="btn btn-outline btn-block btn-primary"><i
 										style="padding-right: 16px;" class="fa fa-android"></i>/<i
-										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.0.3</button>
+										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.0.5</button>
                                 
                             </td>
                         </tr>
@@ -181,7 +181,7 @@
                             <td class="text-right">
                                 
                                     <button type="button" onclick = "toggleAdNetworkStatus('a1');" id="a1" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.5.0</button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.5.3</button>
                                
                             </td>
                             <td class="text-right">
@@ -257,7 +257,7 @@
                             <td class="text-right">
 								
 								<button type="button" onclick="toggleAdNetworkStatus('a5');" id="a5"  class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.0</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.7.4.1</button>
                                 
                             </td>
                             <td class="text-right">
@@ -334,7 +334,7 @@
                             <td class="text-right">
                                 
 								<button type="button"  onclick="toggleAdNetworkStatus('a9');" id="a9" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.3</button>
                                 
                             </td>
                             <td class="text-right">
@@ -353,7 +353,7 @@
                             <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('a10');" id="a10" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.8.15.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.8.16.1</button>
 							
                             </td>
                             <td class="text-right">
@@ -390,7 +390,7 @@
                             <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('a12');" id="a12" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.6.6.4.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.6.6.8.1</button>
                                
                             </td>
                             <td class="text-right">
@@ -409,7 +409,7 @@
                             <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('a13');" id="a13" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.8.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.8.1a</button>
 							
                             </td>
                             <td class="text-right">
@@ -428,7 +428,7 @@
                             <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('a14');" id="a14" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.5.1.11</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.5.2.4</button>
 							
                             </td>
                             <td class="text-right">
@@ -578,7 +578,7 @@
                             <td class="text-right">
                                 
                                     <button type="button" onclick="toggleAdNetworkStatus('a23');" id="a23" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.3.6.3</button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.3.6.7</button>
                                
                             </td>
                             <td class="text-right">
@@ -627,7 +627,7 @@
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('a26');" id="a26" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.2.1.0</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.2.1.1</button>
 							
                             </td>
                             <td class="text-right">
@@ -764,10 +764,12 @@ if (AMR.AMRSDK.isInterstitialReady())
 // Interstitial Callbacks - Optional
 AMR.AMRSDK.setOnInterstitialReady(onInterstitialReady);
 AMR.AMRSDK.setOnInterstitialFail(onInterstitialFail);
+AMR.AMRSDK.setOnInterstitialShow(onInterstitialShow);
 AMR.AMRSDK.setOnInterstitialDismiss(onInterstitialDismiss);
 
 public void onInterstitialReady(string networkName) {}
 public void onInterstitialFail(string error) {}
+public void onInterstitialShow(string message) {}
 public void onInterstitialDismiss(string message) {}
                 </code></pre>
 
@@ -795,11 +797,13 @@ if (AMR.AMRSDK.isRewardedVideoReady())
 // Rewarded Video Callbacks - Optional
 AMR.AMRSDK.setOnRewardedVideoReady(OnVideoReady);
 AMR.AMRSDK.setOnRewardedVideoFail(OnVideoFail);
+AMR.AMRSDK.setOnRewardedVideoShow(OnVideoShow);
 AMR.AMRSDK.setOnRewardedVideoDismiss(OnVideoDismiss);
 AMR.AMRSDK.setOnRewardedVideoComplete(OnVideoComplete);
 
 public void OnVideoReady(string networkName) {}
 public void OnVideoFail(string error) {}
+public void OnVideoShow(string message) {}
 public void OnVideoDismiss(string message) {}
 public void OnVideoComplete(string message) {}
                 </code></pre>
@@ -917,6 +921,8 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
                     new features, etc.</p>
 
                 <ol class="toc">
+                    <li><a href="#v.1.0.5"> Version 1.0.5</a></li>
+                    <li><a href="#v.1.0.4"> Version 1.0.4</a></li>
                     <li><a href="#v.1.0.3"> Version 1.0.3</a></li>
                     <li><a href="#v.1.0.2"> Version 1.0.2</a></li>
                     <li><a href="#v.1.0.1"> Version 1.0.1</a></li>
@@ -938,7 +944,104 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
             </section>
 
             <section id="versions">
-                <h3 id="v1.0.3">Version 1.0.3
+                <h3 id="v.1.0.5">Version 1.0.5
+                    <small class="release-date">November 24, 2017</small>
+                </h3>
+                <br>
+
+                <section id="changelog-unity-1.0.5">
+                    <ul class="changelog">
+                        <li class="ch-added">
+                            From now on callback will be triggered when full screen ads opened on the screen.
+                            <pre><code class="added">
+                            <span class="text-success">AMR.AMRSDK.setOnInterstitialShow(onInterstitialShow);
+                                AMR.AMRSDK.setOnRewardedVideoShow(OnVideoShow);</span>
+                            </code></pre>
+                        </li>
+                        <li class="ch-updated">
+                            <code>AMRPlugin.dll</code> 1.0.5
+                        </li>
+                        <li class="ch-updated">
+                            <code>AMRDemoScript</code>
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="changelog-android-1.0.5">
+                    <div class="promo left small-icon">
+                        <i class="fa fa-android" style="color: #00af97"></i>
+                        <h3>Android</h3>
+                    </div>
+                    <ul class="changelog">
+                        <li class="ch-updated">
+                            Android Core Package 1.5.3
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="changelog-ios-1.0.5">
+                    <div class="promo left small-icon">
+                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                        <h3>iOS</h3>
+                    </div>
+                    <ul class="changelog">
+                        <li class="ch-updated">
+                            iOS Core Package
+                        </li>
+                    </ul>
+                </section>
+
+
+                <h3 id="v1.0.4">Version 1.0.4
+                    <small class="release-date">November 7, 2017</small>
+                </h3>
+                <br>
+
+                <section id="changelog-unity-1.0.4">
+                    <ul class="changelog">
+                        <li class="ch-updated">
+                            <code>AMRPlugin.dll</code> 1.0.4
+                        </li>
+                    </ul>
+                </section>
+
+                <section id="changelog-android-1.0.4">
+                    <div class="promo left small-icon">
+                        <i class="fa fa-android" style="color: #00af97"></i>
+                        <h3>Android</h3>
+                    </div>
+                    <ul class="changelog">
+                        <li class="ch-updated">
+                            AMR Android Sdk 1.5.3
+                        </li>
+                        <li class="ch-updated">
+                            Applovin 7.4.1
+                        </li>
+                        <li class="ch-updated">
+                            Flurry 7.2.3
+                        </li>
+                        <li class="ch-updated">
+                            Fyber 8.16.1
+                        </li>
+                        <li class="ch-updated">
+                            Ironsource 6.6.8.1
+                        </li>
+                        <li class="ch-updated">
+                            Leadbolt 8.1a
+                        </li>
+                        <li class="ch-updated">
+                            Loopme 5.2.4
+                        </li>
+                        <li class="ch-updated">
+                            Startapp 3.6.7
+                        </li>
+                        <li class="ch-updated">
+                            Unity Ads 2.1.1
+                        </li>
+                    </ul>
+                </section>
+
+                <h3 id="v.1.0.3">Version 1.0.3
                     <small class="release-date">October 31, 2017</small>
                 </h3>
                 <br>
@@ -964,7 +1067,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
                 </section>
 
 
-                <h3 id="v1.0.2">Version 1.0.2
+                <h3 id="v.1.0.2">Version 1.0.2
                     <small class="release-date">October 24, 2017</small>
                 </h3>
                 <br>
@@ -990,7 +1093,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
                 </section>
 
 
-                <h3 id="v1.0.1">Version 1.0.1
+                <h3 id="v.1.0.1">Version 1.0.1
                     <small class="release-date">October 19, 2017</small>
                 </h3>
                 <br>
@@ -1053,7 +1156,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 
 
 
-                <h3 id="v1.0.0">Version 1.0.0
+                <h3 id="v.1.0.0">Version 1.0.0
                     <small class="release-date">October 18, 2017</small>
                 </h3>
                 <br>

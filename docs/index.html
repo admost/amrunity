@@ -151,7 +151,7 @@
                     platform.</p>
 
                 <div class="table-responsive">
-                    <table class="table table-info">
+                    <table class="table table-info"  id="myTable">
                         <thead>
                         <tr>
                             <th>Status</th>
@@ -166,11 +166,11 @@
                             <td>Unity Core</td>
                             <td>amr_unity_core.unitypackage</td>
                             <td colspan="2" class="text-center">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/amr_unity_core.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-primary"><i
-                                            style="padding-right: 16px;" class="fa fa-android"></i>/<i
-                                            style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.0.6</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('u1');" id="u1" class="btn btn-outline btn-block btn-primary"><i
+										style="padding-right: 16px;" class="fa fa-android"></i>/<i
+										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.0.3</button>
+                                
                             </td>
                         </tr>
                         <tr>
@@ -179,16 +179,16 @@
                             <td>amr_android_core.unitypackage</br> amr_ios_core.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_core.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.5.5</button>
-                                </a>
+                                
+                                    <button type="button" onclick = "toggleAdNetworkStatus('a1');" id="a1" class="btn btn-outline btn-block btn-success"><i
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.5.0</button>
+                               
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_core.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
+                                
+                                    <button type="button" onclick = "toggleAdNetworkStatus('i1');" id="i1" class="btn btn-outline btn-block btn-default"><i
                                             class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.14</button>
-                                </a>
+                                
                             </td>
                         </tr>
                         <tr>
@@ -197,16 +197,16 @@
                             <td>amr_android_adcolony.unitypackage</br> amr_ios_adcolony.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_adcolony.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.3.2.1</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('a2');" id="a2" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.3.2.1</button>
+                                
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_adcolony.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.3.2.1</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i2');" id="i2" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.3.2.1</button>
+                                
                             </td>
                         </tr>
 
@@ -216,16 +216,16 @@
                             <td>amr_android_admob.unitypackage</br> amr_ios_admob.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_admob.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.10.0.1</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('a3');" id="a3" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.10.0.1</button>
+                                
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_admob.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.7.24.1</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i3');" id="i3" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.24.1</button>
+                                
                             </td>
                         </tr>
 
@@ -236,16 +236,16 @@
                             <td>amr_android_amazon.unitypackage</br> amr_ios_amazon.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_amazon.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.5.8.1.1</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('a4');" id="a4"  class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.5.8.1.1</button>
+							
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_amazon.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.2.2.17</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i4');" id="i4"  class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.2.2.17</button>
+							
                             </td>
                         </tr>
 
@@ -255,16 +255,16 @@
                             <td>amr_android_applovin.unitypackage</br> amr_ios_applovin.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_applovin.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.7.5.0</button>
-                                </a>
+								
+								<button type="button" onclick="toggleAdNetworkStatus('a5');" id="a5"  class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.0</button>
+                                
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_applovin.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.4.3.1</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i5');" id="i5"  class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.4.3.1</button>
+							
                             </td>
                         </tr>
 
@@ -274,16 +274,16 @@
                             <td>amr_android_appnext.unitypackage</br> amr_ios_appnext.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_appnext.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.2.1.1.463</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('a6');" id="a6"  class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.2.1.1.463</button>
+                                
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_appnext.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.1.8.3</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('i6');" id="i6"  class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.1.8.3</button>
+						   
                             </td>
                         </tr>
 
@@ -294,16 +294,16 @@
                             <td>amr_android_chartboost.unitypackage</br> amr_ios_chartboost.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_chartboost.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.7.0.1</button>
-                                </a>
+                               
+								<button type="button"  onclick="toggleAdNetworkStatus('a7');" id="a7" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.7.0.0</button>
+						  
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_chartboost.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.6.6.3</button>
-                                </a>
+                                
+								<button type="button"  onclick="toggleAdNetworkStatus('i7');" id="i7" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.6.3</button>
+						   
                             </td>
                         </tr>
 
@@ -313,16 +313,16 @@
                             <td>amr_android_facebook.unitypackage</br> amr_ios_facebook.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_facebook.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.4.25</button>
-                                </a>
+						   
+								<button type="button"  onclick="toggleAdNetworkStatus('a8');" id="a8" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.4.25</button>
+							
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_facebook.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.4.26.0</button>
-                                </a>
+                               
+								<button type="button"  onclick="toggleAdNetworkStatus('i8');" id="i8" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.4.26.0</button>
+							
                             </td>
                         </tr>
 
@@ -332,16 +332,16 @@
                             <td>amr_android_flurry.unitypackage</br> amr_ios_flurry.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_flurry.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.8.0.2</button>
-                                </a>
+                                
+								<button type="button"  onclick="toggleAdNetworkStatus('a9');" id="a9" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.1</button>
+                                
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_flurry.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.8.3.0</button>
-                                </a>
+                               
+								<button type="button"  onclick="toggleAdNetworkStatus('i9');" id="i9" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.8.3.0</button>
+							
                             </td>
                         </tr>
 
@@ -351,16 +351,16 @@
                             <td>amr_android_fyber.unitypackage</br>amr_ios_fyber.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_fyber.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.8.16.1</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('a10');" id="a10" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.8.15.1</button>
+							
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_fyber.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.8.15.1</button>
-                                </a>
+								
+								<button type="button" onclick="toggleAdNetworkStatus('i10');" id="i10" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.8.15.1</button>
+						   
                             </td>
                         </tr>
 
@@ -370,16 +370,15 @@
                             <td>amr_android_inmobi.unitypackage</br> amr_ios_inmobi.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_inmobi.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.7.0.1</button>
-                                </a>
+								
+								<button type="button" onclick="toggleAdNetworkStatus('a11');" id="a11" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.6.2.4</button>
+						   
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_inmobi.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.6.2.1</button>
-                                </a>
+							
+								<button type="button" onclick="toggleAdNetworkStatus('i11');" id="i11" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.2.1</button>
                             </td>
                         </tr>
 
@@ -389,16 +388,16 @@
                             <td>amr_android_ironsource.unitypackage</br> amr_ios_ironsource.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_ironsource.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.6.7.3</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('a12');" id="a12" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.6.6.4.1</button>
+                               
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_ironsource.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.6.6.8</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i12');" id="i12" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.6.8</button>
+                                
                             </td>
                         </tr>
 
@@ -408,16 +407,16 @@
                             <td>amr_android_leadbolt.unitypackage</br> amr_ios_leadbolt.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_leadbolt.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.8.1a</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('a13');" id="a13" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.8.1</button>
+							
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_leadbolt.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.8.0.0</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('i13');" id="i13" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.8.0.0</button>
+							
                             </td>
                         </tr>
 
@@ -427,16 +426,16 @@
                             <td>amr_android_loopme.unitypackage</br> amr_ios_loopme.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_loopme.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.5.2.7</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('a14');" id="a14" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.5.1.11</button>
+							
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_loopme.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.6.3.1</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i14');" id="i14" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.3.1</button>
+						   
                             </td>
                         </tr>
 
@@ -446,16 +445,15 @@
                             <td>amr_android_mobfox.unitypackage</br> amr_ios_mobfox.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_mobfox.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.3.2.7</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('a15');" id="a15" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.3.2.7</button>
+							
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_mobfox.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.3.1.6</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i15');" id="i15" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.3.1.6</button>
                             </td>
                         </tr>
 
@@ -467,10 +465,10 @@
                             <td class="text-right">
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_mobusi.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.2.3.3</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i16');" id="i16" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.2.3.3</button>
+							
                             </td>
                         </tr>
 
@@ -480,16 +478,16 @@
                             <td>amr_android_mopub.unitypackage</br> amr_ios_mopub.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_mopub.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.4.14.0</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('a17');" id="a17" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.4.14.0</button>
+							
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_mopub.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.4.13.1</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('i17');" id="i17" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.4.13.1</button>
+							
                             </td>
                         </tr>
 
@@ -499,16 +497,16 @@
                             <td>amr_android_nativex.unitypackage</br> amr_ios_nativex.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_nativex.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.5.5.9</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('a18');" id="a18" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.5.5.9</button>
+						   
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_nativex.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.5.5.9</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('i18');" id="i18" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.5.5.9</button>
+						   
                             </td>
                         </tr>
 
@@ -520,10 +518,9 @@
                             <td class="text-right">
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_nexage.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.6.4.0</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i19');" id="i19" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.4.0</button>
                             </td>
                         </tr>
 
@@ -535,10 +532,10 @@
                             <td class="text-right">
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_pubnative.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.1.4.0</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('i20');" id="i20" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.1.4.0</button>
+							
                             </td>
                         </tr>
 
@@ -548,16 +545,16 @@
                             <td>amr_android_revmob.unitypackage</br> amr_ios_revmob.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_revmob.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.10.0.0</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('a21');" id="a21" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.10.0.0</button>
+							
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_revmob.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.9.2.4</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i21');" id="i21" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.9.2.4</button>
+                                
                             </td>
                         </tr>
                         <tr>
@@ -567,10 +564,10 @@
                             <td class="text-right">
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_smaato.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
+                                
+                                    <button type="button" onclick="toggleAdNetworkStatus('i22');" id="i22" class="btn btn-outline btn-block btn-default"><i
                                             class="fa fa-apple"></i>&nbsp;&nbsp;v.8.0.8</button>
-                                </a>
+                                
                             </td>
                         </tr>
                         <tr>
@@ -579,16 +576,16 @@
                             <td>amr_android_startapp.unitypackage</br> amr_ios_startapp.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_startapp.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.3.6.7</button>
-                                </a>
+                                
+                                    <button type="button" onclick="toggleAdNetworkStatus('a23');" id="a23" class="btn btn-outline btn-block btn-success"><i
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.3.6.3</button>
+                               
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_startapp.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
+                               
+                                    <button type="button" onclick="toggleAdNetworkStatus('i23');" id="i23" class="btn btn-outline btn-block btn-default"><i
                                             class="fa fa-apple"></i>&nbsp;&nbsp;v.3.4.2</button>
-                                </a>
+                                
                             </td>
                         </tr>
                         <tr>
@@ -597,16 +594,16 @@
                             <td>amr_android_tapjoy.unitypackage</br> amr_ios_tapjoy.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_tapjoy.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.11.11.0</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('a24');" id="a24" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.11.11.0</button>
+						  
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_tapjoy.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.11.11.0</button>
-                                </a>
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('i24');" id="i24" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.11.11.0</button>
+							
                             </td>
                         </tr>
                         <tr>
@@ -616,10 +613,10 @@
                             <td class="text-right">
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_tappx.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.3.0.2</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i25');" id="i25" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.3.0.2</button>
+							
                             </td>
                         </tr>
                         <tr>
@@ -628,16 +625,16 @@
                             <td>amr_android_unityads.unitypackage</br> amr_ios_unity.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_unityads.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.2.1.1</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('a26');" id="a26" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.2.1.0</button>
+							
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_unity.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.2.1.1</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i26');" id="i26" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.2.1.1</button>
+							
                             </td>
                         </tr>
                         <tr>
@@ -646,16 +643,16 @@
                             <td>amr_android_vungle.unitypackage</br> amr_ios_vungle.unitypackage</td>
 
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/android/amr_android_vungle.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.5.3.0</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('a27');" id="a27" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.5.1.0</button>
+							
                             </td>
                             <td class="text-right">
-                                <a href="https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_vungle.unitypackage">
-                                    <button type="button" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.5.1.0</button>
-                                </a>
+                                
+								<button type="button" onclick="toggleAdNetworkStatus('i27');" id="i27" class="btn btn-outline btn-block btn-default"><i
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.5.1.0</button>
+						   
                             </td>
                         </tr>
                         </tbody>
@@ -767,12 +764,10 @@ if (AMR.AMRSDK.isInterstitialReady())
 // Interstitial Callbacks - Optional
 AMR.AMRSDK.setOnInterstitialReady(onInterstitialReady);
 AMR.AMRSDK.setOnInterstitialFail(onInterstitialFail);
-AMR.AMRSDK.setOnInterstitialShow(onInterstitialShow);
 AMR.AMRSDK.setOnInterstitialDismiss(onInterstitialDismiss);
 
 public void onInterstitialReady(string networkName) {}
 public void onInterstitialFail(string error) {}
-public void onInterstitialShow(string message) {}
 public void onInterstitialDismiss(string message) {}
                 </code></pre>
 
@@ -800,13 +795,11 @@ if (AMR.AMRSDK.isRewardedVideoReady())
 // Rewarded Video Callbacks - Optional
 AMR.AMRSDK.setOnRewardedVideoReady(OnVideoReady);
 AMR.AMRSDK.setOnRewardedVideoFail(OnVideoFail);
-AMR.AMRSDK.setOnRewardedVideoShow(OnVideoShow);
 AMR.AMRSDK.setOnRewardedVideoDismiss(OnVideoDismiss);
 AMR.AMRSDK.setOnRewardedVideoComplete(OnVideoComplete);
 
 public void OnVideoReady(string networkName) {}
 public void OnVideoFail(string error) {}
-public void OnVideoShow(string message) {}
 public void OnVideoDismiss(string message) {}
 public void OnVideoComplete(string message) {}
                 </code></pre>
@@ -924,9 +917,6 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
                     new features, etc.</p>
 
                 <ol class="toc">
-                    <li><a href="#v.1.0.6"> Version 1.0.6</a></li>
-                    <li><a href="#v.1.0.5"> Version 1.0.5</a></li>
-                    <li><a href="#v.1.0.4"> Version 1.0.4</a></li>
                     <li><a href="#v.1.0.3"> Version 1.0.3</a></li>
                     <li><a href="#v.1.0.2"> Version 1.0.2</a></li>
                     <li><a href="#v.1.0.1"> Version 1.0.1</a></li>
@@ -948,149 +938,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
             </section>
 
             <section id="versions">
-
-                <h3 id="v.1.0.6">Version 1.0.6
-                    <small class="release-date">November 27, 2017</small>
-                </h3>
-                <br>
-
-                <section id="changelog-unity-1.0.6">
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.0.6
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="changelog-android-1.0.6">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            Applovin 7.5.0
-                        </li>
-                        <li class="ch-updated">
-                            Chartboost 7.0.1
-                        </li>
-                        <li class="ch-updated">
-                            Flurry 8.0.2
-                        </li>
-                        <li class="ch-updated">
-                            Inmobi 7.0.1
-                        </li>
-                        <li class="ch-updated">
-                            Ironsource 6.7.3
-                        </li>
-                        <li class="ch-updated">
-                            LoopMe 5.2.7
-                        </li>
-                        <li class="ch-updated">
-                            Vungle 5.3.0
-                        </li>
-
-                    </ul>
-                </section>
-
-                <h3 id="v.1.0.5">Version 1.0.5
-                    <small class="release-date">November 24, 2017</small>
-                </h3>
-                <br>
-
-                <section id="changelog-unity-1.0.5">
-                    <ul class="changelog">
-                        <li class="ch-added">
-                            From now on callback will be triggered when full screen ads opened on the screen.
-                            <pre><code class="added">
-                            <span class="text-success">AMR.AMRSDK.setOnInterstitialShow(onInterstitialShow);
-                                AMR.AMRSDK.setOnRewardedVideoShow(OnVideoShow);</span>
-                            </code></pre>
-                        </li>
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.0.5
-                        </li>
-                        <li class="ch-updated">
-                            <code>AMRDemoScript</code>
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="changelog-android-1.0.5">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            Android Core Package 1.5.3
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="changelog-ios-1.0.5">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            iOS Core Package
-                        </li>
-                    </ul>
-                </section>
-
-
-                <h3 id="v.1.0.4">Version 1.0.4
-                    <small class="release-date">November 7, 2017</small>
-                </h3>
-                <br>
-
-                <section id="changelog-unity-1.0.4">
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.0.4
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="changelog-android-1.0.4">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            AMR Android Sdk 1.5.3
-                        </li>
-                        <li class="ch-updated">
-                            Applovin 7.4.1
-                        </li>
-                        <li class="ch-updated">
-                            Flurry 7.2.3
-                        </li>
-                        <li class="ch-updated">
-                            Fyber 8.16.1
-                        </li>
-                        <li class="ch-updated">
-                            Ironsource 6.6.8.1
-                        </li>
-                        <li class="ch-updated">
-                            Leadbolt 8.1a
-                        </li>
-                        <li class="ch-updated">
-                            Loopme 5.2.4
-                        </li>
-                        <li class="ch-updated">
-                            Startapp 3.6.7
-                        </li>
-                        <li class="ch-updated">
-                            Unity Ads 2.1.1
-                        </li>
-                    </ul>
-                </section>
-
-                <h3 id="v.1.0.3">Version 1.0.3
+                <h3 id="v1.0.3">Version 1.0.3
                     <small class="release-date">October 31, 2017</small>
                 </h3>
                 <br>
@@ -1116,7 +964,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
                 </section>
 
 
-                <h3 id="v.1.0.2">Version 1.0.2
+                <h3 id="v1.0.2">Version 1.0.2
                     <small class="release-date">October 24, 2017</small>
                 </h3>
                 <br>
@@ -1142,7 +990,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
                 </section>
 
 
-                <h3 id="v.1.0.1">Version 1.0.1
+                <h3 id="v1.0.1">Version 1.0.1
                     <small class="release-date">October 19, 2017</small>
                 </h3>
                 <br>
@@ -1205,7 +1053,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 
 
 
-                <h3 id="v.1.0.0">Version 1.0.0
+                <h3 id="v1.0.0">Version 1.0.0
                     <small class="release-date">October 18, 2017</small>
                 </h3>
                 <br>
@@ -1391,18 +1239,8 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 	var iosArr = [];
 	var selectedIDS = [];
 	var allSelectedNetworks = [];
-
-
-	function includes(container, value)
-	{
-		var returnValue = false;
-		var pos = container.indexOf(value);
-		if (pos >= 0) {
-			returnValue = true;
-		}
-		return returnValue;
-	}
-
+	
+	
 	function downloadPackage()
 	{
 		if(andrArr.length + iosArr.length == 1 && uFlag == 0)
@@ -1435,98 +1273,98 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 			}
 			window.location = s;
 		}
-
+		
 		else if (andrArr.length + iosArr.length == 0 && uFlag==1)
 		{
 			var s = "https://github.com/admost/amrunity/raw/master/packages/amr_unity_core.unitypackage";
 			window.location = s;
 		}
-
+	
 		else
 		{
-
+		
 			var s = "http://download.admost.com/Main.aspx?d=";
-
+			
 			//var s = "http://localhost:62029/Main.aspx?d=";
-
+			
 			var params='{"android" : [';
-
+			
 			for (var i=0;i<andrArr.length;i++)
 			{
 				if(andrArr[i]!="Platform Related Core")
 				{
 					params+='"' + (andrArr[i].replace(/\s/g,'')).toLowerCase() + '"';
-
+					
 					params+=",";
-
+					
 				}
 				else
 				{
 					params += '"' + "core" + '"';
-
+					
 					params+=",";
 
 				}
-
+				
 			}
 			if(params[params.length-1] == ",")
 			{
 				params = params.slice(0, -1);
 			}
-
-
+			
+			
 			params += '] , "ios" : [';
-
+			
 			for (var i=0;i<iosArr.length;i++)
 			{
 				if(iosArr[i]=="Unity Ads")
 				{
 					params+='"' + "unity" + '"';
-
+					
 					params+=",";
-
+					
 				}
 
 
 				else if(iosArr[i]!="Platform Related Core")
 				{
 					params+='"' + (iosArr[i].replace(/\s/g,'')).toLowerCase() + '"';
-
+					
 					params+=",";
-
-				}
+					
+				}	
 				else if(iosArr[i]=="Platform Related Core")
 				{
 					params+='"' + "core" + '"';
-
+					
 					params+=",";
-
+				
 				}
 			}
-
+			
 			if(params[params.length-1] == ",")
 			{
 				params = params.slice(0, -1);
 			}
-
+			
 			params += '] , "unityCore" : [';
-
+			
 			if(uFlag==1)
 			{
 				params += '"' + "core" + '"';
 			}
+			
+			
+			
+			
 
-
-
-
-
-
-
+			
+			
 			params += "]}";
-
+			
 			s += params;
 			console.log(s);
-
+			
 			var w = window.innerWidth
 			|| document.documentElement.clientWidth
 			|| document.body.clientWidth;
@@ -1536,12 +1374,12 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 			|| document.body.clientHeight;
 
 			var hght = Math.max(iosArr.length,andrArr.length) * 25 + 650;
-
+			
 			window.open(s, "_blank", "toolbar=yes, width = "+ 1000 + ", height=" + hght );
 		}
 	}
-
-
+	
+	
 	function closeList()
 	{
 		andrArr = [];
@@ -1555,51 +1393,45 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 			selectedTemp.blur();
 		}
 		selectedIDS = [];
-
-
+		
+		
 		update();
 	}
-
-
-
+	
+	
+	
 	function update()
 	{
 
 
-
+		
 		if((andrArr.length + iosArr.length == 0) && uFlag==0)
 		{
 			document.getElementById('myPanel').style.display='none';
 		}
-
+		
 		else
 		{
 			document.getElementById('myPanel').style.display='block';
 		}
-
-
-
+		
+		
+		
 		var table = document.getElementById("selectedTable");
 		table.innerHTML="";
-
-
+		
+		
 		allSelectedNetworks = andrArr.slice(0);
-
+		
 		for(var i=0; i< iosArr.length;i++)
 		{
-			/*if(allSelectedNetworks.includes(iosArr[i])==false)
-			{
-				allSelectedNetworks.push(iosArr[i]);
-			}*/
-
-			if(includes(allSelectedNetworks,iosArr[i])==false)
+			if(allSelectedNetworks.includes(iosArr[i])==false)
 			{
 				allSelectedNetworks.push(iosArr[i]);
 			}
-
 		}
 		allSelectedNetworks.sort();
-
+		
 		if(uFlag==1)
 		{
 			var row = table.insertRow(table.rows.length);
@@ -1614,11 +1446,11 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 			cell1.innerHTML = '<span class="fa fa-apple" style = "color:#2196F3;"></span>'
 
 		}
-
-		if(includes(allSelectedNetworks,"Platform Related Core"))
+		
+		if(allSelectedNetworks.includes("Platform Related Core"))
 		{
-			var ifand = includes(andrArr,"Platform Related Core");
-			var ifios = includes(iosArr,"Platform Related Core");
+			var ifand = andrArr.includes("Platform Related Core");
+			var ifios = iosArr.includes("Platform Related Core");
 			var row = table.insertRow(table.rows.length);
 			var cell1 = row.insertCell(0);
 			var cell2 = row.insertCell(0);
@@ -1628,30 +1460,30 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 
 			cell0.innerHTML = '<span class="fa fa-remove" style="color:red; cursor:pointer;" onclick="deleteTableItem(\'p\');" ></span>';
 			cell3.innerHTML = "Platform Related Core";
-
+			
 			if(ifand)
 			{
 				cell2.innerHTML= '<span class="fa fa-android" style = "color:#43A047;"></span>'
 			}
-
+			
 			if(ifios)
 			{
 				cell1.innerHTML = '<span class="fa fa-apple" style = "color:#777777;"></span>'
-			}
-
+			}	
+			
 			allSelectedNetworks.splice(allSelectedNetworks.indexOf("Platform Related Core"),1);
 
-
+		
 		}
-
-
-
-
-
+		
+		
+		
+	
+		
 		for (var i=0;i<allSelectedNetworks.length;i++)
 		{
-			var ifand = includes(andrArr,allSelectedNetworks[i]);
-			var ifios = includes(iosArr,allSelectedNetworks[i]);
+			var ifand = andrArr.includes(allSelectedNetworks[i]);
+			var ifios = iosArr.includes(allSelectedNetworks[i]);
 			var row = table.insertRow(table.rows.length);
 			var cell1 = row.insertCell(0);
 			var cell2 = row.insertCell(0);
@@ -1661,39 +1493,39 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 
 			cell3.innerHTML = allSelectedNetworks[i];
 			cell0.innerHTML = '<span class="fa fa-remove" style="color:red; cursor:pointer;" onclick="deleteTableItem(\'' + allSelectedNetworks[i] + '\');" ></span>';
-
+			
 			if(ifand)
 			{
 				cell2.innerHTML= '<span class="fa fa-android" style = "color:#43A047;"></span>'
 			}
-
+			
 			if(ifios)
 			{
 				cell1.innerHTML = '<span class="fa fa-apple" style = "color:#777777;"></span>'
 			}
-
-
-
+			
+			
+		
 		}
-
-
+		
+	
 	}
-
+	
 	function deleteTableItem(item)
 	{
 		if(item == "u")
 		{
-			var unityBut = document.getElementById('u1');
+			var unityBut = document.getElementById('u1');		
 			unityBut.style.backgroundColor = "";
 			unityBut.style.color = "";
 			unityBut.blur();
 			uFlag=0;
 			selectedIDS.splice(selectedIDS.indexOf("u1"),1);
 		}
-
+		
 		if(item == "p")
 		{
-			if(includes(andrArr,"Platform Related Core") )
+			if(andrArr.includes("Platform Related Core") )
 			{
 				var but = document.getElementById("a1");
 				andrArr.splice(andrArr.indexOf("Platform Related Core"),1);
@@ -1702,7 +1534,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 				but.blur();
 				selectedIDS.splice(selectedIDS.indexOf("a1"),1);
 			}
-			if(includes(iosArr,"Platform Related Core"))
+			if(iosArr.includes("Platform Related Core"))
 			{
 				var but = document.getElementById("i1");
 				iosArr.splice(andrArr.indexOf("Platform Related Core"),1);
@@ -1710,14 +1542,14 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 				but.style.color = "";
 				but.blur();
 				selectedIDS.splice(selectedIDS.indexOf("i1"),1);
-			}
+			}	
 		}
-
+		
 		else
 		{
-			var ifAndroid = includes(andrArr,item);
-			var ifIos = includes(iosArr,item);
-
+			var ifAndroid = andrArr.includes(item);
+			var ifIos = iosArr.includes(item);
+			
 			if(ifAndroid)
 			{
 				var rows = document.getElementById("myTable").rows;
@@ -1733,11 +1565,11 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 						andrArr.splice(andrArr.indexOf(item), 1);
 						selectedIDS.splice(selectedIDS.indexOf(id),1);
 					}
-
+					
 				}
 			}
-
-
+			
+			
 			if(ifIos)
 			{
 				var rows = document.getElementById("myTable").rows;
@@ -1753,25 +1585,25 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 						iosArr.splice(iosArr.indexOf(item), 1);
 						selectedIDS.splice(selectedIDS.indexOf(id),1);
 					}
-
+					
 				}
 			}
-
+		
 		}
-
-		update();
+		
+		update();	
 	}
-
-
+	
+	
 	function toggleAdNetworkStatus(id)
 	{
 		if(id=='u1')
-		{
-			var unityBut = document.getElementById('u1');
-
+		{	
+			var unityBut = document.getElementById('u1');		
+			
 			if(uFlag==0)
 			{
-
+				
 				unityBut.style.backgroundColor = "#2196F3";
 				unityBut.style.color = "#ffffff";
 				uFlag=1;
@@ -1779,7 +1611,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 			}
 			else if(uFlag==1)
 			{
-
+				
 				unityBut.style.backgroundColor = "";
 				unityBut.style.color = "";
 				unityBut.blur();
@@ -1787,37 +1619,37 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 				selectedIDS.splice(selectedIDS.indexOf(id),1);
 			}
 			update();
-
+		
 		}
-
+		
 		else
 		{
 			var ifAndroid = (id.substring(0,1) == 'a');
 			var buttonAndSpanId;
-
+			
 			if (id.length == 4)
 				buttonAndSpanId = id[1];
-
+			
 			else
 			{
 				buttonAndSpanId = id[1];
 				buttonAndSpanId+= id[2];
 			}
-
+			
 			var but = document.getElementById(id);
-
-
-
+			
+			
+			
 			if(ifAndroid == true)
-			{
+			{			
 				var listElement = document.getElementById("myTable").rows[parseInt(buttonAndSpanId)+1].cells[1].innerHTML;
-				if(includes(andrArr,listElement) == false)
+				if(andrArr.includes(listElement) == false)
 				{
 					but.style.backgroundColor = "#43A047";
 					but.style.color = "#ffffff";
 					andrArr.push(listElement);
 					selectedIDS.push(id);
-					if(includes(andrArr,"Platform Related Core")==false)
+					if(andrArr.includes("Platform Related Core")==false) 
 					{
 						toggleAdNetworkStatus("a1");
 					}
@@ -1834,20 +1666,20 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 					andrArr.splice(andrArr.indexOf(listElement), 1);
 					selectedIDS.splice(selectedIDS.indexOf(id),1);
 				}
-
+				
 				update();
 			}
 			else
 			{
-				var listElement = document.getElementById("myTable").rows[parseInt(buttonAndSpanId)+1].cells[1].innerHTML;
-				if(includes(iosArr,listElement) == false)
+				var listElement = document.getElementById("myTable").rows[parseInt(buttonAndSpanId)+1].cells[1].innerHTML;	
+				if(iosArr.includes(listElement) == false)
 				{
 					but.style.backgroundColor = "#777777"
 					but.style.color = "#ffffff";
 					iosArr.push(listElement);
-
+					
 					selectedIDS.push(id);
-					if(includes(iosArr,"Platform Related Core")==false)
+					if(iosArr.includes("Platform Related Core")==false)
 					{
 						toggleAdNetworkStatus("i1");
 					}
@@ -1855,7 +1687,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 					{
 						toggleAdNetworkStatus("u1");
 					}
-
+					
 
 
 				}
@@ -1867,12 +1699,12 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 					iosArr.splice(iosArr.indexOf(listElement), 1);
 					selectedIDS.splice(selectedIDS.indexOf(id),1);
 				}
-
+				
 				update();
-
-			}
+				
+			}	
 		}
-
+	
 	}
 
 

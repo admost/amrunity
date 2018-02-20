@@ -102,6 +102,7 @@
                     <ul>
                         <li><a href="#testsuite">Test Suite</a></li>
                         <li><a href="#iap">In App Purchase Tracking</a></li>
+                        <li><a href="#senduserid">Setting Application User Id</a></li>
                     </ul>
                 </li>
 
@@ -909,6 +910,16 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 
             </ul>
 
+            <h3 id="senduserid">Setting Application User Id <span class="label label-teal">New</span></h3>
+
+                <p>
+                    You can use the following method to set application specific user id in AMR Analytics for enhanced tracking of your users. You have to call this method after initialization.
+                </p>
+				
+				<pre><code class="language-c">
+AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
+                </code></pre>
+
             <h2 id="release-notes">Release Notes</h2>
 
             <header>
@@ -917,6 +928,7 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
                     new features, etc.</p>
 
                 <ol class="toc">
+                	<li><a href="#v.1.0.13"> Version 1.0.13</a></li>
                     <li><a href="#v.1.0.12"> Version 1.0.12</a></li>
                     <li><a href="#v.1.0.11"> Version 1.0.11</a></li>
                 	<li><a href="#v.1.0.10"> Version 1.0.10</a></li>
@@ -947,6 +959,44 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
             </section>
 
             <section id="versions">
+
+           <h3 id="v.1.0.13">Version 1.0.13
+                            <small class="release-date">February 20, 2018</small>
+                        </h3>
+                        <br>
+
+                    <section id="changelog-unity-1.0.13">
+                            <ul class="changelog">
+                                <li class="ch-updated">
+                                    <code>AMRPlugin.dll</code> 1.0.13
+                                </li>
+                            </ul>
+                        </section>
+						
+					<section id="changelog-android-1.0.13">
+                    <div class="promo left small-icon">
+                        <i class="fa fa-android" style="color: #00af97"></i>
+                        <h3>Android</h3>
+                    </div>
+                    <ul class="changelog">
+                        <li class="ch-updated">
+                            AMR Android Sdk 1.5.9
+                        </li>
+                    </ul>
+                </section>
+        
+                        <section id="changelog-ios-1.0.13">
+                            <div class="promo left small-icon">
+                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                                <h3>iOS</h3>
+                            </div>
+                            <ul class="changelog">
+                                <li class="ch-updated">AMR iOS Sdk 1.3.28 </li>
+                            </ul>
+                        </section>
+
+
+
             <h3 id="v.1.0.12">Version 1.0.12
                             <small class="release-date">February 15, 2018</small>
                         </h3>

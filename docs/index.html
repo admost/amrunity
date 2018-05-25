@@ -92,10 +92,21 @@
                     <a href="#usage">Usage</a>
                     <ul>
                         <li><a href="#initialization">Initialization</a></li>
+                        <ul style="display: block;">
+                                <li><a href="#initgdpr">GDPR</a></li>
+                            </ul>
                         <li><a href="#banner-ads">Banner Ads</a></li>
                         <li><a href="#interstitial-ads">Interstitial Ads</a></li>
                         <li><a href="#rewarded-ads">Rewarded Video Ads</a></li>
                     </ul>
+                </li>
+
+                <li>
+                    <a href="#gdpr">GDPR</a>
+                        <ul>
+                            <li><a href="#networkcomplience">Network GDPR Complience</a></li>
+                            <li><a href="#gdprrules">GDPR Rules</a></li>
+                         </ul>
                 </li>
 
                 <li><a href="#extras">Extras</a>
@@ -169,7 +180,7 @@
                             <td colspan="2" class="text-center">
                                <button type="button" onclick="toggleAdNetworkStatus('u1');" id="u1" class="btn btn-outline btn-block btn-primary"><i
 										style="padding-right: 16px;" class="fa fa-android"></i>/<i
-										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.0.21</button>
+										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.1.0</button>
                             </td>
                         </tr>
                         <tr>
@@ -179,12 +190,12 @@
 
                             <td class="text-right">
                                 <button type="button" onclick = "toggleAdNetworkStatus('a1');" id="a1" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.6.4</button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.6.6</button>
                                
                             </td>
                             <td class="text-right">
                                             <button type="button" onclick = "toggleAdNetworkStatus('i1');" id="i1" class="btn btn-outline btn-block btn-default"><i
-                                                class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.35</button>
+                                                class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.55</button>
 											
                             </td>
                         </tr>
@@ -196,13 +207,13 @@
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('a2');" id="a2" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.3.3.3</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.3.3.4</button>
                                 
                             </td>
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i2');" id="i2" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.3.3.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.3.3.4</button>
                                 
                             </td>
                         </tr>
@@ -215,13 +226,13 @@
                               <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('a3');" id="a3" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.10.0.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.15.0.1</button>
                                 
                             </td>
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i3');" id="i3" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.29.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.31.0</button>
                                 
                             </td>
                         </tr>
@@ -254,13 +265,13 @@
                             <td class="text-right">
 								
 								<button type="button" onclick="toggleAdNetworkStatus('a5');" id="a5"  class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.7.8.6</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.8.0.1</button>
                                 
                             </td>
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i5');" id="i5"  class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.4.8.3</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.5.0.1</button>
 							
                             </td>
                         </tr>
@@ -293,13 +304,13 @@
                             <td class="text-right">
                                
 								<button type="button"  onclick="toggleAdNetworkStatus('a7');" id="a7" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.7.1.0</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.0</button>
 						  
                             </td>
                             <td class="text-right">
                                 
 								<button type="button"  onclick="toggleAdNetworkStatus('i7');" id="i7" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.1.2</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.2.0</button>
 						   
                             </td>
                         </tr>
@@ -312,13 +323,13 @@
                             <td class="text-right">
 						   
 								<button type="button"  onclick="toggleAdNetworkStatus('a8');" id="a8" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.4.28.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.4.28.2</button>
 							
                             </td>
                             <td class="text-right">
                                
 								<button type="button"  onclick="toggleAdNetworkStatus('i8');" id="i8" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.4.27.2</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.4.28.1</button>
 							
                             </td>
                         </tr>
@@ -331,13 +342,13 @@
                             <td class="text-right">
                                 
 								<button type="button"  onclick="toggleAdNetworkStatus('a9');" id="a9" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.9.0.0</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.10.1.0</button>
                                 
                             </td>
                             <td class="text-right">
                                
 								<button type="button"  onclick="toggleAdNetworkStatus('i9');" id="i9" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.8.4.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.8.6.1</button>
 							
                             </td>
                         </tr>
@@ -350,13 +361,13 @@
                             <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('a10');" id="a10" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.8.20.0</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.8.21.0</button>
 							
                             </td>
                             <td class="text-right">
 								
 								<button type="button" onclick="toggleAdNetworkStatus('i10');" id="i10" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.8.20.2</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.8.21.0</button>
 						   
                             </td>
                         </tr>
@@ -369,13 +380,13 @@
                             <td class="text-right">
 								
 								<button type="button" onclick="toggleAdNetworkStatus('a11');" id="a11" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.7.0.4</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.7.1.0</button>
 						   
                             </td>
                             <td class="text-right">
 							
 								<button type="button" onclick="toggleAdNetworkStatus('i11');" id="i11" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.0.4</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.1.1</button>
                             </td>
                         </tr>
 
@@ -387,13 +398,13 @@
                                                        <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('a12');" id="a12" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.6.7.8</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.6.7.9</button>
                                
                             </td>
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i12');" id="i12" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.7.7</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.7.9</button>
                                 
                             </td>
                         </tr>
@@ -420,7 +431,7 @@
                             <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('a14');" id="a14" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.5.2.8</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.5.2.9</button>
 							
                             </td>
                             <td class="text-right">
@@ -439,13 +450,13 @@
                             <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('a15');" id="a15" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.3.4.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.3.5.0</button>
 							
                             </td>
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i15');" id="i15" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.3.4.1</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.3.5.0</button>
                             </td>
                         </tr>
 
@@ -457,13 +468,13 @@
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('a16');" id="a16" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.4.14.0</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.5.0.0</button>
 							
                             </td>
                             <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('i16');" id="i16" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.4.20.1</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.5.0.0</button>
 							
                             </td>
                         </tr>
@@ -493,7 +504,7 @@
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i18');" id="i18" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.7.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.8.0</button>
                             </td>
                         </tr>
 
@@ -520,7 +531,7 @@
                             <td class="text-right">
                                 
                                     <button type="button" onclick="toggleAdNetworkStatus('i20');" id="i20" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.8.2.3</button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.9.0.0</button>
                                 
                             </td>
                         </tr>
@@ -532,13 +543,13 @@
                            <td class="text-right">
                                 
                                     <button type="button" onclick="toggleAdNetworkStatus('a21');" id="a21" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.3.8.1</button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.3.8.4</button>
                                
                             </td>
                             <td class="text-right">
                                
                                     <button type="button" onclick="toggleAdNetworkStatus('i21');" id="i21" class="btn btn-outline btn-block btn-default"><i
-                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.3.6.0</button>
+                                            class="fa fa-apple"></i>&nbsp;&nbsp;v.3.7.1</button>
                                 
                             </td>
                         </tr>
@@ -550,13 +561,13 @@
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('a22');" id="a22" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.11.12.0</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.11.12.2</button>
 						  
                             </td>
                             <td class="text-right">
                                
 								<button type="button" onclick="toggleAdNetworkStatus('i22');" id="i22" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.11.11.1</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.11.12.2</button>
 							
                             </td>
                         </tr>
@@ -569,13 +580,13 @@
                            <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('a23');" id="a23" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.2.2.0</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.2.2.1</button>
 							
                             </td>
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i23');" id="i23" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.2.2.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.2.2.1</button>
 							
                             </td>
                         </tr>
@@ -587,13 +598,13 @@
 							<td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('a24');" id="a24" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.5.3.2</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.6.2.5</button>
 							
                             </td>
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i24');" id="i24" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.5.4.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.2.0</button>
 						   
                             </td>
                         </tr>
@@ -637,6 +648,10 @@ config.InterstitialIdIOS = &quot;&lt;Your IOS Interstitial Zone Id&gt;&quot;;
 config.RewardedVideoIdAndroid = &quot;&lt;Your Android Video Zone Id&gt;&quot;;
 config.RewardedVideoIdIOS = &quot;&lt;Your IOS Video Zone Id&gt;&quot;;
 
+//GDPR COMPLIANCE
+config.UserConsent = "1";
+config.SubjectToGDPR = "1";
+
 AMR.AMRSDK.startWithConfig(config);
                 </code></pre>
                 <p>Call onApplicationPause in each of the Unity Scenes</p>
@@ -656,6 +671,14 @@ void OnApplicationPause(Boolean paused)
 	    AMR.AMRSDK.onResume();
 	}
 }</code></pre>
+
+            <h4 id="initgdpr">GDPR</h4>
+                <p> Once you have collected the user’s consent, you can pass it onto the SDK using the init configuration parameters shown above.  </p> 
+                 <p><code>UserConsent</code> has a boolean parameter. If you have the user’s consent, set it "1". If you do not have the user's consent, set it "0".</p>
+                 <p><code>SubjectToGDPR</code> has a boolean parameter. If you know the user is subject to GDPR, set it "1". If you know the user is not subject to GDPR, set it "0". </p> 
+                <p>If you don’t pass the user’s consent or subjectToGDPR to the SDK, the rules described in  <a href="#gdprrules">GDPR</a>  have been applied.  </p>
+
+
                 <h3 id="banner-ads">Banner Ads</h3>
                 <p>To create and show a banner ad run the following code</p>
                 <pre><code class="language-c">
@@ -752,6 +775,147 @@ public void OnVideoComplete(string message) {}
 
 
             </section>
+
+            <h2 id="gdpr">GDPR</h2>
+				 
+                <p>We specified your responsibilities for obtaining consent from end-users of your apps in our updated <a href="https://www.admost.com/privacy-policy">Privacy Policy</a>. By updating GDPR compatible SDK you agree that you’re responsible for inform the end-users and take their consent. 
+						Please note that the consent collection applies only to users located in the European Economic Area, the United Kingdom, and Switzerland.
+						As data controller you should take consent of end-users by preparing consent window, you can find samples below. When you take end-user consent, the response will be passed to Admost SDK. 
+						You can find the implementation  <a href="#init">here</a> </p>
+				<img class="img-responsive"
+                                 src="assets/img/consent.png"
+                                 alt="consent">
+				<h3 id="networkcomplience">Network GDPR Complience</h2>				 
+			   
+			   <table class="table table-bordered table-striped table-info" style = "width:300px ">	
+			    <tr>
+				    <th align="center">Ad Network </th>
+					<th align="center">Android</th>
+					<th align="center">IOS</th>
+				  </tr>
+				  <tr>
+				    <td >Adcolony</td>
+				    <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					<td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				 
+				  <tr>
+				    <td>Admob</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Amazon</td>
+				    <td align="center"><input type="checkbox" disabled="disabled"><br></td> 
+					 <td align="center"><input type="checkbox" disabled="disabled"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Applovin</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Appnext</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" ><br></td>
+					<td align="center"><input type="checkbox" disabled="disabled" ><br></td>
+					<tr>
+				    <td>ChartBoost</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+				
+				  <tr>
+				    <td>Facebook</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Flurry</td>
+				    <td align="center"><input type="checkbox" disabled="disabled"><br></td> 
+					<td align="center"><input type="checkbox" disabled="disabled"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Fyber</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>InMobi</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				
+				  <tr>
+				    <td>IronSource</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>LeadBolt</td>
+				    <td align="center"><input type="checkbox" disabled="disabled"><br></td> 
+					<td> </td>
+				  </tr>
+				  <tr>
+				    <td>LoopMe</td>
+				    <td align="center"><input type="checkbox" disabled="disabled"><br></td> 
+					 <td align="center"><input type="checkbox" disabled="disabled"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Mobfox</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Mopub</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+   				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Nexage</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" ><br></td> 
+					<td align="center"><input type="checkbox" disabled="disabled" ><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Smaato</td>
+				    <td align="center"><input type="checkbox" disabled="disabled"><br></td> 
+					<td align="center"><input type="checkbox" disabled="disabled"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Startapp</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Tapjoy</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Unity</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				  <tr>
+				    <td>Vungle</td>
+				    <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+					<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td> 
+				  </tr>
+				
+				  
+				  </tr> 
+				  </tr>
+				  
+				</table>
+								 
+				<h3 id="gdprrules">GDPR Rules</h3>
+				
+				<p>Admost provides two methods for GDPR compatibility: <code>config.SubjectToGDPR</code> and <code>config.UserConsent</code>.</p> 
+				<p>Publisher have to set <code>config.SubjectToGDPR = "1"</code> if the user is located in European Union. Otherwise, publisher have to set <code>config.SubjectToGDPR = "0"</code>  . If publisher does not use this method, SubjectToGDPR status remains as unknown. In this case, Admost SDK automatically determines whether the user is in EU or not which is totally under responsibility of the publisher. If user is in EU, networks are not allowed to show personalized ads. If the user is not located in EU, the ad networks are allowed to show personalized ads. </p> 
+				<p>On condition that, the publisher obtains neither user's SubjectToGDPR status nor any negative legal consequences, SubjectToGDPR must set <code>config.SubjectToGDPR = "1"</code>  for each user. In this case, Admost considers all users as subject to GDPR and if the consent is not allowed, Admost blocks ad networks to collect data from users. Which may cause a decrease on overall revenue performance apart from Admost. </p> 
+				<p>If the publisher obtains user's consent and sets <code>config.UserConsent = "1"</code>, personalized ads would be shown to the users. Otherwise, the publisher sets <code>config.UserConsent = "0"</code> which would block the personalized ads, unless the user is not subject to GDPR.</p> 
+				<p>If the publisher does not use <code>config.UserConsent</code> method , userConsent status remains unknown. In this case, if the publisher provides <code>config.SubjectToGDPR = "1"</code>, the ad networks do not have ability to serve personalized ads.If the publisher provides <code> config.SubjectToGDPR = "0"</code>, the ad networks have ability to serve personalized ads.</p> 
+				<p>If the publisher does not provide both <code>config.UserConsent</code>  and <code>config.SubjectToGDPR</code>, Admost decides whether the user is located  in EU or not which is totally under responsibility of the publisher. </p> 
+				<p>If the publisher wants to obtain neither the user's consent nor any negative legal consequences, the publisher must set <code>config.UserConsent = "0"</code> for every user. In this case, Admost considers the user has no consent,  the ad networks are not allowed to serve personalized ads, except only the publisher does not provide <code>config.SubjectToGDPR = "0" </code>.</p>
+					
 
             <h2 id="extras">Extras</h2>
             <h3 id="testsuite">Test Suite</h3>
@@ -873,6 +1037,7 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
                     new features, etc.</p>
 
                 <ol class="toc">
+                    <li><a href="#v1.1.0">Version 1.1.0</a></li>
 					<li><a href="#v.1.0.21"> Version 1.0.21</a></li>
 					<li><a href="#v.1.0.20"> Version 1.0.20</a></li>
                     <li><a href="#v.1.0.19"> Version 1.0.19</a></li>
@@ -912,6 +1077,76 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
             </section>
 
             <section id="versions">
+            <h3 id="v1.1.0">Version 1.1.0
+                            <small class="release-date">May 25, 2018</small>
+                        </h3>
+                        <br>
+
+                        <section id="changelog-unity-1.1.0">
+                            <ul class="changelog">
+                                <li class="ch-updated">
+                                    <code>AMRPlugin.dll</code> 1.1.0 &nbsp;&nbsp;<small>&nbsp;~ GDPR compatibility</small>
+                                </li>
+                            </ul>
+                        </section>
+
+                        <section id="changelog-android-1.1.0">
+                                <div class="promo left small-icon">
+                                    <i class="fa fa-android" style="color: #00af97"></i>
+                                    <h3>Android</h3>
+                                </div>
+                                <ul class="changelog">
+                                    <li class="ch-updated">AMR Android SDK 1.6.6 &nbsp;&nbsp;<small>&nbsp;~ GDPR compatibility</small></li>
+                                    <li class="ch-updated">Adcolony 3.3.4 </li>
+                                    <li class="ch-updated">Admob 15.0.1 </li>
+                                    <li class="ch-updated">Applovin 8.0.1 </li>
+                                    <li class="ch-updated">Appnext 2.3.1.471 </li>
+                                    <li class="ch-updated">Chartboost 7.2.0 </li>
+                                    <li class="ch-updated">Facebook 4.28.2 </li>
+                                    <li class="ch-updated">Flurry 10.1.0 </li>
+                                    <li class="ch-updated">Fyber 8.21.0 </li>
+                                    <li class="ch-updated">Inmobi 7.1.0 </li>
+                                    <li class="ch-updated">Ironsource 6.7.9 </li>
+                                    <li class="ch-updated">Loopme 5.2.9 </li>
+                                    <li class="ch-updated">Mobfox 3.5.0 </li>
+                                    <li class="ch-updated">Mopub 5.0.0 </li>
+                                    <li class="ch-updated">Startapp 3.8.4 </li>
+                                    <li class="ch-updated">Tapjoy 11.12.2 </li>
+                                    <li class="ch-updated">UnityAds 2.2.1 </li>
+                                    <li class="ch-updated">Vungle 6.2.5 </li>
+                                </ul>
+                            </section>
+		        
+                        <section id="changelog-ios-1.1.0">
+                            <div class="promo left small-icon">
+                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                                <h3>iOS</h3>
+                            </div>
+                            <ul class="changelog">
+                                    <li class="ch-updated">iOS Core Package </li>
+                                    <li class="ch-updated">AMRSDK 1.3.55 &nbsp;&nbsp;<small>&nbsp;~ GDPR compatibility</small></li>
+                                    <li class="ch-updated">Adcolony 3.3.4.0 </li>
+                                    <li class="ch-updated">Admob 7.31.0.0 </li>
+                                    <li class="ch-updated">Applovin 5.0.1.0 </li>
+                                    <li class="ch-updated">Charboost 7.2.0.0 </li>
+                                    <li class="ch-updated">Facebook 4.28.1.0 </li>
+                                    <li class="ch-updated">Flurry 8.6.1.0 </li>
+                                    <li class="ch-updated">Fyber 8.21.0.0 </li>
+                                    <li class="ch-updated">Inmobi 7.1.1.0 </li>
+                                    <li class="ch-updated">Ironsource 6.7.9.0 </li>
+                                    <li class="ch-updated">Loopme 6.4.5.3 </li>
+                                    <li class="ch-updated">Mobfox 3.5.0.0 </li>
+                                    <li class="ch-updated">Mopub 5.0.0.0 </li>
+                                    <li class="ch-updated">Nexage 6.8.0.0 </li>
+                                    <li class="ch-updated">Smaato 9.0.0.0 </li>
+                                    <li class="ch-updated">Startapp 3.7.1.0 </li>
+                                    <li class="ch-updated">Tapjoy 11.12.2.0 </li>
+                                    <li class="ch-updated">UnityAds 2.2.1.1 </li>
+                                    <li class="ch-updated">Vungle 6.2.0.0 </li>
+                            </ul>
+                        </section>    
+
+                
 				<h3 id="v.1.0.21">Version 1.0.21
                             <small class="release-date">May 07, 2018</small>
                         </h3>

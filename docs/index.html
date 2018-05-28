@@ -2158,30 +2158,36 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
 	{
 		if(andrArr.length + iosArr.length == 1 && uFlag == 0)
 		{
+			var reqPath =  "http://download.admost.com/OneFileDownloader.aspx";
 			if(andrArr.length==1)
 			{
 				if(andrArr[0]!="Platform Related Core")
 				{
-					var s =  "https://github.com/admost/amrunity/raw/master/packages/android/amr_android_" + andrArr[0].replace(/\s/g,'').toLowerCase() + ".unitypackage";
+					//var s =  "https://github.com/admost/amrunity/raw/master/packages/android/amr_android_" + andrArr[0].replace(/\s/g,'').toLowerCase() + ".unitypackage";					
+					var s = reqPath + "?type=android&d=" + andrArr[0].replace(/\s/g,'').toLowerCase();
 				}
 				else
 				{
-					var s = "https://github.com/admost/amrunity/raw/master/packages/android/amr_android_core.unitypackage";
+					//var s = "https://github.com/admost/amrunity/raw/master/packages/android/amr_android_core.unitypackage";
+					var s = reqPath + "?type=android&d=" + "core";
 				}
 			}
 			else if(iosArr.length==1)
 			{
 				if(iosArr[0]!="Platform Related Core" && iosArr[0] != "Unity Ads")
 				{
-					var s =  "https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_" + iosArr[0].replace(/\s/g,'').toLowerCase() + ".unitypackage";
+					//var s =  "https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_" + iosArr[0].replace(/\s/g,'').toLowerCase() + ".unitypackage";
+					var s = reqPath + "?type=ios&d=" + iosArr[0].replace(/\s/g,'').toLowerCase();
 				}
 				else if ( iosArr[0] == "Unity Ads")
 				{
-					var s = "https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_unity.unitypackage";
+					//var s = "https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_unity.unitypackage";
+					var s = reqPath + "?type=ios&d=" + "unity"
 				}
 				else
 				{
-					var s = "https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_core.unitypackage"
+					//var s = "https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_core.unitypackage"
+					var s = reqPath + "?type=ios&d=" + "core"
 				}
 			}
 			window.location = s;
@@ -2189,7 +2195,10 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
 
 		else if (andrArr.length + iosArr.length == 0 && uFlag==1)
 		{
-			var s = "https://github.com/admost/amrunity/raw/master/packages/amr_unity_core.unitypackage";
+			//var reqPath =  "http://localhost:62029/OneFileDownloader.aspx";
+			var reqPath =  "http://download.admost.com/OneFileDownloader.aspx";
+			//var s = "https://github.com/admost/amrunity/raw/master/packages/amr_unity_core.unitypackage";
+			var s = reqPath + "?type=core&d=" + "core"
 			window.location = s;
 		}
 

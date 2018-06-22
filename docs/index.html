@@ -702,7 +702,7 @@ AMR.AMRSDK.hideBanner();
 // Banner Callbacks - Optional
 AMR.AMRSDK.setOnBannerReady(onBannerReady);
 
-public void onBannerReady(string networkName) {}
+public void onBannerReady(string networkName, double ecpm) {}
                 </code></pre>
 
                 <h3 id="interstitial-ads">Interstitial Ads</h3>
@@ -732,10 +732,10 @@ AMR.AMRSDK.setOnInterstitialFail(onInterstitialFail);
 AMR.AMRSDK.setOnInterstitialShow(onInterstitialShow);
 AMR.AMRSDK.setOnInterstitialDismiss(onInterstitialDismiss);
 
-public void onInterstitialReady(string networkName) {}
-public void onInterstitialFail(string error) {}
-public void onInterstitialShow(string message) {}
-public void onInterstitialDismiss(string message) {}
+public void onInterstitialReady(string networkName, double ecpm) {}
+public void onInterstitialFail(string errorMessage) {}
+public void onInterstitialShow() {}
+public void onInterstitialDismiss() {}
                 </code></pre>
 
                 <h3 id="rewarded-ads">Rewarded Ads</h3>
@@ -766,11 +766,11 @@ AMR.AMRSDK.setOnRewardedVideoShow(OnVideoShow);
 AMR.AMRSDK.setOnRewardedVideoDismiss(OnVideoDismiss);
 AMR.AMRSDK.setOnRewardedVideoComplete(OnVideoComplete);
 
-public void OnVideoReady(string networkName) {}
-public void OnVideoFail(string error) {}
-public void OnVideoShow(string message) {}
-public void OnVideoDismiss(string message) {}
-public void OnVideoComplete(string message) {}
+public void OnVideoReady(string networkName, double ecpm) {}
+public void OnVideoFail(string errorMessage) {}
+public void OnVideoShow() {}
+public void OnVideoDismiss() {}
+public void OnVideoComplete() {}
                 </code></pre>
 
 
@@ -1087,7 +1087,7 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
                 <section id="changelog-unity-1.1.3">
                   <ul class="changelog">
                         <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.1.3
+                            <code>AMRPlugin.dll</code> 1.1.3 &nbsp;&nbsp;<small>&nbsp;~ Delegate methods updated.</small>
                         </li>
                     </ul>      
                 </section>

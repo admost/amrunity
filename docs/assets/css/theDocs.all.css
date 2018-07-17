@@ -178,7 +178,7 @@ body[data-spy] {
 
 .site-header .navbar-brand > img {
   display: inline-block;
-  max-height: 50px;
+  max-height: 36px;
   -webkit-transition: 0.2s ease;
   -o-transition: 0.2s ease;
   transition: 0.2s ease;
@@ -196,7 +196,7 @@ body[data-spy] {
 }
 
 .site-header.navbar-sm .navbar-brand > img {
-  max-height: 34px;
+  max-height: 24px;
 }
 
 .site-header.navbar-lg .navbar {

@@ -92,12 +92,16 @@
                     <a href="#usage">Usage</a>
                     <ul>
                         <li><a href="#initialization">Initialization</a></li>
-                        <ul style="display: block;">
+                            <ul style="display: block;">
                                 <li><a href="#initgdpr">GDPR</a></li>
                             </ul>
                         <li><a href="#banner-ads">Banner Ads</a></li>
                         <li><a href="#interstitial-ads">Interstitial Ads</a></li>
                         <li><a href="#rewarded-ads">Rewarded Video Ads</a></li>
+                        <li><a href="#offerwall-ads">Offerwall Ads</a></li>
+                            <ul style="display: block;">
+                                <li><a href="#spend-virtual-currency">Spend Virtual Currency</a></li>
+                            </ul>
                     </ul>
                 </li>
 
@@ -660,6 +664,9 @@ config.InterstitialIdIOS = &quot;&lt;Your IOS Interstitial Zone Id&gt;&quot;;
 config.RewardedVideoIdAndroid = &quot;&lt;Your Android Video Zone Id&gt;&quot;;
 config.RewardedVideoIdIOS = &quot;&lt;Your IOS Video Zone Id&gt;&quot;;
 
+config.OfferWallIdAndroid = &quot;&lt;Your Android Offerwall Zone Id&gt;&quot;;
+config.OfferWallIdIOS = &quot;&lt;Your IOS Offerwall Zone Id&gt;&quot;;
+
 //GDPR COMPLIANCE
 config.UserConsent = "1";
 config.SubjectToGDPR = "1";
@@ -761,7 +768,7 @@ public void onInterstitialDismiss() {}
 AMR.AMRSDK.loadRewardedVideo();
                 </code></pre>
 
-                <p> To load an rewarded video ad, run the following code;</p>
+                <p> To show an rewarded video ad, run the following code;</p>
 
                 <pre><code class="language-c">
 if (AMR.AMRSDK.isRewardedVideoReady())
@@ -785,7 +792,41 @@ public void OnVideoDismiss() {}
 public void OnVideoComplete() {}
                 </code></pre>
 
+<h3 id="offerwall-ads">Offerwall Ads</h3>
 
+                <p> To load an offerwall ad, run the following code;</p>
+
+                <pre><code class="language-c">
+AMR.AMRSDK.loadOfferWall();
+                </code></pre>
+
+                <p> To show an offerwall ad, run the following code;</p>
+
+                <pre><code class="language-c">
+if (AMR.AMRSDK.isOfferWallReady())
+	AMR.AMRSDK.showOfferWall();
+                </code></pre>
+
+                <p>You can subscribe to 3 callback functions OnOfferWallReady, OnOfferWallFail and
+                    OnOfferWallDismiss to catch offerwall events.</p>
+                <pre><code class="language-c">
+// Offerwall Callbacks - Optional
+AMR.AMRSDK.setOnOfferWallReady(OnOfferWallReady);
+AMR.AMRSDK.setOnOfferWallFail(OnOfferWallFail);
+AMR.AMRSDK.setOnOfferWallDismiss(OnOfferWallDismiss);
+
+public void OnOfferWallReady(string networkName, double ecpm) {}
+public void OnOfferWallFail(string error)
+public void OnOfferWallDismiss()
+                </code></pre>
+
+            <h4 id="spend-virtual-currency">Spend Virtual Currency</h4>
+            <pre><code class="language-c">
+                // Spend Virtual Currency Callbacks - Optional
+AMR.AMRSDK.setOnDidSpendVirtualCurrency(OnVirtualCurrencyDidSpend);
+                
+public void OnVirtualCurrencyDidSpend(string networkName, string currency, double amount) {}
+            </code></pre>
             </section>
 
             <h2 id="gdpr">GDPR</h2>

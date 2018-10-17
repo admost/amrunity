@@ -87,6 +87,10 @@
                 <li><a href="#prerequisites">Prerequisites</a></li>
                 <li>
                     <a href="#setup">Setup</a>
+                        <ul>
+                            <li><a href="#androidsetupnotes">Android Setup Notes</a></li>
+                            <li><a href="#iossetupnotes">iOS Setup Notes</a></li>
+                        </ul>
                 </li>
                 <li>
                     <a href="#usage">Usage</a>
@@ -124,7 +128,7 @@
                 <li><a href="#release-notes">Release Notes</a>
 
                     <ul>
-                        <li><a href="#updating-from-previous">Updating after 17.10.2017</a></li>
+                        <li><a href="#updating-from-previous">Updating after 17.10.2018</a></li>
                         <li>
                             <a href="#versions">Versions</a>
                         </li>
@@ -133,14 +137,14 @@
 
                 </li>
             </ul>
-
         </aside>
-        <!-- END Sidebar -->
+        <!-- End Sidebar -->
 
 
         <!-- Main content -->
         <article class="col-sm-8 main-content" role="main">
 
+            <!-- Prerequisites -->
             <section>
                 <h2 id="prerequisites">Prerequisites</h2>
                 <ul>
@@ -148,17 +152,24 @@
                     </li>
                     <li> Application Id provided in Admost Mediation Dashboard.
                     </li>
-                    <li> Zone Id(s) provided in <a href="http://dashboard.admost.com">Admost Mediation Dashboard.</a>
+                    <li> Zone Id(s) provided in <a href="http://dashboard.admost.com" target="_blank">Admost Mediation Dashboard.</a>
+                    </li>
+                    <li> Xcode 9.0 and iOS 8 or later for iOS.</a>
+                    </li>
+                    <li> <a href="https://cocoapods.org/" target="_blank">Cocoapods</a> for iOS.
                     </li>
                 </ul>
             </section>
+            <!-- End Prerequisites -->
 
+            <!-- Setup -->
             <section>
                 <h2 id="setup">Setup</h2>
 
                 <div class="alert alert-danger" role="alert">
-                    <a href="#versions" class="alert-link">Updating after 17.10.2017</a>
+                    <a href="#versions" class="alert-link">Updating after 17.10.2018</a>
                 </div>
+
                 <p>Please refer to following table for required and optional packages for your target
                     platform.</p>
 
@@ -180,7 +191,7 @@
                             <td colspan="2" class="text-center">
                                <button type="button" onclick="toggleAdNetworkStatus('u1');" id="u1" class="btn btn-outline btn-block btn-primary"><i
 										style="padding-right: 16px;" class="fa fa-android"></i>/<i
-										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.2.4</button>
+										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.2.6</button>
                             </td>
                         </tr>
                         <tr>
@@ -190,12 +201,12 @@
 
                             <td class="text-right">
                                 <button type="button" onclick = "toggleAdNetworkStatus('a1');" id="a1" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.7.4</button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.7.6</button>
                                
                             </td>
                             <td class="text-right">
                                             <button type="button" onclick = "toggleAdNetworkStatus('i1');" id="i1" class="btn btn-outline btn-block btn-default"><i
-                                                class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.68</button>
+                                                class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.74</button>
 											
                             </td>
                         </tr>
@@ -232,7 +243,7 @@
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i3');" id="i3" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.32.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.34.0</button>
                                 
                             </td>
                         </tr>
@@ -248,7 +259,6 @@
                                             class="fa fa-apple"></i>&nbsp;&nbsp;v.2.1.1</button>
                                     </td>         
                         </tr>
-
 
                         <tr>
                             <td><span class="label label-success">Optional</span></td>
@@ -283,7 +293,7 @@
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i6');" id="i6"  class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.5.1.1</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.5.1.2</button>
 							
                             </td>
                         </tr>
@@ -322,7 +332,7 @@
                             <td class="text-right">
                                 
 								<button type="button"  onclick="toggleAdNetworkStatus('i8');" id="i8" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.2.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.3.0</button>
 						   
                             </td>
                         </tr>
@@ -335,13 +345,13 @@
                             <td class="text-right">
 						   
 								<button type="button"  onclick="toggleAdNetworkStatus('a9');" id="a9" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.4.28.2</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.5.0.0</button>
 							
                             </td>
                             <td class="text-right">
                                
 								<button type="button"  onclick="toggleAdNetworkStatus('i9');" id="i9" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.4.99.2</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.5.0.1</button>
 							
                             </td>
                         </tr>
@@ -392,13 +402,13 @@
                             <td class="text-right">
 								
 								<button type="button" onclick="toggleAdNetworkStatus('a12');" id="a12" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.7.1.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.1</button>
 						   
                             </td>
                             <td class="text-right">
 							
 								<button type="button" onclick="toggleAdNetworkStatus('i12');" id="i12" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.1.2</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.2.0</button>
                             </td>
                         </tr>
 
@@ -416,7 +426,7 @@
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i13');" id="i13" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.7.10</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.7.12</button>
                                 
                             </td>
                         </tr>
@@ -534,9 +544,9 @@
 						  
                             </td>
                             <td class="text-right">
-                               
+                            
 								<button type="button" onclick="toggleAdNetworkStatus('i20');" id="i20" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.12.0.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.12.1.0</button>
 							
                             </td>
                         </tr>
@@ -573,7 +583,7 @@
                             <td class="text-right">
                                 
 								<button type="button" onclick="toggleAdNetworkStatus('i22');" id="i22" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.2.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.3.1</button>
 						   
                             </td>
                         </tr>
@@ -581,22 +591,50 @@
                     </table>
                 </div>
 
-                <div class="callout callout-danger" role="alert">
-                    <h4></h4>
-                    <p>If you are integrating <span class="label label-success"><i class="fa fa-android"></i>&nbsp;Applovin</span>
-                        in your application. You have to edit <var>applovin.sdk.key</var> value inside <code>Plugins/Android/amr_definition/AndroidManifest.xml</code>
-                    </p>
-                </div>
-                <div class="callout callout-danger" role="alert">
-                    <h4></h4>
-                    <p>If you are using <span class="label label-dark"><i class="fa fa-apple"></i>&nbsp;Applovin</span>
-                        add the following lines to your application info <code>plist</code> file in Xcode project.</p>
-                    <pre><code class="language-markup">&lt;key&gt;AppLovinSdkKey&lt;/key&gt;
+                <h3 id="androidsetupnotes">Android Setup Notes</h3>
+
+                <ul>
+                    <li>
+                        <h5 id="androidapplovinconfig">Applovin Configuration</h5>
+                        <div class="callout callout-danger" role="alert">
+                            <p>If you are integrating <span class="label label-success"><i class="fa fa-android"></i>&nbsp;Applovin</span>
+                                in your application. You have to edit <var>applovin.sdk.key</var> value inside <code>Plugins/Android/amr_definition/AndroidManifest.xml</code>
+                            </p>
+                        </div>
+                    </li>
+                </ul>
+
+                <h3 id="iossetupnotes">iOS Setup Notes</h3>
+                <ul>
+                    <li>
+                        <h5 id="ioscocoapodsconfig">Cocoapods Configuration</h5>
+                        <p>After export your Unity project to Xcode, double click to <code>open_pods.command</code> file in your Xcode project root folder. Network adapters will be installed automatically with <a href="https://cocoapods.org/" target="_blank">Cocoapods</a>.
+                        </p>
+                            If you already use Cocoapods in your project then just add necessary AMRAdapter pods to your <code>Podfile</code>.
+                        <p>
+
+                        </p>
+                    </li>
+                    <li>
+                        <h5 id="iosapplovinconfig">Applovin Configuration</h5>
+                        <div class="callout callout-danger" role="alert">
+                            <h4></h4>
+                            <p>If you are using <span class="label label-dark"><i class="fa fa-apple"></i>&nbsp;Applovin</span>
+                                add the following lines to your application info <code>plist</code> file in Xcode project.</p>
+<pre><code class="language-markup">&lt;key&gt;AppLovinSdkKey&lt;/key&gt;
 &lt;string&gt;YOUR_KEY&lt;/string&gt;</code></pre>
-                </div>
+                        </div>
+                    </li>
+                    <li>
+                        <h5 id="ioswarningnotes">Version Warning</h5>
+                        Facebook, Loopme and Mobfox adapters support iOS9 or later.
+                    </li>
+                </ul>
 
             </section>
+            <!-- End Setup -->
 
+            <!-- Usage -->
             <section>
                 <h2 id="usage">Usage</h2>
                 <h3 id="initialization">Initialization</h3>
@@ -781,8 +819,11 @@ AMR.AMRSDK.setOnDidSpendVirtualCurrency(OnVirtualCurrencyDidSpend);
 public void OnVirtualCurrencyDidSpend(string networkName, string currency, double amount) {}
             </code></pre>
             </section>
+            <!-- End Usage -->
 
-            <h2 id="gdpr">GDPR</h2>
+            <!-- GDPR -->
+            <section>
+                <h2 id="gdpr">GDPR</h2>
 				 
                 <p>We specified your responsibilities for obtaining consent from end-users of your apps in our updated <a href="https://www.admost.com/privacy-policy">Privacy Policy</a>. By updating GDPR compatible SDK you agree that you’re responsible for inform the end-users and take their consent. 
 						Please note that the consent collection applies only to users located in the European Economic Area, the United Kingdom, and Switzerland.
@@ -924,112 +965,113 @@ public void OnVirtualCurrencyDidSpend(string networkName, string currency, doubl
 				<p>If the publisher obtains user's consent and sets <code>config.UserConsent = "1"</code>, personalized ads would be shown to the users. Otherwise, the publisher sets <code>config.UserConsent = "0"</code> which would block the personalized ads, unless the user is not subject to GDPR.</p> 
 				<p>If the publisher does not use <code>config.UserConsent</code> method , userConsent status remains unknown. In this case, if the publisher provides <code>config.SubjectToGDPR = "1"</code>, the ad networks do not have ability to serve personalized ads.If the publisher provides <code> config.SubjectToGDPR = "0"</code>, the ad networks have ability to serve personalized ads.</p> 
 				<p>If the publisher does not provide both <code>config.UserConsent</code>  and <code>config.SubjectToGDPR</code>, Admost decides whether the user is located  in EU or not which is totally under responsibility of the publisher. </p> 
-				<p>If the publisher wants to obtain neither the user's consent nor any negative legal consequences, the publisher must set <code>config.UserConsent = "0"</code> for every user. In this case, Admost considers the user has no consent,  the ad networks are not allowed to serve personalized ads, except only the publisher does not provide <code>config.SubjectToGDPR = "0" </code>.</p>
-					
+				<p>If the publisher wants to obtain neither the user's consent nor any negative legal consequences, the publisher must set <code>config.UserConsent = "0"</code> for every user. In this case, Admost considers the user has no consent,  the ad networks are not allowed to serve personalized ads, except only the publisher does not provide <code>config.SubjectToGDPR = "0" </code>.</p>	
+            </section>
+            <!-- End GDPR -->
 
-            <h2 id="extras">Extras</h2>
-            <h3 id="testsuite">Test Suite</h3>
-            <p>
-                You can use Test Suite to test your ad networks with your zone ids.
-            </p>
+            <!-- Extras -->
+            <section>
+                <h2 id="extras">Extras</h2>
+                <h3 id="testsuite">Test Suite</h3>
+                <p>
+                    You can use Test Suite to test your ad networks with your zone ids.
+                </p>
 
-            <p>
-                To use Test Suite in your application, you can use following code;
-            </p>
+                <p>
+                    To use Test Suite in your application, you can use following code;
+                </p>
 
-            <pre><code class="language-c">
-// Call method with tested zone ids
-#if UNITY_IPHONE
-AMR.AMRSDK.startTestSuite(new string[] {"IOS_ZONE_ID","ANOTHER_IOS_ZONE_ID"});
-#endif
-#if UNITY_ANDROID
-AMR.AMRSDK.startTestSuite(new string[] {"ANDROID_ZONE_ID","ANOTHER_ANDROID_ZONE_ID"});
-#endif
-                </code></pre>
+                <pre><code class="language-c">
+    // Call method with tested zone ids
+    #if UNITY_IPHONE
+    AMR.AMRSDK.startTestSuite(new string[] {"IOS_ZONE_ID","ANOTHER_IOS_ZONE_ID"});
+    #endif
+    #if UNITY_ANDROID
+    AMR.AMRSDK.startTestSuite(new string[] {"ANDROID_ZONE_ID","ANOTHER_ANDROID_ZONE_ID"});
+    #endif
+                    </code></pre>
 
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android"></i>
-                        <h3>Android</h3>
-                        <img class="img-responsive"
-                             src="https://admost.github.io/amrunity/assets/img/android_testsuite.png"
-                             alt="shadowed image">
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android"></i>
+                            <h3>Android</h3>
+                            <img class="img-responsive"
+                                src="https://admost.github.io/amrunity/assets/img/android_testsuite.png"
+                                alt="shadowed image">
+                        </div>
+
                     </div>
+                    <div class="col-md-6">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple"></i>
+                            <h3>iOS</h3>
+                            <img class="img-responsive"
+                                src="https://admost.github.io/amrunity/assets/img/ios_testsuite.png"
+                                alt="shadowed image">
+                        </div>
 
-                </div>
-                <div class="col-md-6">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple"></i>
-                        <h3>iOS</h3>
-                        <img class="img-responsive"
-                             src="https://admost.github.io/amrunity/assets/img/ios_testsuite.png"
-                             alt="shadowed image">
                     </div>
-
                 </div>
 
+                <h3 id="iap">In App Purchase Tracking&nbsp;<span class="label label-teal">New</span></h3>
+                <p>
+                    The following call is used to track purchases with receipt validation:
+                </p>
 
-            </div>
+                <div class="promo left small-icon">
+                    <i class="fa fa-android" style="color: #00af97"></i>
+                    <h3>Android</h3>
+                </div>
 
-            <h3 id="iap">In App Purchase Tracking&nbsp;<span class="label label-teal">New</span></h3>
-            <p>
-                The following call is used to track purchases with receipt validation:
-            </p>
+                <pre><code class="language-c">
+                    //Product refers UnityEngine.Purchasing class object
+    AMR.AMRSDK.trackPurchaseForAndroid( product.receipt,
+                                        product.metadata.localizedPrice,
+                                        product.metadata.isoCurrencyCode);
+                    </code></pre>
 
-            <div class="promo left small-icon">
-                <i class="fa fa-android" style="color: #00af97"></i>
-                <h3>Android</h3>
-            </div>
+                <p>Explanation of parameters:</p>
+                <ul>
+                    <li><b>receipt</b> – The purchase receipt for this product
+                    </li>
+                    <li><b>localizedPrice</b> – Decimal product price denominated in the currency indicated by isoCurrencySymbol.
 
-            <pre><code class="language-c">
-                //Product refers UnityEngine.Purchasing class object
-AMR.AMRSDK.trackPurchaseForAndroid( product.receipt,
+                    </li>
+
+                    <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
+
+                    </li>
+
+
+                </ul>
+
+                <div class="promo left small-icon">
+                    <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                    <h3>iOS</h3>
+                </div>
+
+                <pre><code class="language-c">
+                    //Product refers UnityEngine.Purchasing class object
+    AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
                                     product.metadata.localizedPrice,
                                     product.metadata.isoCurrencyCode);
-                </code></pre>
+                    </code></pre>
+                <ul>
+                    <li><b>transactionID</b> – A unique identifier for this product's transaction
+                    </li>
+                    <li><b>localizedPrice</b> – Decimal product price denominated in the currency indicated by isoCurrencySymbol.
 
-            <p>Explanation of parameters:</p>
-            <ul>
-                <li><b>receipt</b> – The purchase receipt for this product
-                </li>
-                <li><b>localizedPrice</b> – Decimal product price denominated in the currency indicated by isoCurrencySymbol.
+                    </li>
 
-                </li>
+                    <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
 
-                <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
-
-                </li>
+                    </li>
 
 
-            </ul>
+                </ul>
 
-            <div class="promo left small-icon">
-                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                <h3>iOS</h3>
-            </div>
-
-            <pre><code class="language-c">
-                //Product refers UnityEngine.Purchasing class object
-AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
-                                product.metadata.localizedPrice,
-                                product.metadata.isoCurrencyCode);
-                </code></pre>
-            <ul>
-                <li><b>transactionID</b> – A unique identifier for this product's transaction
-                </li>
-                <li><b>localizedPrice</b> – Decimal product price denominated in the currency indicated by isoCurrencySymbol.
-
-                </li>
-
-                <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
-
-                </li>
-
-
-            </ul>
-
-            <h3 id="senduserid">Setting Application User Id <span class="label label-teal">New</span></h3>
+                <h3 id="senduserid">Setting Application User Id <span class="label label-teal">New</span></h3>
 
                 <p>
                     You can use the following method to set application specific user id in AMR Analytics for enhanced tracking of your users. You have to call this method after initialization.
@@ -1039,210 +1081,251 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
                 </code></pre>
 
-            <h2 id="release-notes">Release Notes</h2>
-
-            <header>
-
-                <p>In this page, you can find a record of all the changes made to this project such as bug fixes,
-                    new features, etc.</p>
-
-                <ol class="toc">
-					<li><a href="#v.1.2.4"> Version 1.2.4</a></li>
-                    <li><a href="#v.1.2.3"> Version 1.2.3</a></li>
-                    <li><a href="#v.1.2.2"> Version 1.2.2</a></li>
-                    <li><a href="#v.1.2.1"> Version 1.2.1</a></li>
-					<li><a href="#v.1.1.6"> Version 1.1.6</a></li>
-                    <li><a href="#v.1.1.5"> Version 1.1.5</a></li>
-                    <li><a href="#v.1.1.4"> Version 1.1.4</a></li>
-                    <li><a href="#v.1.1.3"> Version 1.1.3</a></li>
-                    <li><a href="#v.1.1.2"> Version 1.1.2</a></li>
-					<li><a href="#v.1.1.1"> Version 1.1.1</a></li>
-                    <li><a href="#v.1.1.0"> Version 1.1.0</a></li>
-					<li><a href="#v.1.0.21"> Version 1.0.21</a></li>
-					<li><a href="#v.1.0.20"> Version 1.0.20</a></li>
-                    <li><a href="#v.1.0.19"> Version 1.0.19</a></li>
-                    <li><a href="#v.1.0.18"> Version 1.0.18</a></li>
-                    <li><a href="#v.1.0.17"> Version 1.0.17</a></li>
-                    <li><a href="#v.1.0.16"> Version 1.0.16</a></li>
-					<li><a href="#v.1.0.15"> Version 1.0.15</a></li>
-                    <li><a href="#v.1.0.14"> Version 1.0.14</a></li>
-                	<li><a href="#v.1.0.13"> Version 1.0.13</a></li>
-                    <li><a href="#v.1.0.12"> Version 1.0.12</a></li>
-                    <li><a href="#v.1.0.11"> Version 1.0.11</a></li>
-                	<li><a href="#v.1.0.10"> Version 1.0.10</a></li>
-                    <li><a href="#v.1.0.9"> Version 1.0.9</a></li>
-                    <li><a href="#v.1.0.8"> Version 1.0.8</a></li>
-                    <li><a href="#v.1.0.7"> Version 1.0.7</a></li>
-                    <li><a href="#v.1.0.6"> Version 1.0.6</a></li>
-                    <li><a href="#v.1.0.5"> Version 1.0.5</a></li>
-                    <li><a href="#v.1.0.4"> Version 1.0.4</a></li>
-                    <li><a href="#v.1.0.3"> Version 1.0.3</a></li>
-                    <li><a href="#v.1.0.2"> Version 1.0.2</a></li>
-                    <li><a href="#v.1.0.1"> Version 1.0.1</a></li>
-                    <li><a href="#v.1.0.0"> Version 1.0.0</a></li>
-                </ol>
-            </header>
-
-            <section id="updating-from-previous">
-                <h3>Updating after 17.10.2017</h3>
-
-                <p>From 17.10.2017 our package system is completely revised. We deployed all of our SDK files in same
-                    folder.</p>
-                <p>If you are using previous version you are able to achieve same goal via new packaging system.
-                </p>
-
-                <div class="callout callout-danger" role="alert">
-                    <p class="text-danger">You have to delete all packages related to AMR SDK before using v.1.0.0</p>
-                </div>
             </section>
+            <!-- End Extras -->
+            
+            <!-- Release Notes -->
+            <section>
+                <h2 id="release-notes">Release Notes</h2>
 
-			<section id="versions">
-<h3 id="v.1.2.4">Version 1.2.4
-					<small class="release-date">September 05, 2018</small>
-                </h3>
-                 <section id="changelog-unity-1.2.4">
-                  <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.2.4
-                        </li>
-                    </ul>      
+                <header>
+                    <p>In this page, you can find a record of all the changes made to this project such as bug fixes,
+                        new features, etc.</p>
+
+                    <ol class="toc">
+                        <li><a href="#v.1.2.6"> Version 1.2.6</a></li>
+                        <li><a href="#v.1.2.4"> Version 1.2.4</a></li>
+                        <li><a href="#v.1.2.3"> Version 1.2.3</a></li>
+                        <li><a href="#v.1.2.2"> Version 1.2.2</a></li>
+                        <li><a href="#v.1.2.1"> Version 1.2.1</a></li>
+                        <li><a href="#v.1.1.6"> Version 1.1.6</a></li>
+                        <li><a href="#v.1.1.5"> Version 1.1.5</a></li>
+                        <li><a href="#v.1.1.4"> Version 1.1.4</a></li>
+                        <li><a href="#v.1.1.3"> Version 1.1.3</a></li>
+                        <li><a href="#v.1.1.2"> Version 1.1.2</a></li>
+                        <li><a href="#v.1.1.1"> Version 1.1.1</a></li>
+                        <li><a href="#v.1.1.0"> Version 1.1.0</a></li>
+                        <li><a href="#v.1.0.21"> Version 1.0.21</a></li>
+                        <li><a href="#v.1.0.20"> Version 1.0.20</a></li>
+                        <li><a href="#v.1.0.19"> Version 1.0.19</a></li>
+                        <li><a href="#v.1.0.18"> Version 1.0.18</a></li>
+                        <li><a href="#v.1.0.17"> Version 1.0.17</a></li>
+                        <li><a href="#v.1.0.16"> Version 1.0.16</a></li>
+                        <li><a href="#v.1.0.15"> Version 1.0.15</a></li>
+                        <li><a href="#v.1.0.14"> Version 1.0.14</a></li>
+                        <li><a href="#v.1.0.13"> Version 1.0.13</a></li>
+                        <li><a href="#v.1.0.12"> Version 1.0.12</a></li>
+                        <li><a href="#v.1.0.11"> Version 1.0.11</a></li>
+                        <li><a href="#v.1.0.10"> Version 1.0.10</a></li>
+                        <li><a href="#v.1.0.9"> Version 1.0.9</a></li>
+                        <li><a href="#v.1.0.8"> Version 1.0.8</a></li>
+                        <li><a href="#v.1.0.7"> Version 1.0.7</a></li>
+                        <li><a href="#v.1.0.6"> Version 1.0.6</a></li>
+                        <li><a href="#v.1.0.5"> Version 1.0.5</a></li>
+                        <li><a href="#v.1.0.4"> Version 1.0.4</a></li>
+                        <li><a href="#v.1.0.3"> Version 1.0.3</a></li>
+                        <li><a href="#v.1.0.2"> Version 1.0.2</a></li>
+                        <li><a href="#v.1.0.1"> Version 1.0.1</a></li>
+                        <li><a href="#v.1.0.0"> Version 1.0.0</a></li>
+                    </ol>
+                </header>
+
+                <section id="updating-from-previous">
+                    <h3>Updating after 17.10.2018</h3>
+
+                    <p>From 17.10.2018 our package system is completely revised. </p>
+                    <p>If you are using previous version you are able to achieve same goal via new packaging system.
+                    </p>
+
+                    <div class="callout callout-danger" role="alert">
+                        <p class="text-danger">You have to delete all files and folders related to AMR SDK before using v.1.2.6</p>
+                    </div>
                 </section>
 
-                <section id="changelog-android-1.2.3">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                            <li class="ch-updated">AMR Android SDK 1.7.4 </li>
-                            <li class="ch-updated">Ironsource 6.7.10 </li>
-							<li class="ch-updated">Vungle 6.3.12 </li>
-
-                    </ul>
-                </section> 
-                <section id="changelog-ios-1.2.4">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-                            <li class="ch-updated">iOS Core Package </li>
-                            <li class="ch-updated">AMRSDK 1.3.69 </li>
-                    </ul>
-                </section> 
-			
-<h3 id="v.1.2.3">Version 1.2.3
-					<small class="release-date">August 16, 2018</small>
-                </h3>
-                 <section id="changelog-unity-1.2.3">
-                  <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.2.3
-                        </li>
-                    </ul>      
-                </section>
-
-                <section id="changelog-ios-1.2.3">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-                            <li class="ch-updated">iOS Core Package </li>
-                            <li class="ch-updated">AMRSDK 1.3.68 </li>
-                            <li class="ch-updated">Adcolony 3.3.5.0 </li>
-                            <li class="ch-updated">Admob 7.32.0.0 </li>
-                            <li class="ch-updated">Appnext 1.9.1.0 </li>
-                            <li class="ch-updated">Applovin 5.1.1.0 </li>
-                            <li class="ch-updated">DFP Adapter 7.32.0.0</li>
-                            <li class="ch-updated">Facebook 4.99.2.0 </li>
-                            <li class="ch-updated">Flurry 9.0.0.0 </li>
-                            <li class="ch-updated">Fyber 8.22.0.0 </li>
-                            <li class="ch-updated">Inmobi 7.1.2.0 </li>
-                            <li class="ch-updated">Mobfox 3.5.1.0 </li>
-                            <li class="ch-updated">Mopub 5.2.0.0 </li>
-                            <li class="ch-updated">Smaato 9.0.3.0 </li>
-                            <li class="ch-updated">Tapjoy 12.0.0.0 </li>
-                            <li class="ch-updated">UnityAds 2.3.0.0 </li>
-
-                    </ul>
-                </section> 
-
-<h3 id="v.1.2.2">Version 1.2.2
-					<small class="release-date">August 2, 2018</small>
-                </h3>
-                 <section id="changelog-unity-1.2.2">
-                  <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.2.2
-                        </li>
-                    </ul>      
-                </section>
-
-                <section id="changelog-ios-1.2.2">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-                            <li class="ch-updated">iOS Core Package </li>
-                            <li class="ch-updated">AMRSDK 1.3.66 </li>
-                            <li class="ch-updated">NSUserDefaults crashes fixed. </li>
-                            <li class="ch-updated">Ad requests now wait and processed after SDK initialization. </li>
-                    </ul>
-                </section> 
-
-                 <h3 id="v.1.2.1">Version 1.2.1
-					<small class="release-date">July 28, 2018</small>
-                </h3>
-                <section id="changelog-unity-1.2.1">
-                  <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.2.1 &nbsp;&nbsp;<small>&nbsp;~ OfferWall support added.</small>
-                        </li>
-                        <li class="ch-updated">Demo application updated </li>
-                        <li class="ch-added">OfferWall support added.</li>
-                    </ul>      
-                </section>
-
-                <section id="changelog-android-1.2.1">
-                  <div class="promo left small-icon">
-                            <i class="fa fa-android" style="color: #00af97"></i>
-                            <h3>Android</h3>
-                        </div>
-						<p style="color:red;">
-							<b>All adapters' versions changed, please update all adnetwork adapters even adnetwork version is the same with yours.</b>
-						</p>
-                        <ul class="changelog">
-                            <li class="ch-updated">AMR Android SDK 1.7.1 &nbsp;&nbsp;</li>
-                        </ul>      
-                </section>
-
-                <section id="changelog-ios-1.2.1">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-                            <li class="ch-updated">iOS Core Package </li>
-                            <li class="ch-updated">AMRSDK 1.3.64 </li>
-                            <li class="ch-updated">Ironsource 6.7.10.0 </li>
-                    </ul>
-                </section> 
-
-
-                    <h3 id="v.1.1.6">Version 1.1.6
-					<small class="release-date">July 9, 2018</small>
+                <section id="versions">
+                    <h3 id="v.1.2.6">Version 1.2.6
+                        <small class="release-date">October 17, 2018</small>
                     </h3>
-                    <br>
-                    <section id="changelog-unity-1.1.6">
-                      <ul class="changelog">
+                    <section id="changelog-unity-1.2.6">
+                    <ul class="changelog">
                             <li class="ch-updated">
-                                <code>AMRPlugin.dll</code> 1.1.6
+                                    <code> You have to delete all files and folders related to AMR SDK before using v.1.2.6 </code>
+                            </li>
+                            <li class="ch-updated"><code> Integration steps has changed! </code> </li>
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.2.6
                             </li>
                         </ul>      
                     </section>
-    
+
+                    <section id="changelog-android-1.2.6">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">AMR Android SDK 1.7.6 </li>
+                            <li class="ch-updated">Facebook 5.0.0 </li>
+                            <li class="ch-updated">Inmobi 7.2.1 </li>
+                        </ul>
+                    </section> 
+                    <section id="changelog-ios-1.2.6">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package </li>
+                                <li class="ch-updated">AMRSDK 1.3.74 </li>
+                                <li class="ch-updated">Applovin 5.1.2.0 </li>
+                                <li class="ch-updated">Facebook 5.0.1.0 </li>
+                                <li class="ch-updated">Chartboost 7.3.0.0 </li>
+                                <li class="ch-updated">Inmobi 7.2.0.0 </li>
+                                <li class="ch-updated">Ironsource 6.7.12.0 </li>
+                                <li class="ch-updated">Tapjoy 12.1.0.0 </li>
+                                <li class="ch-updated">Vungle 6.3.1.0 </li>
+                        </ul>
+                    </section> 
+
+                    <h3 id="v.1.2.4">Version 1.2.4
+                        <small class="release-date">September 05, 2018</small>
+                    </h3>
+                    <section id="changelog-unity-1.2.4">
+                    <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.2.4
+                            </li>
+                        </ul>      
+                    </section>
+
+                    <section id="changelog-android-1.2.4">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">AMR Android SDK 1.7.4 </li>
+                                <li class="ch-updated">Ironsource 6.7.10 </li>
+                                <li class="ch-updated">Vungle 6.3.12 </li>
+
+                        </ul>
+                    </section> 
+                    <section id="changelog-ios-1.2.4">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package </li>
+                                <li class="ch-updated">AMRSDK 1.3.69 </li>
+                        </ul>
+                    </section> 
+                
+                    <h3 id="v.1.2.3">Version 1.2.3
+                        <small class="release-date">August 16, 2018</small>
+                    </h3>
+                    <section id="changelog-unity-1.2.3">
+                    <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.2.3
+                            </li>
+                        </ul>      
+                    </section>
+
+                    <section id="changelog-ios-1.2.3">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package </li>
+                                <li class="ch-updated">AMRSDK 1.3.68 </li>
+                                <li class="ch-updated">Adcolony 3.3.5.0 </li>
+                                <li class="ch-updated">Admob 7.32.0.0 </li>
+                                <li class="ch-updated">Appnext 1.9.1.0 </li>
+                                <li class="ch-updated">Applovin 5.1.1.0 </li>
+                                <li class="ch-updated">DFP Adapter 7.32.0.0</li>
+                                <li class="ch-updated">Facebook 4.99.2.0 </li>
+                                <li class="ch-updated">Flurry 9.0.0.0 </li>
+                                <li class="ch-updated">Fyber 8.22.0.0 </li>
+                                <li class="ch-updated">Inmobi 7.1.2.0 </li>
+                                <li class="ch-updated">Mobfox 3.5.1.0 </li>
+                                <li class="ch-updated">Mopub 5.2.0.0 </li>
+                                <li class="ch-updated">Smaato 9.0.3.0 </li>
+                                <li class="ch-updated">Tapjoy 12.0.0.0 </li>
+                                <li class="ch-updated">UnityAds 2.3.0.0 </li>
+
+                        </ul>
+                    </section> 
+
+                    <h3 id="v.1.2.2">Version 1.2.2
+                        <small class="release-date">August 2, 2018</small>
+                    </h3>
+                    <section id="changelog-unity-1.2.2">
+                    <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.2.2
+                            </li>
+                        </ul>      
+                    </section>
+
+                    <section id="changelog-ios-1.2.2">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package </li>
+                                <li class="ch-updated">AMRSDK 1.3.66 </li>
+                                <li class="ch-updated">NSUserDefaults crashes fixed. </li>
+                                <li class="ch-updated">Ad requests now wait and processed after SDK initialization. </li>
+                        </ul>
+                    </section> 
+
+                    <h3 id="v.1.2.1">Version 1.2.1 <small class="release-date">July 28, 2018</small> </h3>
+                    <section id="changelog-unity-1.2.1">
+                    <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.2.1 &nbsp;&nbsp;<small>&nbsp;~ OfferWall support added.</small>
+                            </li>
+                            <li class="ch-updated">Demo application updated </li>
+                            <li class="ch-added">OfferWall support added.</li>
+                        </ul>      
+                    </section>
+
+                    <section id="changelog-android-1.2.1">
+                    <div class="promo left small-icon">
+                                <i class="fa fa-android" style="color: #00af97"></i>
+                                <h3>Android</h3>
+                            </div>
+                            <p style="color:red;">
+                                <b>All adapters' versions changed, please update all adnetwork adapters even adnetwork version is the same with yours.</b>
+                            </p>
+                            <ul class="changelog">
+                                <li class="ch-updated">AMR Android SDK 1.7.1 &nbsp;&nbsp;</li>
+                            </ul>      
+                    </section>
+
+                    <section id="changelog-ios-1.2.1">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package </li>
+                                <li class="ch-updated">AMRSDK 1.3.64 </li>
+                                <li class="ch-updated">Ironsource 6.7.10.0 </li>
+                        </ul>
+                    </section> 
+
+
+                    <h3 id="v.1.1.6">Version 1.1.6 <small class="release-date">July 9, 2018</small> </h3>
+                    <section id="changelog-unity-1.1.6">
+                        <ul class="changelog">
+                            <li class="ch-updated"> <code>AMRPlugin.dll</code> 1.1.6 </li>
+                        </ul>      
+                    </section>
+        
                     <section id="changelog-android-1.1.6">
                         <div class="promo left small-icon">
                             <i class="fa fa-android" style="color: #00af97"></i>
@@ -1252,26 +1335,23 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
                             <li class="ch-updated">AMR Android SDK 1.7.0 </li>
                             <li class="ch-updated">Applovin 8.0.2 </li>
                             <li class="ch-added">StartApp 3.9.3 </li>
-							<li class="ch-added">Tapjoy 12.0.0 </li>
+                            <li class="ch-added">Tapjoy 12.0.0 </li>
                         </ul>
                     </section> 
-			
-                    <h3 id="v.1.1.5">Version 1.1.5
-                        <small class="release-date">July 5, 2018</small>
-                    </h3>
-                    <br>
+                
+                    <h3 id="v.1.1.5">Version 1.1.5 <small class="release-date">July 5, 2018</small> </h3>
                     <section id="changelog-unity-1.1.5">
-                      <ul class="changelog">
+                    <ul class="changelog">
                             <li class="ch-updated">
                                 <code>AMRPlugin.dll</code> 1.1.5
                             </li>
                         </ul>      
                     </section>
-    
+        
                     <section id="changelog-ios-1.1.5">
                         <div class="promo left small-icon">
                             <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                            <h3>iOS</h3>
+                                <h3>iOS</h3>
                         </div>
                         <ul class="changelog">
                             <li class="ch-updated">iOS Core Package </li>
@@ -1281,18 +1361,15 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
                         </ul>
                     </section> 
 
-                    <h3 id="v.1.1.4">Version 1.1.4
-                        <small class="release-date">July 2, 2018</small>
-                    </h3>
-                    <br>
+                    <h3 id="v.1.1.4">Version 1.1.4 <small class="release-date">July 2, 2018</small> </h3>
                     <section id="changelog-unity-1.1.4">
-                      <ul class="changelog">
+                        <ul class="changelog">
                             <li class="ch-updated">
                                 <code>AMRPlugin.dll</code> 1.1.4
                             </li>
                         </ul>      
                     </section>
-    
+        
                     <section id="changelog-ios-1.1.4">
                         <div class="promo left small-icon">
                             <i class="fa fa-apple" style="color: #0b0b0b"></i>
@@ -1306,1060 +1383,946 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
                         </ul>
                     </section> 
 
-                <h3 id="v.1.1.3">Version 1.1.3
-                    <small class="release-date">June 21, 2018</small>
-                </h3>
-                <br>
-                <section id="changelog-unity-1.1.3">
-                  <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.1.3 &nbsp;&nbsp;<small>&nbsp;~ Delegate methods updated.</small>
-                        </li>
-                    </ul>      
-                </section>
+                    <h3 id="v.1.1.3">Version 1.1.3 <small class="release-date">June 21, 2018</small> </h3>
+                    <section id="changelog-unity-1.1.3">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.1.3 &nbsp;&nbsp;<small>&nbsp;~ Delegate methods updated.</small>
+                            </li>
+                        </ul>      
+                    </section>
 
-                <section id="changelog-android-1.1.3">
-                  <div class="promo left small-icon">
+                    <section id="changelog-android-1.1.3">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                            <ul class="changelog">
+                                <li class="ch-updated">AMR Android SDK 1.6.8 &nbsp;&nbsp;</li>
+                                <li class="ch-updated">Appnext 2.4.0.471 </li>
+                                <li class="ch-updated">Mopub 5.1.0 </li>
+                            </ul>      
+                    </section>
+
+                    <section id="changelog-ios-1.1.3">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package </li>
+                                <li class="ch-updated">AMRSDK 1.3.60 </li>
+                        </ul>
+                    </section>                  
+                            
+                    <h3 id="v.1.1.2">Version 1.1.2 <small class="release-date">June 7, 2018</small> </h3>
+                    <section id="changelog-unity-1.1.2">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.1.2
+                            </li>ææ
+                        </ul>
+                    </section>
+        
+                    <section id="changelog-ios-1.1.2">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package </li>
+                                <li class="ch-updated">AMRSDK 1.3.57 </li>
+                                <li class="ch-updated">Ironsource 6.7.9.2 </li>
+                        </ul>
+                    </section>   
+
+                    <h3 id="v.1.1.1">Version 1.1.1 <small class="release-date">May 31, 2018</small> </h3>
+                    <section id="changelog-unity-1.1.0">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.1.1 &nbsp;&nbsp;
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="changelog-android-1.1.1">
+                        <div class="promo left small-icon">
                             <i class="fa fa-android" style="color: #00af97"></i>
                             <h3>Android</h3>
                         </div>
                         <ul class="changelog">
-                            <li class="ch-updated">AMR Android SDK 1.6.8 &nbsp;&nbsp;</li>
-                            <li class="ch-updated">Appnext 2.4.0.471 </li>
-                            <li class="ch-updated">Mopub 5.1.0 </li>
-                        </ul>      
-                </section>
+                            <li class="ch-updated">AMR Android SDK 1.6.7 &nbsp;&nbsp;</li>
+                        </ul>
+                    </section>
 
-                <section id="changelog-ios-1.1.3">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-                            <li class="ch-updated">iOS Core Package </li>
-                            <li class="ch-updated">AMRSDK 1.3.60 </li>
-                    </ul>
-                </section>                  
-                        
+                    <h3 id="v.1.1.0">Version 1.1.0 <small class="release-date">May 25, 2018</small> </h3>
+                    <section id="changelog-unity-1.1.0">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.1.0 &nbsp;&nbsp;<small>&nbsp;~ GDPR compatibility</small>
+                            </li>
+                        </ul>
+                    </section>
 
-
-<h3 id="v.1.1.2">Version 1.1.2
-                            <small class="release-date">June 7, 2018</small>
-                        </h3>
-                        <br>
-
-                        <section id="changelog-unity-1.1.2">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.1.2
-                                </li>
-                            </ul>
-                        </section>
-		
-                        <section id="changelog-ios-1.1.2">
+                    <section id="changelog-android-1.1.0">
                             <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
+                                <i class="fa fa-android" style="color: #00af97"></i>
+                                <h3>Android</h3>
                             </div>
                             <ul class="changelog">
-                                    <li class="ch-updated">iOS Core Package </li>
-                                    <li class="ch-updated">AMRSDK 1.3.57 </li>
-                                    <li class="ch-updated">Ironsource 6.7.9.2 </li>
+                                <li class="ch-updated">AMR Android SDK 1.6.6 &nbsp;&nbsp;<small>&nbsp;~ GDPR compatibility</small></li>
+                                <li class="ch-updated">Adcolony 3.3.4 </li>
+                                <li class="ch-updated">Admob 15.0.1 </li>
+                                <li class="ch-updated">Applovin 8.0.1 </li>
+                                <li class="ch-updated">Appnext 2.3.1.471 </li>
+                                <li class="ch-updated">Chartboost 7.2.0 </li>
+                                <li class="ch-updated">Facebook 4.28.2 </li>
+                                <li class="ch-updated">Flurry 10.1.0 </li>
+                                <li class="ch-updated">Fyber 8.21.0 </li>
+                                <li class="ch-updated">Inmobi 7.1.0 </li>
+                                <li class="ch-updated">Ironsource 6.7.9 </li>
+                                <li class="ch-updated">Loopme 5.2.9 </li>
+                                <li class="ch-updated">Mobfox 3.5.0 </li>
+                                <li class="ch-updated">Mopub 5.0.0 </li>
+                                <li class="ch-updated">Startapp 3.8.4 </li>
+                                <li class="ch-updated">Tapjoy 11.12.2 </li>
+                                <li class="ch-updated">UnityAds 2.2.1 </li>
+                                <li class="ch-updated">Vungle 6.2.5 </li>
                             </ul>
-                        </section>   
+                    </section>
 
-			<h3 id="v.1.1.1">Version 1.1.1
-                            <small class="release-date">May 31, 2018</small>
-                        </h3>
-                        <br>
+                    <section id="changelog-ios-1.1.0">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package </li>
+                                <li class="ch-updated">AMRSDK 1.3.55 &nbsp;&nbsp;<small>&nbsp;~ GDPR compatibility</small></li>
+                                <li class="ch-updated">Adcolony 3.3.4.0 </li>
+                                <li class="ch-updated">Admob 7.31.0.0 </li>
+                                <li class="ch-updated">Applovin 5.0.1.0 </li>
+                                <li class="ch-updated">Charboost 7.2.0.0 </li>
+                                <li class="ch-updated">Facebook 4.28.1.0 </li>
+                                <li class="ch-updated">Flurry 8.6.1.0 </li>
+                                <li class="ch-updated">Fyber 8.21.0.0 </li>
+                                <li class="ch-updated">Inmobi 7.1.1.0 </li>
+                                <li class="ch-updated">Ironsource 6.7.9.0 </li>
+                                <li class="ch-updated">Loopme 6.4.5.3 </li>
+                                <li class="ch-updated">Mobfox 3.5.0.0 </li>
+                                <li class="ch-updated">Mopub 5.0.0.0 </li>
+                                <li class="ch-updated">Nexage 6.8.0.0 </li>
+                                <li class="ch-updated">Smaato 9.0.0.0 </li>
+                                <li class="ch-updated">Startapp 3.7.1.0 </li>
+                                <li class="ch-updated">Tapjoy 11.12.2.0 </li>
+                                <li class="ch-updated">UnityAds 2.2.1.1 </li>
+                                <li class="ch-updated">Vungle 6.2.0.0 </li>
+                        </ul>
+                    </section>    
 
-                        <section id="changelog-unity-1.1.0">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.1.1 &nbsp;&nbsp;
-                                </li>
-                            </ul>
-                        </section>
-
-                        <section id="changelog-android-1.1.1">
-                                <div class="promo left small-icon">
-                                    <i class="fa fa-android" style="color: #00af97"></i>
-                                    <h3>Android</h3>
-                                </div>
-                                <ul class="changelog">
-                                    <li class="ch-updated">AMR Android SDK 1.6.7 &nbsp;&nbsp;</li>
-                                </ul>
-                            </section>
-            <h3 id="v.1.1.0">Version 1.1.0
-                            <small class="release-date">May 25, 2018</small>
-                        </h3>
-                        <br>
-
-                        <section id="changelog-unity-1.1.0">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.1.0 &nbsp;&nbsp;<small>&nbsp;~ GDPR compatibility</small>
-                                </li>
-                            </ul>
-                        </section>
-
-                        <section id="changelog-android-1.1.0">
-                                <div class="promo left small-icon">
-                                    <i class="fa fa-android" style="color: #00af97"></i>
-                                    <h3>Android</h3>
-                                </div>
-                                <ul class="changelog">
-                                    <li class="ch-updated">AMR Android SDK 1.6.6 &nbsp;&nbsp;<small>&nbsp;~ GDPR compatibility</small></li>
-                                    <li class="ch-updated">Adcolony 3.3.4 </li>
-                                    <li class="ch-updated">Admob 15.0.1 </li>
-                                    <li class="ch-updated">Applovin 8.0.1 </li>
-                                    <li class="ch-updated">Appnext 2.3.1.471 </li>
-                                    <li class="ch-updated">Chartboost 7.2.0 </li>
-                                    <li class="ch-updated">Facebook 4.28.2 </li>
-                                    <li class="ch-updated">Flurry 10.1.0 </li>
-                                    <li class="ch-updated">Fyber 8.21.0 </li>
-                                    <li class="ch-updated">Inmobi 7.1.0 </li>
-                                    <li class="ch-updated">Ironsource 6.7.9 </li>
-                                    <li class="ch-updated">Loopme 5.2.9 </li>
-                                    <li class="ch-updated">Mobfox 3.5.0 </li>
-                                    <li class="ch-updated">Mopub 5.0.0 </li>
-                                    <li class="ch-updated">Startapp 3.8.4 </li>
-                                    <li class="ch-updated">Tapjoy 11.12.2 </li>
-                                    <li class="ch-updated">UnityAds 2.2.1 </li>
-                                    <li class="ch-updated">Vungle 6.2.5 </li>
-                                </ul>
-                            </section>
-		        
-                        <section id="changelog-ios-1.1.0">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                    <li class="ch-updated">iOS Core Package </li>
-                                    <li class="ch-updated">AMRSDK 1.3.55 &nbsp;&nbsp;<small>&nbsp;~ GDPR compatibility</small></li>
-                                    <li class="ch-updated">Adcolony 3.3.4.0 </li>
-                                    <li class="ch-updated">Admob 7.31.0.0 </li>
-                                    <li class="ch-updated">Applovin 5.0.1.0 </li>
-                                    <li class="ch-updated">Charboost 7.2.0.0 </li>
-                                    <li class="ch-updated">Facebook 4.28.1.0 </li>
-                                    <li class="ch-updated">Flurry 8.6.1.0 </li>
-                                    <li class="ch-updated">Fyber 8.21.0.0 </li>
-                                    <li class="ch-updated">Inmobi 7.1.1.0 </li>
-                                    <li class="ch-updated">Ironsource 6.7.9.0 </li>
-                                    <li class="ch-updated">Loopme 6.4.5.3 </li>
-                                    <li class="ch-updated">Mobfox 3.5.0.0 </li>
-                                    <li class="ch-updated">Mopub 5.0.0.0 </li>
-                                    <li class="ch-updated">Nexage 6.8.0.0 </li>
-                                    <li class="ch-updated">Smaato 9.0.0.0 </li>
-                                    <li class="ch-updated">Startapp 3.7.1.0 </li>
-                                    <li class="ch-updated">Tapjoy 11.12.2.0 </li>
-                                    <li class="ch-updated">UnityAds 2.2.1.1 </li>
-                                    <li class="ch-updated">Vungle 6.2.0.0 </li>
-                            </ul>
-                        </section>    
-
-                
-				<h3 id="v.1.0.21">Version 1.0.21
-                            <small class="release-date">May 07, 2018</small>
-                        </h3>
-                        <br>
-
+                    <h3 id="v.1.0.21">Version 1.0.21 <small class="release-date">May 07, 2018</small> </h3>
                     <section id="changelog-unity-1.0.21">
                             <ul class="changelog">
                                 <li class="ch-updated">
                                     <code>AMRPlugin.dll</code> 1.0.21
                                 </li>
                             </ul>
-                        </section>
-						
-					<section id="changelog-android-1.0.20">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            AMR Android Sdk 1.6.4
-                        </li>
-						<li class="ch-updated">
-                            Adcolony 3.3.3
-                        </li>
-                        <li class="ch-updated">
-                            Facebook 4.28.1
-                        </li>
-                    </ul>
-				<h3 id="v.1.0.20">Version 1.0.20
-                            <small class="release-date">April 24, 2018</small>
-                        </h3>
-                        <br>
-
+                    </section>
+                            
+                    <section id="changelog-android-1.0.21">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                AMR Android Sdk 1.6.4
+                            </li>
+                            <li class="ch-updated">
+                                Adcolony 3.3.3
+                            </li>
+                            <li class="ch-updated">
+                                Facebook 4.28.1
+                            </li>
+                        </ul>
+                    </section> 
+                    
+                    <h3 id="v.1.0.20">Version 1.0.20 <small class="release-date">April 24, 2018</small> </h3>
                     <section id="changelog-unity-1.0.20">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.20
-                                </li>
-                            </ul>
-                        </section>
-						
-					<section id="changelog-android-1.0.20">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            AMR Android Sdk 1.6.3
-                        </li>
-						<li class="ch-updated">
-                            Adcolony 3.3.3
-                        </li>
-                        <li class="ch-updated">
-                            Applovin 7.8.6
-                        </li>
-                        <li class="ch-updated">
-                            Appnext 2.2.4.467
-                        </li>
-                        <li class="ch-updated">
-                            Chartboost 7.1.0
-                        </li>
-                        <li class="ch-updated">
-                            Facebook 4.28.0
-                        </li>
-                        <li class="ch-updated">
-                            Flurry 9.0.0
-                        </li>
-                        <li class="ch-updated">
-                            Inmobi 7.0.4
-                        </li>
-                        <li class="ch-updated">
-                            Ironsource 6.7.8
-                        </li>
-						<li class="ch-updated">
-                            Mobfox 3.4.1
-                        </li>
-                        <li class="ch-updated">
-                            Startapp 3.8.1
-                        </li>
-						<li class="ch-updated">
-                            Tapjoy 11.12.0
-                        </li>
-						<li class="ch-updated">
-                            UnityAds 2.2.0
-                        </li>
-                    </ul>
-                </section>
-                    <h3 id="v.1.0.19">Version 1.0.19
-                            <small class="release-date">April 19, 2018</small>
-                        </h3>
-                        <br>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.20
+                            </li>
+                        </ul>
+                    </section>
+                            
+                    <section id="changelog-android-1.0.20">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                AMR Android Sdk 1.6.3
+                            </li>
+                            <li class="ch-updated">
+                                Adcolony 3.3.3
+                            </li>
+                            <li class="ch-updated">
+                                Applovin 7.8.6
+                            </li>
+                            <li class="ch-updated">
+                                Appnext 2.2.4.467
+                            </li>
+                            <li class="ch-updated">
+                                Chartboost 7.1.0
+                            </li>
+                            <li class="ch-updated">
+                                Facebook 4.28.0
+                            </li>
+                            <li class="ch-updated">
+                                Flurry 9.0.0
+                            </li>
+                            <li class="ch-updated">
+                                Inmobi 7.0.4
+                            </li>
+                            <li class="ch-updated">
+                                Ironsource 6.7.8
+                            </li>
+                            <li class="ch-updated">
+                                Mobfox 3.4.1
+                            </li>
+                            <li class="ch-updated">
+                                Startapp 3.8.1
+                            </li>
+                            <li class="ch-updated">
+                                Tapjoy 11.12.0
+                            </li>
+                            <li class="ch-updated">
+                                UnityAds 2.2.0
+                            </li>
+                        </ul>
+                    </section>
 
-                        <section id="changelog-unity-1.0.19">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.19
-                                </li>
-                            </ul>
-                        </section>
-		        
-                        <section id="changelog-ios-1.0.19">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                    <li class="ch-updated">iOS Core Package</li>
-                                    <li class="ch-updated">AMRSDK 1.3.38 </li>
-                                    <li class="ch-updated">Adcolony 3.3.0.1 </li>
-                                    <li class="ch-updated">Tapjoy 11.11.1.4 </li>
-                            </ul>
-                        </section>
+                    <h3 id="v.1.0.19">Version 1.0.19 <small class="release-date">April 19, 2018</small> </h3>
+                    <section id="changelog-unity-1.0.19">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.19
+                            </li>
+                        </ul>
+                    </section>
+            
+                    <section id="changelog-ios-1.0.19">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package</li>
+                                <li class="ch-updated">AMRSDK 1.3.38 </li>
+                                <li class="ch-updated">Adcolony 3.3.0.1 </li>
+                                <li class="ch-updated">Tapjoy 11.11.1.4 </li>
+                        </ul>
+                    </section>
 
 
-                    <h3 id="v.1.0.18">Version 1.0.18
-                            <small class="release-date">April 3, 2018</small>
-                        </h3>
-                        <br>
+                    <h3 id="v.1.0.18">Version 1.0.18 <small class="release-date">April 3, 2018</small> </h3>
+                    <section id="changelog-unity-1.0.18">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.18
+                            </li>
+                        </ul>
+                    </section>
+            
+                    <section id="changelog-ios-1.0.18">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package</li>
+                                <li class="ch-updated">AMRSDK 1.3.35 </li>
+                        </ul>
+                    </section>
+                            
+                    <h3 id="v.1.0.17">Version 1.0.17 <small class="release-date">March 27, 2018</small> </h3>
+                    <section id="changelog-unity-1.0.17">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.17
+                            </li>
+                        </ul>
+                    </section>
+            
+                    <section id="changelog-ios-1.0.17">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package</li>
+                                <li class="ch-updated">AMRSDK 1.3.33 </li>
+                                <li class="ch-updated">Adcolony 3.3.0.0 </li>
+                                <li class="ch-updated">Admob 7.29.0.0 </li>
+                                <li class="ch-updated">Amazon 2.2.17.9 </li>
+                                <li class="ch-updated">Applovin 4.8.3.0 </li>
+                                <li class="ch-updated">Appnext 1.8.3.1 </li>
+                                <li class="ch-updated">Avocarrot 4.9.0.0 </li>
+                                <li class="ch-updated">Charboost 7.1.2.0 </li>
+                                <li class="ch-updated">Facebook 4.27.2.1 </li>
+                                <li class="ch-updated">Flurry 8.4.0.0 </li>
+                                <li class="ch-updated">Fyber 8.20.2.0 </li>
+                                <li class="ch-updated">Inmobi 7.0.4.1 </li>
+                                <li class="ch-updated">Ironsource 6.7.7.0 </li>
+                                <li class="ch-updated">Loopme 6.4.5.1 </li>
+                                <li class="ch-updated">Mopub 4.20.1.1 </li>
+                                <li class="ch-updated">Mobfox 3.4.1.0 </li>
+                                <li class="ch-updated">Nexage 6.7.0.1 </li>
+                                <li class="ch-updated">Smaato 8.2.3.1 </li>
+                                <li class="ch-updated">Startapp 3.6.0.1 </li>
+                                <li class="ch-updated">Tapjoy 11.11.1.3 </li>
+                                <li class="ch-updated">UnityAds 2.2.0.0 </li>
+                                <li class="ch-updated">Vungle 5.4.0.0 </li>
+                                <li class="ch-removed">Leadbolt</li>
+                                <li class="ch-removed">Mobusi</li>
+                                <li class="ch-removed">NativeX</li>
+                                <li class="ch-removed">Pubnative</li>
+                                <li class="ch-removed">Revmob</li>
+                                <li class="ch-removed">Tappx</li>
+                        </ul>
+                    </section>
 
-                        <section id="changelog-unity-1.0.18">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.18
-                                </li>
-                            </ul>
-                        </section>
-		        
-                        <section id="changelog-ios-1.0.18">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                    <li class="ch-updated">iOS Core Package</li>
-                                    <li class="ch-updated">AMRSDK 1.3.35 </li>
-                            </ul>
-                        </section>
-                        
-                        <h3 id="v.1.0.17">Version 1.0.17
-                            <small class="release-date">March 27, 2018</small>
-                        </h3>
-                        <br>
-
-                        <section id="changelog-unity-1.0.17">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.17
-                                </li>
-                            </ul>
-                        </section>
-		        
-                        <section id="changelog-ios-1.0.17">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                    <li class="ch-updated">iOS Core Package</li>
-                                    <li class="ch-updated">AMRSDK 1.3.33 </li>
-                                    <li class="ch-updated">Adcolony 3.3.0.0 </li>
-                                    <li class="ch-updated">Admob 7.29.0.0 </li>
-                                    <li class="ch-updated">Amazon 2.2.17.9 </li>
-                                    <li class="ch-updated">Applovin 4.8.3.0 </li>
-                                    <li class="ch-updated">Appnext 1.8.3.1 </li>
-                                    <li class="ch-updated">Avocarrot 4.9.0.0 </li>
-                                    <li class="ch-updated">Charboost 7.1.2.0 </li>
-                                    <li class="ch-updated">Facebook 4.27.2.1 </li>
-                                    <li class="ch-updated">Flurry 8.4.0.0 </li>
-                                    <li class="ch-updated">Fyber 8.20.2.0 </li>
-                                    <li class="ch-updated">Inmobi 7.0.4.1 </li>
-                                    <li class="ch-updated">Ironsource 6.7.7.0 </li>
-                                    <li class="ch-updated">Loopme 6.4.5.1 </li>
-                                    <li class="ch-updated">Mopub 4.20.1.1 </li>
-                                    <li class="ch-updated">Mobfox 3.4.1.0 </li>
-                                    <li class="ch-updated">Nexage 6.7.0.1 </li>
-                                    <li class="ch-updated">Smaato 8.2.3.1 </li>
-                                    <li class="ch-updated">Startapp 3.6.0.1 </li>
-                                    <li class="ch-updated">Tapjoy 11.11.1.3 </li>
-                                    <li class="ch-updated">UnityAds 2.2.0.0 </li>
-                                    <li class="ch-updated">Vungle 5.4.0.0 </li>
-                                    <li class="ch-removed">Leadbolt</li>
-                                    <li class="ch-removed">Mobusi</li>
-                                    <li class="ch-removed">NativeX</li>
-                                    <li class="ch-removed">Pubnative</li>
-                                    <li class="ch-removed">Revmob</li>
-                                    <li class="ch-removed">Tappx</li>
-                            </ul>
-                        </section>
-
-
-            <h3 id="v.1.0.16">Version 1.0.16
-                            <small class="release-date">March 16, 2018</small>
-                        </h3>
-                        <br>
-
+                    <h3 id="v.1.0.16">Version 1.0.16 <small class="release-date">March 16, 2018</small> </h3>
                     <section id="changelog-unity-1.0.16">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.16
-                                </li>
-                            </ul>
-                        </section>
-		        
-                        <section id="changelog-ios-1.0.16">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                    <li class="ch-updated">iOS Core Package</li>
-                                    <li class="ch-updated">AMRSDK 1.3.33 </li>
-                                    <li class="ch-updated">Adcolony 3.3.0.0</li>
-                                    <li class="ch-updated">Applovin 4.8.3.0</li>
-                                    <li class="ch-updated">Chartboost 7.1.2.0</li>
-                                    <li class="ch-updated">Tapjoy 11.11.1.3</li>
-                                    <li class="ch-updated">Unity 2.2.0.0</li>
-                                    <li class="ch-updated">Vungle 5.3.2.2</li>
-                            </ul>
-                        </section>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.16
+                            </li>
+                        </ul>
+                    </section>
+            
+                    <section id="changelog-ios-1.0.16">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package</li>
+                                <li class="ch-updated">AMRSDK 1.3.33 </li>
+                                <li class="ch-updated">Adcolony 3.3.0.0</li>
+                                <li class="ch-updated">Applovin 4.8.3.0</li>
+                                <li class="ch-updated">Chartboost 7.1.2.0</li>
+                                <li class="ch-updated">Tapjoy 11.11.1.3</li>
+                                <li class="ch-updated">Unity 2.2.0.0</li>
+                                <li class="ch-updated">Vungle 5.3.2.2</li>
+                        </ul>
+                    </section>
 
-
-				<h3 id="v.1.0.15">Version 1.0.15
-                            <small class="release-date">Match 12, 2018</small>
-                        </h3>
-                        <br>
-
+                    <h3 id="v.1.0.15">Version 1.0.15 <small class="release-date">Match 12, 2018</small> </h3>
                     <section id="changelog-unity-1.0.15">
                             <ul class="changelog">
                                 <li class="ch-updated">
                                     <code>AMRPlugin.dll</code> 1.0.15 
                                 </li>
                             </ul>
-                        </section>
-						
-					<section id="changelog-android-1.0.15">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            AMR Android Sdk 1.6.1
-                        </li>
-                        <li class="ch-updated">
-                            Amazon 5.8.2
-                        </li>
-                        <li class="ch-updated">
-                            Applovin 7.8.1
-                        </li>
-                        <li class="ch-updated">
-                            Fyber 8.20.0
-                        </li>
-                        <li class="ch-updated">
-                            Ironsource 6.7.5
-                        </li>
-                        <li class="ch-updated">
-                            Leadbolt 8.3
-                        </li>
-                        <li class="ch-updated">
-                            Loopme 5.2.8
-                        </li>
-                        <li class="ch-updated">
-                            Startapp 3.7.1
-                        </li>
-                    </ul>
-                </section>
-            <h3 id="v.1.0.14">Version 1.0.14
-                            <small class="release-date">February 22, 2018</small>
-                        </h3>
-                        <br>
+                    </section>
+                        
+                    <section id="changelog-android-1.0.15">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                AMR Android Sdk 1.6.1
+                            </li>
+                            <li class="ch-updated">
+                                Amazon 5.8.2
+                            </li>
+                            <li class="ch-updated">
+                                Applovin 7.8.1
+                            </li>
+                            <li class="ch-updated">
+                                Fyber 8.20.0
+                            </li>
+                            <li class="ch-updated">
+                                Ironsource 6.7.5
+                            </li>
+                            <li class="ch-updated">
+                                Leadbolt 8.3
+                            </li>
+                            <li class="ch-updated">
+                                Loopme 5.2.8
+                            </li>
+                            <li class="ch-updated">
+                                Startapp 3.7.1
+                            </li>
+                        </ul>
+                    </section>
 
+                    <h3 id="v.1.0.14">Version 1.0.14 <small class="release-date">February 22, 2018</small> </h3>
                     <section id="changelog-unity-1.0.14">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.14
-                                </li>
-                            </ul>
-                        </section>
-		        
-                        <section id="changelog-ios-1.0.14">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                    <li class="ch-updated">iOS Core Package</li>
-                                    <li class="ch-updated">AMRSDK 1.3.29 </li>
-                                    <li class="ch-updated">Tapjoy 11.11.1.2</li>
-                                    <li class="ch-updated">Unity 2.1.2.1</li>
-                                    <li class="ch-updated">Vungle 5.3.2.1</li>
-                            </ul>
-                        </section>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.14
+                            </li>
+                        </ul>
+                    </section>
+                    
+                    <section id="changelog-ios-1.0.14">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package</li>
+                                <li class="ch-updated">AMRSDK 1.3.29 </li>
+                                <li class="ch-updated">Tapjoy 11.11.1.2</li>
+                                <li class="ch-updated">Unity 2.1.2.1</li>
+                                <li class="ch-updated">Vungle 5.3.2.1</li>
+                        </ul>
+                    </section>
 
-           <h3 id="v.1.0.13">Version 1.0.13
-                            <small class="release-date">February 20, 2018</small>
-                        </h3>
-                        <br>
-
+                    <h3 id="v.1.0.13">Version 1.0.13 <small class="release-date">February 20, 2018</small> </h3>
                     <section id="changelog-unity-1.0.13">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.13
-                                </li>
-                            </ul>
-                        </section>
-						
-					<section id="changelog-android-1.0.13">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            AMR Android Sdk 1.5.9
-                        </li>
-                    </ul>
-                </section>
-        
-                        <section id="changelog-ios-1.0.13">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                    <li class="ch-updated">iOS Core Package</li>
-                                    <li class="ch-updated">AMRSDK 1.3.28 </li>
-                            </ul>
-                        </section>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.13
+                            </li>
+                        </ul>
+                    </section>
+                            
+                    <section id="changelog-android-1.0.13">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                AMR Android Sdk 1.5.9
+                            </li>
+                        </ul>
+                    </section>
+            
+                    <section id="changelog-ios-1.0.13">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                                <li class="ch-updated">iOS Core Package</li>
+                                <li class="ch-updated">AMRSDK 1.3.28 </li>
+                        </ul>
+                    </section>
 
-
-
-            <h3 id="v.1.0.12">Version 1.0.12
-                            <small class="release-date">February 15, 2018</small>
-                        </h3>
-                        <br>
-
+                    <h3 id="v.1.0.12">Version 1.0.12 <small class="release-date">February 15, 2018</small> </h3>
                     <section id="changelog-unity-1.0.12">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.12 
-                                </li>
-                            </ul>
-                        </section>
-						
-					<section id="changelog-android-1.0.12">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            AMR Android Sdk 1.5.8
-                        </li>
-                        <li class="ch-updated">
-                            Adcolony 3.3.0
-                        </li>
-                        <li class="ch-updated">
-                            Applovin 7.6.2
-                        </li>
-                        <li class="ch-updated">
-                            Appnext 2.2.1.464
-                        </li>
-                        <li class="ch-updated">
-                            Facebook 4.27
-                        </li>
-                        <li class="ch-updated">
-                            Flurry 8.2.0
-                        </li>
-                        <li class="ch-updated">
-                            Fyber 8.19.0
-                        </li>
-                        <li class="ch-updated">
-                            Inmobi 7.0.2
-                        </li>
-						<li class="ch-updated">
-                            Mobfox 3.3.0
-                        </li>
-						<li class="ch-updated">
-                            Startapp 3.6.9
-                        </li>
-						<li class="ch-updated">
-                            Tapjoy 11.11.1
-                        </li>
-                        <li class="ch-updated">
-                            Unity Ads 2.1.2
-                        </li>
-						<li class="ch-updated">
-                            Vungle 5.3.2
-                        </li>
-                    </ul>
-                </section>
-        
-                        <section id="changelog-ios-1.0.12">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                <li class="ch-updated">iOS Core Package &nbsp;&nbsp;<small>&nbsp;~ Fixed iphone X safe area issue for banners
-                                    </small></li>
-                            </ul>
-                        </section>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.12 
+                            </li>
+                        </ul>
+                    </section>
+                            
+                    <section id="changelog-android-1.0.12">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                AMR Android Sdk 1.5.8
+                            </li>
+                            <li class="ch-updated">
+                                Adcolony 3.3.0
+                            </li>
+                            <li class="ch-updated">
+                                Applovin 7.6.2
+                            </li>
+                            <li class="ch-updated">
+                                Appnext 2.2.1.464
+                            </li>
+                            <li class="ch-updated">
+                                Facebook 4.27
+                            </li>
+                            <li class="ch-updated">
+                                Flurry 8.2.0
+                            </li>
+                            <li class="ch-updated">
+                                Fyber 8.19.0
+                            </li>
+                            <li class="ch-updated">
+                                Inmobi 7.0.2
+                            </li>
+                            <li class="ch-updated">
+                                Mobfox 3.3.0
+                            </li>
+                            <li class="ch-updated">
+                                Startapp 3.6.9
+                            </li>
+                            <li class="ch-updated">
+                                Tapjoy 11.11.1
+                            </li>
+                            <li class="ch-updated">
+                                Unity Ads 2.1.2
+                            </li>
+                            <li class="ch-updated">
+                                Vungle 5.3.2
+                            </li>
+                        </ul>
+                    </section>
+            
+                    <section id="changelog-ios-1.0.12">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">iOS Core Package &nbsp;&nbsp;<small>&nbsp;~ Fixed iphone X safe area issue for banners
+                                </small></li>
+                        </ul>
+                    </section>
 
-
-            <h3 id="v.1.0.11">Version 1.0.11
-                            <small class="release-date">January 30, 2018</small>
-                        </h3>
-                        <br>
-
+                    <h3 id="v.1.0.11">Version 1.0.11 <small class="release-date">January 30, 2018</small> </h3>
                     <section id="changelog-unity-1.0.11">
                             <ul class="changelog">
                                 <li class="ch-updated">
                                     <code>AMRPlugin.dll</code> 1.0.11 
                                 </li>
                             </ul>
-                        </section>
-        
-                        <section id="changelog-ios-1.0.11">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                <li class="ch-updated">iOS Core Package &nbsp;&nbsp;<small>&nbsp;~ Fixed a bug that prevents append builds.
-                                    </small></li>
-                            </ul>
-                        </section>
+                    </section>
+            
+                    <section id="changelog-ios-1.0.11">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">iOS Core Package &nbsp;&nbsp;<small>&nbsp;~ Fixed a bug that prevents append builds.
+                                </small></li>
+                        </ul>
+                    </section>
 
-            	<h3 id="v.1.0.10">Version 1.0.10
-                            <small class="release-date">January 22, 2018</small>
-                        </h3>
-                        <br>
-
+                    <h3 id="v.1.0.10">Version 1.0.10 <small class="release-date">January 22, 2018</small> </h3>
                     <section id="changelog-unity-1.0.10">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.10
-                                </li>
-                            </ul>
-                        </section>
-        
-                        <section id="changelog-ios-1.0.10">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                <li class="ch-updated">iOS Core Package</li>
-								<li class="ch-moved">
-                           		 <code>Assets/AMR/Plugins/iOS/AMRAdapterTapjoy/TapjoyResources.bundle</code> to <code>Assets/AMR/Resources/TapjoyResources.bundle</code>
-                        		</li>
-                            </ul>
-                        </section>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.10
+                            </li>
+                        </ul>
+                    </section>
 
-                <h3 id="v.1.0.9">Version 1.0.9
-                            <small class="release-date">January 16, 2018</small>
-                        </h3>
-                        <br>
+                    <section id="changelog-ios-1.0.10">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">iOS Core Package</li>
+                            <li class="ch-moved">
+                                <code>Assets/AMR/Plugins/iOS/AMRAdapterTapjoy/TapjoyResources.bundle</code> to <code>Assets/AMR/Resources/TapjoyResources.bundle</code>
+                            </li>
+                        </ul>
+                    </section>
 
+                    <h3 id="v.1.0.9">Version 1.0.9 <small class="release-date">January 16, 2018</small> </h3>
                     <section id="changelog-unity-1.0.9">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.9
-                                </li>
-                            </ul>
-                        </section>
-        
-                        <section id="changelog-ios-1.0.9">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                <li class="ch-updated">iOS Core Package</li>
-                                <li class="ch-updated">AMRSDK 1.3.26 </li>
-                                <li class="ch-updated">Admob 7.27.0.0 </li>
-                                <li class="ch-updated">Applovin 4.7.0.0 </li>
-                                <li class="ch-updated">Facebook 4.27.2.0 </li>
-                                <li class="ch-updated">Fyber 8.19.0.0 </li>
-                                <li class="ch-updated">Leadbolt 8.2.0.0 &nbsp;&nbsp;<small>&nbsp;~ iOS9+</small></li>
-                                <li class="ch-updated">Loopme 6.4.5.0 &nbsp;&nbsp;<small>&nbsp;~ iOS9+</small></li></li>
-                                <li class="ch-updated">Mobfox 3.3.0.0 &nbsp;&nbsp;<small>&nbsp;~ iOS9+</small></li></li>
-                                <li class="ch-updated">Vungle 5.3.2.0 </li>
-                            </ul>
-                        </section>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.9
+                            </li>
+                        </ul>
+                    </section>
 
-                    <h3 id="v.1.0.8">Version 1.0.8
-                            <small class="release-date">December 28, 2017</small>
-                        </h3>
-                        <br>
+                    <section id="changelog-ios-1.0.9">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">iOS Core Package</li>
+                            <li class="ch-updated">AMRSDK 1.3.26 </li>
+                            <li class="ch-updated">Admob 7.27.0.0 </li>
+                            <li class="ch-updated">Applovin 4.7.0.0 </li>
+                            <li class="ch-updated">Facebook 4.27.2.0 </li>
+                            <li class="ch-updated">Fyber 8.19.0.0 </li>
+                            <li class="ch-updated">Leadbolt 8.2.0.0 &nbsp;&nbsp;<small>&nbsp;~ iOS9+</small></li>
+                            <li class="ch-updated">Loopme 6.4.5.0 &nbsp;&nbsp;<small>&nbsp;~ iOS9+</small></li></li>
+                            <li class="ch-updated">Mobfox 3.3.0.0 &nbsp;&nbsp;<small>&nbsp;~ iOS9+</small></li></li>
+                            <li class="ch-updated">Vungle 5.3.2.0 </li>
+                        </ul>
+                    </section>
 
+                    <h3 id="v.1.0.8">Version 1.0.8 <small class="release-date">December 28, 2017</small> </h3>
                     <section id="changelog-unity-1.0.8">
                             <ul class="changelog">
                                 <li class="ch-updated">
                                     <code>AMRPlugin.dll</code> 1.0.8
                                 </li>
                             </ul>
-                        </section>
-        
-                        <section id="changelog-ios-1.0.8">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                <li class="ch-updated">iOS Core Package</li>
-                                <li class="ch-updated">AMRSDK 1.3.21 </li>
-                                <li class="ch-updated">Mopub 4.19.0.0 </li>
-                            </ul>
-                        </section>
-                
-                    <h3 id="v.1.0.7">Version 1.0.7
-                            <small class="release-date">December 14, 2017</small>
-                        </h3>
-                        <br>
-
+                    </section>
+            
+                    <section id="changelog-ios-1.0.8">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">iOS Core Package</li>
+                            <li class="ch-updated">AMRSDK 1.3.21 </li>
+                            <li class="ch-updated">Mopub 4.19.0.0 </li>
+                        </ul>
+                    </section>
+                    
+                    <h3 id="v.1.0.7">Version 1.0.7 <small class="release-date">December 14, 2017</small> </h3>
                     <section id="changelog-unity-1.0.7">
-                            <ul class="changelog">
-                                <li class="ch-updated">
-                                    <code>AMRPlugin.dll</code> 1.0.7
-                                </li>
-                            </ul>
-                        </section>
-        
-                        <section id="changelog-ios-1.0.7">
-                            <div class="promo left small-icon">
-                                <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                                <h3>iOS</h3>
-                            </div>
-                            <ul class="changelog">
-                                <li class="ch-updated">iOS Core Package &nbsp;&nbsp;<small>&nbsp;~ Minimum iOS version updated to iOS8.</small></li>
-                                <li class="ch-updated">AMRSDK 1.3.19 </li>
-                                <li class="ch-updated">Admob 7.26.0.0 </li>
-                                <li class="ch-updated">Amazon 2.2.17.8 </li>
-                                <li class="ch-updated">Applovin 4.6.0.0 </li>
-                                <li class="ch-updated">Charboost 7.0.4 </li>
-                                <li class="ch-updated">Facebook 4.26.1.0 </li>
-                                <li class="ch-updated">Flurry 8.3.4.0 </li>
-                                <li class="ch-updated">Fyber 8.18.0.0 </li>
-                                <li class="ch-updated">Inmobi 7.0.4.0 </li>
-                                <li class="ch-updated">Ironsource 6.7.3.1 </li>
-                                <li class="ch-updated">Mopub 4.18.0.0 </li>
-                                <li class="ch-updated">Nexage 6.6.0.0 </li>
-                                <li class="ch-updated">Revmob 10.0.0.0 </li>
-                                <li class="ch-updated">Tapjoy 11.11.1.0 </li>
-                                <li class="ch-updated">Tappx 3.0.2.4 </li>
-                                <li class="ch-updated">Unity 2.1.2.0 </li>
-                                <li class="ch-updated">Vungle 5.3.0.0 </li>
-                            </ul>
-                        </section>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.7
+                            </li>
+                        </ul>
+                    </section>
+            
+                    <section id="changelog-ios-1.0.7">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">iOS Core Package &nbsp;&nbsp;<small>&nbsp;~ Minimum iOS version updated to iOS8.</small></li>
+                            <li class="ch-updated">AMRSDK 1.3.19 </li>
+                            <li class="ch-updated">Admob 7.26.0.0 </li>
+                            <li class="ch-updated">Amazon 2.2.17.8 </li>
+                            <li class="ch-updated">Applovin 4.6.0.0 </li>
+                            <li class="ch-updated">Charboost 7.0.4 </li>
+                            <li class="ch-updated">Facebook 4.26.1.0 </li>
+                            <li class="ch-updated">Flurry 8.3.4.0 </li>
+                            <li class="ch-updated">Fyber 8.18.0.0 </li>
+                            <li class="ch-updated">Inmobi 7.0.4.0 </li>
+                            <li class="ch-updated">Ironsource 6.7.3.1 </li>
+                            <li class="ch-updated">Mopub 4.18.0.0 </li>
+                            <li class="ch-updated">Nexage 6.6.0.0 </li>
+                            <li class="ch-updated">Revmob 10.0.0.0 </li>
+                            <li class="ch-updated">Tapjoy 11.11.1.0 </li>
+                            <li class="ch-updated">Tappx 3.0.2.4 </li>
+                            <li class="ch-updated">Unity 2.1.2.0 </li>
+                            <li class="ch-updated">Vungle 5.3.0.0 </li>
+                        </ul>
+                    </section>
+
+                    <h3 id="v.1.0.6">Version 1.0.6 <small class="release-date">November 27, 2017</small> </h3>
+                    <section id="changelog-unity-1.0.6">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.6
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="changelog-android-1.0.6">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                Applovin 7.5.0
+                            </li>
+                            <li class="ch-updated">
+                                Chartboost 7.0.1
+                            </li>
+                            <li class="ch-updated">
+                                Flurry 8.0.2
+                            </li>
+                            <li class="ch-updated">
+                                Inmobi 7.0.1
+                            </li>
+                            <li class="ch-updated">
+                                Ironsource 6.7.3
+                            </li>
+                            <li class="ch-updated">
+                                LoopMe 5.2.7
+                            </li>
+                            <li class="ch-updated">
+                                Vungle 5.3.0
+                            </li>
+
+                        </ul>
+                    </section>
+
+                    <h3 id="v.1.0.5">Version 1.0.5 <small class="release-date">November 24, 2017</small> </h3>
+                    <section id="changelog-unity-1.0.5">
+                        <ul class="changelog">
+                            <li class="ch-added">
+                                From now on callback will be triggered when full screen ads opened on the screen.
+                                <pre><code class="added">
+                                <span class="text-success">AMR.AMRSDK.setOnInterstitialShow(onInterstitialShow);
+                                    AMR.AMRSDK.setOnRewardedVideoShow(OnVideoShow);</span>
+                                </code></pre>
+                            </li>
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.5
+                            </li>
+                            <li class="ch-updated">
+                                <code>AMRDemoScript</code>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="changelog-android-1.0.5">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                Android Core Package 1.5.3
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="changelog-ios-1.0.5">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                iOS Core Package
+                            </li>
+                        </ul>
+                    </section>
+
+                    <h3 id="v.1.0.4">Version 1.0.4 <small class="release-date">November 7, 2017</small> </h3>
+                    <section id="changelog-unity-1.0.4">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.4
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="changelog-android-1.0.4">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                AMR Android Sdk 1.5.3
+                            </li>
+                            <li class="ch-updated">
+                                Applovin 7.4.1
+                            </li>
+                            <li class="ch-updated">
+                                Flurry 7.2.3
+                            </li>
+                            <li class="ch-updated">
+                                Fyber 8.16.1
+                            </li>
+                            <li class="ch-updated">
+                                Ironsource 6.6.8.1
+                            </li>
+                            <li class="ch-updated">
+                                Leadbolt 8.1a
+                            </li>
+                            <li class="ch-updated">
+                                Loopme 5.2.4
+                            </li>
+                            <li class="ch-updated">
+                                Startapp 3.6.7
+                            </li>
+                            <li class="ch-updated">
+                                Unity Ads 2.1.1
+                            </li>
+                        </ul>
+                    </section>
+
+                    <h3 id="v.1.0.3">Version 1.0.3 <small class="release-date">October 31, 2017</small> </h3>
+                    <section id="changelog-unity-1.0.3">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.3
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="changelog-ios-1.0.3">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                AMRSDK 1.3.14
+                            </li>
+                        </ul>
+                    </section>
+
+                    <h3 id="v.1.0.2">Version 1.0.2 <small class="release-date">October 24, 2017</small> </h3>
+                    <section id="changelog-unity-1.0.2">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.2
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="changelog-ios-1.0.2">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                Appnext 1.8.3.0
+                            </li>
+                        </ul>
+                    </section>
+
+                    <h3 id="v.1.0.1">Version 1.0.1 <small class="release-date">October 19, 2017</small> </h3>
+                    <section id="changelog-unity-1.0.1">
+                        <ul class="changelog">
+                            <li class="ch-updated">
+                                <code>AMRPlugin.dll</code> 1.0.1
+                            </li>
+
+                            <li class="ch-added">
+                                You can see current version of AMR SDK in log with filter <var>"&lt;AMRSDK&gt;"</var>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="changelog-android-1.0.1">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+
+                            <li class="ch-updated">
+                                <pre><code class="added"><span class="text-success">AMR.AMRSDK.trackPurchaseForAndroid(String, Decimal, String);</span></code></pre>
+                                <pre><code class="removed"><span class="text-danger">AMR.AMRSDK.trackPurchaseForAndroid(String, Double, String);</span></code></pre>
+                            </li>
+
+                        </ul>
+                    </section>
+
+                    <section id="changelog-ios-1.0.1">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+
+                            <li class="ch-updated">
+                                <pre><code class="added"><span class="text-success">AMR.AMRSDK.trackPurchaseForIOS(String, Decimal, String);</span></code></pre>
+                                <pre><code class="removed"><span class="text-danger">AMR.AMRSDK.trackPurchaseForIOS(String, Double, String);</span></code></pre>
+                            </li>
+                            <li class="ch-updated">
+                                AMRSDK 1.3.12
+                            </li>
+                            <li class="ch-updated">
+                                Facebook 4.26.0.0
+                            </li>
+                            <li class="ch-updated">
+                                Flurry 8.3.0.0
+                            </li>
+                            <li class="ch-updated">
+                                Vungle 5.1.0.2
+                            </li>
 
 
-                <h3 id="v.1.0.6">Version 1.0.6
-                    <small class="release-date">November 27, 2017</small>
-                </h3>
-                <br>
 
-                <section id="changelog-unity-1.0.6">
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.0.6
-                        </li>
-                    </ul>
+                        </ul>
+                    </section>
+
+                    <h3 id="v.1.0.0">Version 1.0.0 <small class="release-date">October 18, 2017</small> </h3>
+                    <section id="changelog-unity-1.0.0">
+                        <ul class="changelog">
+                            <li class="ch-added">In App Purchase Tracking
+                                <small>&nbsp;&nbsp;<a href="#iap"><i class="fa fa-link"></i></a></small>
+                            </li>
+                            <li class="ch-added">
+                                <code>Assets/AMR</code>
+                            </li>
+
+                            <li class="ch-removed">
+                                <code>Assets/AMRSdkWrapper</code>
+                            </li>
+
+
+                            <li class="ch-moved">
+                                <code>Assets/Scenes/AMRDemoScene.unity</code> to <code>Assets/AMR/SampleCode/AMRDemoScene.unity</code>
+                            </li>
+
+                            <li class="ch-moved">
+                                <code>Assets/Scripts/AMRDemoScript.cs</code> to <code>Assets/AMR/SampleCode/AMRDemoScript.cs</code>
+                            </li>
+
+
+                            <li class="ch-added"> <code>Assets/AMR/AMRPlugin.dll</code>
+                            </li>
+                            <li class="ch-moved"><code>Assets/Plugins/iOS/AMRSDKWrapper.mm</code> to
+                                <code>Assets/AMR/Plugins/iOS/AMRSDKWrapper.mm</code>
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="changelog-android-1.0.0">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-android" style="color: #00af97"></i>
+                            <h3>Android</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">AMR Android Sdk Updated to 1.5.0
+                            </li>
+                            <li class="ch-updated">AMR Unity Plugin  Updated to 1.5.0
+                            </li>
+                            <li class="ch-moved">All ad network .aar and .jar files moved from <code>Assets/Plugins/Android</code> to
+                                <code>Assets/AMR/Plugins/Android</code>
+                            </li>
+                            <li class="ch-removed">Adtrial Adnetwork
+                            </li>
+                        </ul>
+                    </section>
+
+                    <section id="changelog-ios-1.0.0">
+                        <div class="promo left small-icon">
+                            <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                            <h3>iOS</h3>
+                        </div>
+                        <ul class="changelog">
+                            <li class="ch-updated">AMR iOS Sdk Updated to 1.3.11
+                            </li>
+                            <li class="ch-removed"> <code>Assets/Editor/PostProcessorAMR.mm</code>
+                            </li>
+                            <li class="ch-added"><code>Assets/AMR/Editor/AMRPostProcessor.mm</code>
+                            </li>
+                            <li class="ch-moved"><code>Assets/Frameworks</code> to
+                                <code>Assets/AMR/Frameworks</code>
+                            </li>
+                            <li class="ch-moved"><code>Assets/Resources</code> to
+                                <code>Assets/AMR/Resources</code>
+                            </li>
+                            <li class="ch-moved">All ad network related AMRAdaptors* moved from <code>Assets/Plugins/iOS</code> to
+                                <code>Assets/AMR/Plugins/iOS</code>
+                            </li>
+                            <li class="ch-moved"><code>Assets/Plugins/iOS/AMRSDKWrapper.mm</code> to
+                                <code>Assets/AMR/Plugins/iOS/AMRSDKWrapper.mm</code>
+                            </li>
+                        </ul>
+                    </section>
+
                 </section>
-
-                <section id="changelog-android-1.0.6">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            Applovin 7.5.0
-                        </li>
-                        <li class="ch-updated">
-                            Chartboost 7.0.1
-                        </li>
-                        <li class="ch-updated">
-                            Flurry 8.0.2
-                        </li>
-                        <li class="ch-updated">
-                            Inmobi 7.0.1
-                        </li>
-                        <li class="ch-updated">
-                            Ironsource 6.7.3
-                        </li>
-                        <li class="ch-updated">
-                            LoopMe 5.2.7
-                        </li>
-                        <li class="ch-updated">
-                            Vungle 5.3.0
-                        </li>
-
-                    </ul>
-                </section>
-
-                <h3 id="v.1.0.5">Version 1.0.5
-                    <small class="release-date">November 24, 2017</small>
-                </h3>
-                <br>
-
-                <section id="changelog-unity-1.0.5">
-                    <ul class="changelog">
-                        <li class="ch-added">
-                            From now on callback will be triggered when full screen ads opened on the screen.
-                            <pre><code class="added">
-                            <span class="text-success">AMR.AMRSDK.setOnInterstitialShow(onInterstitialShow);
-                                AMR.AMRSDK.setOnRewardedVideoShow(OnVideoShow);</span>
-                            </code></pre>
-                        </li>
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.0.5
-                        </li>
-                        <li class="ch-updated">
-                            <code>AMRDemoScript</code>
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="changelog-android-1.0.5">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            Android Core Package 1.5.3
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="changelog-ios-1.0.5">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            iOS Core Package
-                        </li>
-                    </ul>
-                </section>
-
-
-                <h3 id="v.1.0.4">Version 1.0.4
-                    <small class="release-date">November 7, 2017</small>
-                </h3>
-                <br>
-
-                <section id="changelog-unity-1.0.4">
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.0.4
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="changelog-android-1.0.4">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            AMR Android Sdk 1.5.3
-                        </li>
-                        <li class="ch-updated">
-                            Applovin 7.4.1
-                        </li>
-                        <li class="ch-updated">
-                            Flurry 7.2.3
-                        </li>
-                        <li class="ch-updated">
-                            Fyber 8.16.1
-                        </li>
-                        <li class="ch-updated">
-                            Ironsource 6.6.8.1
-                        </li>
-                        <li class="ch-updated">
-                            Leadbolt 8.1a
-                        </li>
-                        <li class="ch-updated">
-                            Loopme 5.2.4
-                        </li>
-                        <li class="ch-updated">
-                            Startapp 3.6.7
-                        </li>
-                        <li class="ch-updated">
-                            Unity Ads 2.1.1
-                        </li>
-                    </ul>
-                </section>
-
-                <h3 id="v.1.0.3">Version 1.0.3
-                    <small class="release-date">October 31, 2017</small>
-                </h3>
-                <br>
-
-                <section id="changelog-unity-1.0.3">
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.0.3
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="changelog-ios-1.0.3">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            AMRSDK 1.3.14
-                        </li>
-                    </ul>
-                </section>
-
-
-                <h3 id="v.1.0.2">Version 1.0.2
-                    <small class="release-date">October 24, 2017</small>
-                </h3>
-                <br>
-
-                <section id="changelog-unity-1.0.2">
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.0.2
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="changelog-ios-1.0.2">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            Appnext 1.8.3.0
-                        </li>
-                    </ul>
-                </section>
-
-
-                <h3 id="v.1.0.1">Version 1.0.1
-                    <small class="release-date">October 19, 2017</small>
-                </h3>
-                <br>
-
-                <section id="changelog-unity-1.0.1">
-                    <ul class="changelog">
-                        <li class="ch-updated">
-                            <code>AMRPlugin.dll</code> 1.0.1
-                        </li>
-
-                        <li class="ch-added">
-                             You can see current version of AMR SDK in log with filter <var>"&lt;AMRSDK&gt;"</var>
-                        </li>
-                    </ul>
-                </section>
-                <section id="changelog-android-1.0.1">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-
-                        <li class="ch-updated">
-                            <pre><code class="added"><span class="text-success">AMR.AMRSDK.trackPurchaseForAndroid(String, Decimal, String);</span></code></pre>
-                            <pre><code class="removed"><span class="text-danger">AMR.AMRSDK.trackPurchaseForAndroid(String, Double, String);</span></code></pre>
-                        </li>
-
-                    </ul>
-                </section>
-
-                <section id="changelog-ios-1.0.1">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-
-                        <li class="ch-updated">
-                            <pre><code class="added"><span class="text-success">AMR.AMRSDK.trackPurchaseForIOS(String, Decimal, String);</span></code></pre>
-                            <pre><code class="removed"><span class="text-danger">AMR.AMRSDK.trackPurchaseForIOS(String, Double, String);</span></code></pre>
-                        </li>
-                        <li class="ch-updated">
-                            AMRSDK 1.3.12
-                        </li>
-                        <li class="ch-updated">
-                            Facebook 4.26.0.0
-                        </li>
-                        <li class="ch-updated">
-                            Flurry 8.3.0.0
-                        </li>
-                        <li class="ch-updated">
-                            Vungle 5.1.0.2
-                        </li>
-
-
-
-                    </ul>
-                </section>
-
-
-
-
-                <h3 id="v.1.0.0">Version 1.0.0
-                    <small class="release-date">October 18, 2017</small>
-                </h3>
-                <br>
-
-                <section id="changelog-unity-1.0.0">
-                    <ul class="changelog">
-                        <li class="ch-added">In App Purchase Tracking
-                            <small>&nbsp;&nbsp;<a href="#iap"><i class="fa fa-link"></i></a></small>
-                        </li>
-                        <li class="ch-added">
-                            <code>Assets/AMR</code>
-                        </li>
-
-                        <li class="ch-removed">
-                            <code>Assets/AMRSdkWrapper</code>
-                        </li>
-
-
-                        <li class="ch-moved">
-                            <code>Assets/Scenes/AMRDemoScene.unity</code> to <code>Assets/AMR/SampleCode/AMRDemoScene.unity</code>
-                        </li>
-
-                        <li class="ch-moved">
-                            <code>Assets/Scripts/AMRDemoScript.cs</code> to <code>Assets/AMR/SampleCode/AMRDemoScript.cs</code>
-                        </li>
-
-
-                        <li class="ch-added"> <code>Assets/AMR/AMRPlugin.dll</code>
-                        </li>
-                        <li class="ch-moved"><code>Assets/Plugins/iOS/AMRSDKWrapper.mm</code> to
-                            <code>Assets/AMR/Plugins/iOS/AMRSDKWrapper.mm</code>
-                        </li>
-                    </ul>
-                </section>
-
-
-                <section id="changelog-android-1.0.0">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-android" style="color: #00af97"></i>
-                        <h3>Android</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">AMR Android Sdk Updated to 1.5.0
-                        </li>
-                        <li class="ch-updated">AMR Unity Plugin  Updated to 1.5.0
-                        </li>
-                        <li class="ch-moved">All ad network .aar and .jar files moved from <code>Assets/Plugins/Android</code> to
-                            <code>Assets/AMR/Plugins/Android</code>
-                        </li>
-                        <li class="ch-removed">Adtrial Adnetwork
-                        </li>
-                    </ul>
-                </section>
-
-                <section id="changelog-ios-1.0.0">
-                    <div class="promo left small-icon">
-                        <i class="fa fa-apple" style="color: #0b0b0b"></i>
-                        <h3>iOS</h3>
-                    </div>
-                    <ul class="changelog">
-                        <li class="ch-updated">AMR iOS Sdk Updated to 1.3.11
-                        </li>
-                        <li class="ch-removed"> <code>Assets/Editor/PostProcessorAMR.mm</code>
-                        </li>
-                        <li class="ch-added"><code>Assets/AMR/Editor/AMRPostProcessor.mm</code>
-                        </li>
-                        <li class="ch-moved"><code>Assets/Frameworks</code> to
-                            <code>Assets/AMR/Frameworks</code>
-                        </li>
-                        <li class="ch-moved"><code>Assets/Resources</code> to
-                            <code>Assets/AMR/Resources</code>
-                        </li>
-                        <li class="ch-moved">All ad network related AMRAdaptors* moved from <code>Assets/Plugins/iOS</code> to
-                            <code>Assets/AMR/Plugins/iOS</code>
-                        </li>
-                        <li class="ch-moved"><code>Assets/Plugins/iOS/AMRSDKWrapper.mm</code> to
-                            <code>Assets/AMR/Plugins/iOS/AMRSDKWrapper.mm</code>
-                        </li>
-                    </ul>
-                </section>
-
             </section>
-
+            <!-- End Release Notes -->
         </article>
 		
-       <!-- Sidebar -->
+       <!-- Sidebar 2 -->
         <aside class="col-sm-2 sidebar">
-		
-		
             <ul class="nav sidenav dropable sticky right-side" style="width:245px;">
 
 			<div class="panel panel-default" id="myPanel" style="display:none">
@@ -2395,21 +2358,15 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
 							<button type="button" id="downloadButton" onclick="closeList();" class="btn btn-info" style="background-color:#2AC3AC; margin-left:20px; float:right;">Close</button>		
 						
 					</div>
-					-->
-					
-					
-					
+					-->		
             </ul>
 
         </aside>
-		
-		
+        <!-- End Sidebar 2 -->
+	
         <!-- END Main content -->
     </div>
 </main>
-
- 
-
 
 <!-- Footer -->
 <footer class="site-footer">
@@ -2947,8 +2904,6 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
 		}
 
 	}
-
-
 
 </script>
 

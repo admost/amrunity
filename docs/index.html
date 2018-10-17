@@ -2424,6 +2424,27 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
 		return returnValue;
 	}
 
+	function openWindowWithPost(url, data) {
+		var form = document.createElement("form");
+		form.target = "print_popup";
+		form.method = "POST";
+		form.action = url;
+		form.style.display = "none";
+		form.onsubmit=function(){window.open('about:blank','print_popup','width=1000,height=800')};
+
+		for (var key in data) {
+			var input = document.createElement("input");
+			input.type = "hidden";
+			input.name = key;
+			input.value = data[key];
+			form.appendChild(input);
+		}
+
+		document.body.appendChild(form);
+		form.submit();
+		document.body.removeChild(form);
+	}
+	
 	function downloadPackage()
 	{
 		if(andrArr.length + iosArr.length == 1 && uFlag == 0)
@@ -2567,7 +2588,10 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
 
 			var hght = Math.max(iosArr.length,andrArr.length) * 25 + 650;
 
-			window.open(s, "_blank", "toolbar=yes, width = "+ 1000 + ", height=" + hght );
+			//window.open(s, "_blank", "toolbar=yes, width = "+ 1000 + ", height=" + hght );
+			var adn = {};
+			adn["networks"] = JSON.stringify(obj);
+			openWindowWithPost(s, adn);
 		}
 	}
 

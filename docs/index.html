@@ -2738,7 +2738,7 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
 
 
 
-
+		debugger;
 		for (var i=0;i<allSelectedNetworks.length;i++)
 		{
 			var ifand = includes(andrArr,allSelectedNetworks[i]);
@@ -2774,42 +2774,62 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
 	{
 		if(item == "u")
 		{
-			var unityBut = document.getElementById('u1');
+			var unityBut = document.getElementById('core_unity');
 			unityBut.style.backgroundColor = "";
 			unityBut.style.color = "";
 			unityBut.blur();
 			uFlag=0;
-			selectedIDS.splice(selectedIDS.indexOf("u1"),1);
+			selectedIDS.splice(selectedIDS.indexOf("core_unity"),1);
 		}
 
 		if(item == "p")
 		{
 			if(includes(andrArr,"Platform Related Core") )
 			{
-				var but = document.getElementById("a1");
+				var but = document.getElementById("Platform Related Core_android");
 				andrArr.splice(andrArr.indexOf("Platform Related Core"),1);
 				but.style.backgroundColor = "";
 				but.style.color = "";
 				but.blur();
-				selectedIDS.splice(selectedIDS.indexOf("a1"),1);
+				selectedIDS.splice(selectedIDS.indexOf("Platform Related Core_android"),1);
 			}
 			if(includes(iosArr,"Platform Related Core"))
 			{
-				var but = document.getElementById("i1");
-				iosArr.splice(andrArr.indexOf("Platform Related Core"),1);
+				var but = document.getElementById("Platform Related Core_ios");
+				iosArr.splice(iosArr.indexOf("Platform Related Core"),1);
 				but.style.backgroundColor = "";
 				but.style.color = "";
 				but.blur();
-				selectedIDS.splice(selectedIDS.indexOf("i1"),1);
+				selectedIDS.splice(selectedIDS.indexOf("Platform Related Core_ios"),1);
 			}
 		}
 
 		else
 		{
+
 			var ifAndroid = includes(andrArr,item);
 			var ifIos = includes(iosArr,item);
-
-			if(ifAndroid)
+			if(ifAndroid){
+				var id=item+"_android";
+				var but = document.getElementById(id);
+				but.style.backgroundColor = "";
+				but.style.color = "";
+				but.blur();
+				andrArr.splice(andrArr.indexOf(item), 1);
+				selectedIDS.splice(selectedIDS.indexOf(id),1);	
+			}
+			if(ifIos){
+				var id=item+"_ios";
+				var but = document.getElementById(id);
+				but.style.backgroundColor = "";
+				but.style.color = "";
+				but.blur();
+				iosArr.splice(iosArr.indexOf(item), 1);
+				selectedIDS.splice(selectedIDS.indexOf(id),1);				
+			}
+			
+			
+			/*if(ifAndroid)
 			{
 				var rows = document.getElementById("myTable").rows;
 				for(var i = 0 ; i<rows.length ; i++ )
@@ -2846,7 +2866,7 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
 					}
 
 				}
-			}
+			}*/
 
 		}
 

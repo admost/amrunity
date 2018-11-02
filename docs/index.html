@@ -728,12 +728,18 @@ public void onBannerReady(string networkName, double ecpm) {}
 AMR.AMRSDK.loadInterstitial();
                 </code></pre>
 
-                <p>To show a loaded interstitial run the following code;
-                </p>
+                <p>To show a loaded interstitial run the following code; </p>
 
                 <pre><code class="language-c">
 if (AMR.AMRSDK.isInterstitialReady())
 	AMR.AMRSDK.showInterstitial();
+                </code></pre>
+
+                <p>As an alternative, if you want to send tag parameter, run the following code; </p>
+
+                <pre><code class="language-c">
+if (AMR.AMRSDK.isInterstitialReady())
+	AMR.AMRSDK.showInterstitial("MyTag");
                 </code></pre>
 
                 <p>You can subscribe to 3 callback functions onInterstitialReady, onInterstitialFail and
@@ -770,6 +776,13 @@ if (AMR.AMRSDK.isRewardedVideoReady())
 	AMR.AMRSDK.showRewardedVideo();
                 </code></pre>
 
+                <p>As an alternative, if you want to send tag parameter, run the following code; </p>
+
+                <pre><code class="language-c">
+if (AMR.AMRSDK.isRewardedVideoReady())
+	AMR.AMRSDK.showRewardedVideo("MyTag");
+                </code></pre>
+
                 <p>You can subscribe to 4 callback functions OnVideoReady, OnVideoFail, OnVideoDismiss and
                     OnVideoComplete to catch rewarded video events.</p>
                 <pre><code class="language-c">
@@ -800,6 +813,13 @@ AMR.AMRSDK.loadOfferWall();
                 <pre><code class="language-c">
 if (AMR.AMRSDK.isOfferWallReady())
 	AMR.AMRSDK.showOfferWall();
+                </code></pre>
+
+                <p>As an alternative, if you want to send tag parameter, run the following code; </p>
+
+                <pre><code class="language-c">
+if (AMR.AMRSDK.isOfferWallReady())
+	AMR.AMRSDK.showOfferWall("MyTag");
                 </code></pre>
 
                 <p>You can subscribe to 3 callback functions OnOfferWallReady, OnOfferWallFail and

@@ -668,23 +668,6 @@ config.SubjectToGDPR = "1";
 
 AMR.AMRSDK.startWithConfig(config);
                 </code></pre>
-                <p>Call onApplicationPause in each of the Unity Scenes</p>
-                <pre><code class="language-c">
-void OnApplicationPause(Boolean paused)
-{
-    if (!AMR.AMRSDK.initialized())
-        return;
-
-	if (paused)
-	{
-	    AMR.AMRSDK.onPause();
-	    AMR.AMRSDK.onStop();
-	} else
-	{
-	    AMR.AMRSDK.onStart();
-	    AMR.AMRSDK.onResume();
-	}
-}</code></pre>
 
             <h4 id="initgdpr">GDPR</h4>
                 <p> Once you have collected the user’s consent, you can pass it onto the SDK using the init configuration parameters shown above.  </p> 

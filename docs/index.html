@@ -119,6 +119,7 @@
 
                 <li><a href="#extras">Extras</a>
                     <ul>
+                        <li><a href="#multidex">Multidex</a></li>
                         <li><a href="#testsuite">Test Suite</a></li>
                         <li><a href="#iap">In App Purchase Tracking</a></li>
                         <li><a href="#senduserid">Setting Application User Id</a></li>
@@ -979,6 +980,41 @@ public void OnVirtualCurrencyDidSpend(string networkName, string currency, doubl
             <!-- Extras -->
             <section>
                 <h2 id="extras">Extras</h2>
+                <h3 id="multidex">Multidex</h3>
+                <p>
+                    To enable Multidex on Android please follow the instructions below. 
+                </p>
+                 <p>
+                    Copy <a href="assets/docs/multidex.zip" download>the files</a> inside the zip into Plugins/Android directory.
+                </p>
+                 <p>
+                    Open the AndroidManifest inside this directory.
+                </p>
+                <p>
+                    Add " android:name=“com.kokteyl.core.AmrUnityApplication” " to application tag as below.  
+                </p>
+                <pre>
+<code class="language-xml">&lt;application android:name="com.kokteyl.core.AmrUnityApplication"&gt; </code></pre>
+
+                <p>
+                    In the Unity Editor, open the Build Settings window (menu: File > Build Settings…)
+                </p>
+                <p>
+                    In the Platform list, select Android
+                </p>
+                <p>
+                    Set the Build System drop-down to Gradle (new)
+                </p>
+                <p>
+                    Open Player Settings
+                </p>
+                <p>
+                    Thick up the Custom Gradle Template checkbox.
+                </p>
+                <img class="img-responsive"
+                                 src="assets/img/multidex.png"
+                                 alt="consent">
+                
                 <h3 id="testsuite">Test Suite</h3>
                 <p>
                     You can use Test Suite to test your ad networks with your zone ids.

@@ -203,7 +203,7 @@
                             <td colspan="2" class="text-center">
                                <button type="button" onclick="toggleAdNetworkStatus('core_unity');" id="core_unity" class="btn btn-outline btn-block btn-primary"><i
 										style="padding-right: 16px;" class="fa fa-android"></i>/<i
-										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.1</button>
+										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.2</button>
                             </td>
                         </tr>
                         <tr>
@@ -723,24 +723,28 @@ void Start()
                     AMR.AMRSDK.loadBanner(AMR.Enums.AMRSDKBannerPosition.BannerPositionTop, true);
                 </code></pre>
                 <p>If you want to show a banner manually after it has loaded, pass false as the second parameter of
-                    loadBanner method and wait for the OnBannerReady callback. Then call showbanner method to show
+                    loadBanner method and wait for the OnBannerReady callback. Then call the following method to show
                     banner.
-
                 </p>
+				<pre><code class="language-c">
+                    AMR.AMRSDK.showBanner();
+                </code></pre>
 
-                <p>Call <code>hideBanner</code> method to hidethe banner;</p>
+                <p>Call <code>hideBanner</code> method to hide the banner;</p>
 
                 <pre><code class="language-c">
 AMR.AMRSDK.hideBanner();
                 </code></pre>
 
-                <p>You can subscribe onBannerReady callback functions to catch banner event.</p>
+                <p>You can subscribe onBannerReady or onBannerFail callback functions to catch banner events.</p>
 
                 <pre><code class="language-c">
 // Banner Callbacks - Optional
 AMR.AMRSDK.setOnBannerReady(onBannerReady);
+AMR.AMRSDK.setOnBannerFail(onBannerFail);
 
 public void onBannerReady(string networkName, double ecpm) {}
+public void onBannerFail(string error) {}
                 </code></pre>
 
                 <h3 id="interstitial-ads">Interstitial Ads</h3>
@@ -1225,6 +1229,7 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
                         new features, etc.</p>
 
                     <ol class="toc">
+						<li><a href="#v.1.3.2"> Version 1.3.2</a></li>
 						<li><a href="#v.1.3.1"> Version 1.3.1</a></li>
 						<li><a href="#v.1.3.0"> Version 1.3.0</a></li>
 						<li><a href="#v.1.2.9"> Version 1.2.9</a></li>
@@ -1280,6 +1285,27 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
                 </section>
 
                 <section id="versions">
+					<h3 id="v.1.3.2">Version 1.3.2
+                                <small class="release-date">December 21, 2018</small>
+                            </h3>
+							<section id="changelog-unity-1.3.2">
+                            <ul class="changelog">
+									<li class="ch-updated"><code>AMRPlugin core</code> 1.3.2</li>
+                                    <li class="ch-added">Banner onFail callback added</li>
+                                </ul>      
+                            </section>
+							<section id="changelog-ios-1.3.2">
+                                <div class="promo left small-icon">
+                                    <i class="fa fa-apple" style="color: #0b0b0b"></i>
+                                    <h3>iOS</h3>
+                                </div>
+                                <ul class="changelog">
+                                        <li class="ch-updated">AMRSDK 1.3.94 </li>
+										<li class="ch-updated">Admob 7.37.0.0 </li>
+										<li class="ch-updated">Admost 1.2.0.0 ~ Banner ads migrated from UIWebView to WkWebView. </li>
+										<li class="ch-updated">Dfp 7.37.0.0 </li>
+                                </ul>
+                            </section>
 					<h3 id="v.1.3.1">Version 1.3.1
                                 <small class="release-date">December 19, 2018</small>
                             </h3>

@@ -203,7 +203,7 @@
                             <td colspan="2" class="text-center">
                                <button type="button" onclick="toggleAdNetworkStatus('core_unity');" id="core_unity" class="btn btn-outline btn-block btn-primary"><i
 										style="padding-right: 16px;" class="fa fa-android"></i>/<i
-										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.2</button>
+										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.3</button>
                             </td>
                         </tr>
                         <tr>
@@ -213,7 +213,7 @@
 
                             <td class="text-right">
                                 <button type="button" onclick = "toggleAdNetworkStatus('Platform Related Core_android');" id="Platform Related Core_android" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.8.2</button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.8.3</button>
                                
                             </td>
                             <td class="text-right">
@@ -283,7 +283,7 @@
     
                                     <td class="text-right">
 									<button type="button" onclick="toggleAdNetworkStatus('Adtiming_android');" id="Adtiming_android" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.4.5.7</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.4.6.3</button>
 									</td>
                                     <td class="text-right">
                                     </td>         
@@ -492,6 +492,22 @@
                             </td>
                         </tr>
 
+						<tr>
+                            <td><span class="label label-success">Optional</span></td>
+                            <td>MIntegral</td>
+                            <td>amr_android_mintegral.unitypackage</td>
+
+                            <td class="text-right">
+                               
+								<button type="button" onclick="toggleAdNetworkStatus('Mintegral_android');" id="Mintegral_android" class="btn btn-outline btn-block btn-success"><i
+										class="fa fa-android"></i>&nbsp;&nbsp;v.9.2.0</button>
+							
+                            </td>
+                            <td class="text-right">
+                                
+                            </td>
+                        </tr>
+						
                         <tr>
                             <td><span class="label label-success">Optional</span></td>
                             <td>Mobfox</td>
@@ -1133,7 +1149,7 @@ public void OnVirtualCurrencyDidSpend(string networkName, string currency, doubl
                             <i class="fa fa-android"></i>
                             <h3>Android</h3>
                             <img class="img-responsive"
-                                src="https://admost.github.io/amrunity/assets/img/android_testsuite.png"
+                                src="assets/img/android_testsuite.png"
                                 alt="shadowed image">
                         </div>
 
@@ -1162,9 +1178,9 @@ public void OnVirtualCurrencyDidSpend(string networkName, string currency, doubl
 
                 <pre><code class="language-c">
                     //Product refers UnityEngine.Purchasing class object
-    AMR.AMRSDK.trackPurchaseForAndroid( product.receipt,
-                                        product.metadata.localizedPrice,
-                                        product.metadata.isoCurrencyCode);
+AMR.AMRSDK.trackPurchaseForAndroid( product.receipt,
+				product.metadata.localizedPrice,
+				product.metadata.isoCurrencyCode);
                     </code></pre>
 
                 <p>Explanation of parameters:</p>
@@ -1189,9 +1205,9 @@ public void OnVirtualCurrencyDidSpend(string networkName, string currency, doubl
 
                 <pre><code class="language-c">
                     //Product refers UnityEngine.Purchasing class object
-    AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
-                                    product.metadata.localizedPrice,
-                                    product.metadata.isoCurrencyCode);
+AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
+				product.metadata.localizedPrice,
+				product.metadata.isoCurrencyCode);
                     </code></pre>
                 <ul>
                     <li><b>transactionID</b> – A unique identifier for this product's transaction
@@ -1202,6 +1218,29 @@ public void OnVirtualCurrencyDidSpend(string networkName, string currency, doubl
 
                     <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
 
+                    </li>
+
+
+                </ul>
+				
+				<div class="promo left small-icon">
+                    <i class="fa fa-android" style="color: #00af97"></i>
+                    <h3>Amazon Store</h3>
+                </div>
+
+                <pre><code class="language-c">
+					AMR.AMRSDK.trackPurchaseForAmazon(userId, receiptId, localizedPrice, marketPlace);
+                    </code></pre>
+
+                <p>Explanation of parameters:</p>
+                <ul>
+                    <li><b>userId (string)</b> – The userId of currently logged on user
+                    </li>
+					<li><b>receiptId (string)</b> – The purchase receiptId
+                    </li>
+                    <li><b>localizedPrice (decimal)</b> – Decimal product price denominated in the currency indicated by isoCurrencySymbol.
+                    </li>
+                    <li><b>marketPlace (string)</b> – Amazon store marketplace for the currently logged on user
                     </li>
 
 
@@ -1229,6 +1268,7 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
                         new features, etc.</p>
 
                     <ol class="toc">
+						<li><a href="#v.1.3.3"> Version 1.3.3</a></li>
 						<li><a href="#v.1.3.2"> Version 1.3.2</a></li>
 						<li><a href="#v.1.3.1"> Version 1.3.1</a></li>
 						<li><a href="#v.1.3.0"> Version 1.3.0</a></li>
@@ -1285,6 +1325,26 @@ AMR.AMRSDK.setUserId(@&quot;&lt;applicationUserId&gt;&quot;);
                 </section>
 
                 <section id="versions">
+					<h3 id="v.1.3.3">Version 1.3.3
+                                <small class="release-date">January 08, 2018</small>
+                            </h3>
+							<section id="changelog-unity-1.3.3">
+                            <ul class="changelog">
+                                    <li class="ch-updated"> <code>AMRPlugin core</code> 1.3.3 </li>
+									<li class="ch-added">Amazon Store In App Tracking</li>
+                                </ul>      
+                            </section>
+                            <section id="changelog-android-1.3.3">
+                                <div class="promo left small-icon">
+                                    <i class="fa fa-android" style="color: #00af97"></i>
+									<h3>Android</h3>
+                                </div>
+                                <ul class="changelog">
+                                    <li class="ch-updated">Android SDK 1.8.3 </li>
+									<li class="ch-updated">AdTiming 4.6.3 </li>
+									<li class="ch-added">Mintegral 9.2.0 </li>
+                                </ul>
+                            </section>					
 					<h3 id="v.1.3.2">Version 1.3.2
                                 <small class="release-date">December 21, 2018</small>
                             </h3>

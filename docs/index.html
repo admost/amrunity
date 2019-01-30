@@ -674,6 +674,24 @@
                             </p>
                         </div>
                     </li>
+					<li>
+						<h5 id="androidadmob17config">AdMob Configuration for Play Services Ads 17.0.0 or higher</h5>
+						<div class="callout callout-danger" role="alert">
+						<p> If you are using <span class="label label-success"><i class="fa fa-android"></i>&nbsp;Admob</span>(com.google.android.gms:play-services-ads)  with version <b>17.0.0 and higher</b>, you must add your <b>AdMob App ID</b> to your Android Manifest file.</b> </p>
+						<pre><code id="code-androidmanifest2">
+&lt;manifest&gt;
+  &lt;application&gt;
+	  &lt;!-- Sample AdMob App ID: ca-app-pub-0000000000000000~0000000000 --&gt;
+	  &lt;meta-data
+		  android:name="com.google.android.gms.ads.APPLICATION_ID"
+		  android:value="[ADMOB_APP_ID]"/&gt;
+  &lt;/application&gt;
+&lt;/manifest&gt;
+				</code></pre>
+				
+						</div>
+						
+					</li>
                 </ul>
 
                 <h3 id="iossetupnotes">iOS Setup Notes</h3>

@@ -1,0 +1,747 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+
+    <title>AMR - Unity FAQ</title>
+
+    <!-- Styles -->
+    <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
+    <link href="assets/css/custom.css" rel="stylesheet">
+    <link href="assets/css/skin/skin-purple.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link href='https://fonts.googleapis.com/css?family=Raleway:100,300,400,500%7CLato:300,400' rel='stylesheet'
+          type='text/css'>
+
+    <!-- Scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Favicons -->
+	<link rel="icon" href="https://dashboard.admost.com/Assets/img/admostfavicon.png">
+</head>
+<body data-spy="scroll" data-target=".sidebar" data-offset="200">
+
+<header class="site-header navbar-transparent sticky">
+
+    <!-- Top navbar & branding -->
+    <nav class="navbar navbar-default">
+        <div class="container">
+
+            <!-- Toggle buttons and brand -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar"
+                        aria-expanded="true" aria-controls="navbar">
+                    <span class="glyphicon glyphicon-option-vertical"></span>
+                </button>
+
+                <button type="button" class="navbar-toggle for-sidebar" data-toggle="offcanvas">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="http://admost.github.io"><img src="assets/img/logo-white.svg" alt="logo"></a>
+
+            </div>
+            <!-- END Toggle buttons and brand -->
+
+            <!-- Top navbar -->
+            <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html">Documentation</a></li>
+                    <li><a href="gdpr.html">GDPR</a></li>
+                    <li><a href="release-notes.html">Release Notes</a></li>
+                    <li class="active"><a href="faq.html">FAQ</a></li>
+                    <li class="hero">
+                        <a target="_blank" href="https://github.com/admost/amrunity"><i class="fa fa-github"></i>&nbsp;&nbsp;Github</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- END Top navbar -->
+            
+        </div>
+    </nav>
+    <!-- END Top navbar & branding -->
+</header>
+
+
+<!-- Main content -->
+<main class="container">
+        <div class="row">
+            <article class="col-sm-9 main-content" role="main">
+                <h1>Frequently asked questions</h1>
+                <p>If you have a question and couldn’t find it here, just send us an <a href="mailto:amr@admost.com">email</a>.</p>
+                <p></p>
+    
+                <div class="faq">
+                        <input class="faq-search" type="text" placeholder="Type to search..."><p></p>
+                    <ul>
+                        <li style="display: list-item;">
+                            <h6 class="">What is min. supported Unity Version?</h6>
+                            <div style="display: none;">
+                                <p>Unity 5 or later.</p>
+                                <p></p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                
+            </article>
+        </div>
+    </main>
+    <!-- END Main content -->
+
+<!-- Footer -->
+<footer class="site-footer">
+    <div class="container">
+        <a id="scroll-up" href="#"><i class="fa fa-angle-up"></i></a>
+
+        <div class="row">
+            <div class="col-md-6 col-sm-6">
+                <p>Copyright &copy; 2017. All right reserved</p>
+            </div>
+            <div class="col-md-6 col-sm-6">
+                <ul class="footer-menu">
+                    <li><a href="http://admost.github.io/amrandroid">Android integration</a></li>
+                    <li><a href="http://admost.github.io/amrios">iOS integration</a></li>
+                    <li><a href="mailto:amr@admost.com">Contact us</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- END Footer -->
+
+<!-- Scripts -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script>
+    window.jQuery || document.write('<script src="assets/js/vendor/jquery.min.js"><\/script>')
+</script>
+<script>function copyToClipboard(element) {
+    var $temp = $("<input>");
+    $("body").append($temp);
+    $temp.val($(element).text()).select();
+    document.execCommand("copy");
+    $temp.remove();
+}
+</script>
+
+<script src="assets/js/theDocs.all.min.js"></script>
+<script src="assets/js/custom.js"></script>
+<script src="https://admost.github.io/amrios/adnetworks.js"></script>
+
+<script>
+	var uFlag=0;
+	var andrArr = [];
+	var iosArr = [];
+	var selectedIDS = [];
+	var allSelectedNetworks = [];
+
+
+	function includes(container, value)
+	{
+		var returnValue = false;
+		var pos = container.indexOf(value);
+		if (pos >= 0) {
+			returnValue = true;
+		}
+		return returnValue;
+	}
+
+	function openWindowWithPost(url, data) {
+		var form = document.createElement("form");
+		form.target = "print_popup";
+		form.method = "POST";
+		form.action = url;
+		form.style.display = "none";
+		form.onsubmit=function(){window.open('about:blank','print_popup','width=1000,height=800')};
+
+		for (var key in data) {
+			var input = document.createElement("input");
+			input.type = "hidden";
+			input.name = key;
+			input.value = data[key];
+			form.appendChild(input);
+		}
+
+		document.body.appendChild(form);
+		form.submit();
+		document.body.removeChild(form);
+	}
+
+	function downloadPackage()
+	{
+		if(andrArr.length + iosArr.length == 1 && uFlag == 0)
+		{
+			var reqPath =  "http://download.admost.com/OneFileDownloader.aspx";
+			if(andrArr.length==1)
+			{
+				if(andrArr[0]!="Platform Related Core")
+				{
+					//var s =  "https://github.com/admost/amrunity/raw/master/packages/android/amr_android_" + andrArr[0].replace(/\s/g,'').toLowerCase() + ".unitypackage";
+					var s = reqPath + "?type=android&d=" + andrArr[0].replace(/\s/g,'').toLowerCase();
+				}
+				else
+				{
+					//var s = "https://github.com/admost/amrunity/raw/master/packages/android/amr_android_core.unitypackage";
+					var s = reqPath + "?type=android&d=" + "core";
+				}
+			}
+			else if(iosArr.length==1)
+			{
+				if(iosArr[0]!="Platform Related Core" && iosArr[0] != "Unity Ads")
+				{
+					//var s =  "https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_" + iosArr[0].replace(/\s/g,'').toLowerCase() + ".unitypackage";
+					var s = reqPath + "?type=ios&d=" + iosArr[0].replace(/\s/g,'').toLowerCase();
+				}
+				else if ( iosArr[0] == "Unity Ads")
+				{
+					//var s = "https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_unity.unitypackage";
+					var s = reqPath + "?type=ios&d=" + "unity"
+				}
+				else
+				{
+					//var s = "https://github.com/admost/amrunity/raw/master/packages/ios/amr_ios_core.unitypackage"
+					var s = reqPath + "?type=ios&d=" + "core"
+				}
+			}
+			window.location = s;
+		}
+
+		else if (andrArr.length + iosArr.length == 0 && uFlag==1)
+		{
+			//var reqPath =  "http://localhost:62029/OneFileDownloader.aspx";
+			var reqPath =  "http://download.admost.com/OneFileDownloader.aspx";
+			//var s = "https://github.com/admost/amrunity/raw/master/packages/amr_unity_core.unitypackage";
+			var s = reqPath + "?type=core&d=" + "core"
+			window.location = s;
+		}
+
+		else
+		{
+
+			var s = "http://download.admost.com/Main.aspx?d=";
+
+			//var s = "http://localhost:62029/Main.aspx?d=";
+
+			var params='{"android" : [';
+
+			for (var i=0;i<andrArr.length;i++)
+			{
+				if(andrArr[i]!="Platform Related Core")
+				{
+					params+='"' + (andrArr[i].replace(/\s/g,'')).toLowerCase() + '"';
+
+					params+=",";
+
+				}
+				else
+				{
+					params += '"' + "core" + '"';
+
+					params+=",";
+
+				}
+
+			}
+			if(params[params.length-1] == ",")
+			{
+				params = params.slice(0, -1);
+			}
+
+
+			params += '] , "ios" : [';
+
+			for (var i=0;i<iosArr.length;i++)
+			{
+				if(iosArr[i]=="Unity Ads")
+				{
+					params+='"' + "unity" + '"';
+
+					params+=",";
+
+				}
+
+
+				else if(iosArr[i]!="Platform Related Core")
+				{
+					params+='"' + (iosArr[i].replace(/\s/g,'')).toLowerCase() + '"';
+
+					params+=",";
+
+				}
+				else if(iosArr[i]=="Platform Related Core")
+				{
+					params+='"' + "core" + '"';
+
+					params+=",";
+
+				}
+			}
+
+			if(params[params.length-1] == ",")
+			{
+				params = params.slice(0, -1);
+			}
+
+			params += '] , "unityCore" : [';
+
+			if(uFlag==1)
+			{
+				params += '"' + "core" + '"';
+			}
+
+
+
+
+
+
+
+			params += "]}";
+
+			s += params;
+			console.log(s);
+
+			var w = window.innerWidth
+			|| document.documentElement.clientWidth
+			|| document.body.clientWidth;
+
+			var h = window.innerHeight
+			|| document.documentElement.clientHeight
+			|| document.body.clientHeight;
+
+			var hght = Math.max(iosArr.length,andrArr.length) * 25 + 650;
+
+			//window.open(s, "_blank", "toolbar=yes, width = "+ 1000 + ", height=" + hght );
+			var adn = {};
+			adn["networks"] = JSON.stringify(obj);
+			openWindowWithPost(s, adn);
+		}
+	}
+
+
+	function closeList()
+	{
+		andrArr = [];
+		iosArr = [];
+		uFlag = 0;
+		for (var i=0 ; i<selectedIDS.length ; i++)
+		{
+			var selectedTemp = document.getElementById(selectedIDS[i]);
+			selectedTemp.style.backgroundColor = "";
+			selectedTemp.style.color = "";
+			selectedTemp.blur();
+		}
+		selectedIDS = [];
+
+
+		update();
+	}
+
+
+
+	function update()
+	{
+
+
+		debugger;
+		if((andrArr.length + iosArr.length == 0) && uFlag==0)
+		{
+			document.getElementById('myPanel').style.display='none';
+		}
+
+		else
+		{
+			document.getElementById('myPanel').style.display='block';
+		}
+
+
+
+		var table = document.getElementById("selectedTable");
+		table.innerHTML="";
+
+
+		allSelectedNetworks = andrArr.slice(0);
+
+		for(var i=0; i< iosArr.length;i++)
+		{
+			/*if(allSelectedNetworks.includes(iosArr[i])==false)
+			{
+				allSelectedNetworks.push(iosArr[i]);
+			}*/
+
+			if(includes(allSelectedNetworks,iosArr[i])==false)
+			{
+				allSelectedNetworks.push(iosArr[i]);
+			}
+
+		}
+		allSelectedNetworks.sort();
+
+		if(uFlag==1)
+		{
+			var row = table.insertRow(table.rows.length);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(0);
+			var cell3 = row.insertCell(0);
+			var cell0 = row.insertCell(0);
+
+			cell0.innerHTML = '<span class="fa fa-remove" style="color:red; cursor:pointer;" onclick="deleteTableItem(\'u\');" ></span>';
+			cell3.innerHTML = "Unity Core";
+			cell2.innerHTML= '<span class="fa fa-android" style = "color:#2196F3;"> </span>'
+			cell1.innerHTML = '<span class="fa fa-apple" style = "color:#2196F3;"></span>'
+
+		}
+
+		if(includes(allSelectedNetworks,"Platform Related Core"))
+		{
+			var ifand = includes(andrArr,"Platform Related Core");
+			var ifios = includes(iosArr,"Platform Related Core");
+			var row = table.insertRow(table.rows.length);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(0);
+			var cell3 = row.insertCell(0);
+			var cell0 = row.insertCell(0);
+
+
+			cell0.innerHTML = '<span class="fa fa-remove" style="color:red; cursor:pointer;" onclick="deleteTableItem(\'p\');" ></span>';
+			cell3.innerHTML = "Platform Related Core";
+
+			if(ifand)
+			{
+				cell2.innerHTML= '<span class="fa fa-android" style = "color:#43A047;"></span>'
+			}
+
+			if(ifios)
+			{
+				cell1.innerHTML = '<span class="fa fa-apple" style = "color:#777777;"></span>'
+			}
+
+			allSelectedNetworks.splice(allSelectedNetworks.indexOf("Platform Related Core"),1);
+
+
+		}
+
+
+
+
+		debugger;
+		for (var i=0;i<allSelectedNetworks.length;i++)
+		{
+			var ifand = includes(andrArr,allSelectedNetworks[i]);
+			var ifios = includes(iosArr,allSelectedNetworks[i]);
+			var row = table.insertRow(table.rows.length);
+			var cell1 = row.insertCell(0);
+			var cell2 = row.insertCell(0);
+			var cell3 = row.insertCell(0);
+			var cell0 = row.insertCell(0);
+
+
+			cell3.innerHTML = allSelectedNetworks[i];
+			cell0.innerHTML = '<span class="fa fa-remove" style="color:red; cursor:pointer;" onclick="deleteTableItem(\'' + allSelectedNetworks[i] + '\');" ></span>';
+
+			if(ifand)
+			{
+				cell2.innerHTML= '<span class="fa fa-android" style = "color:#43A047;"></span>'
+			}
+
+			if(ifios)
+			{
+				cell1.innerHTML = '<span class="fa fa-apple" style = "color:#777777;"></span>'
+			}
+
+
+
+		}
+
+
+	}
+
+	function deleteTableItem(item)
+	{
+		if(item == "u")
+		{
+			var unityBut = document.getElementById('core_unity');
+			unityBut.style.backgroundColor = "";
+			unityBut.style.color = "";
+			unityBut.blur();
+			uFlag=0;
+			selectedIDS.splice(selectedIDS.indexOf("core_unity"),1);
+		}
+
+		if(item == "p")
+		{
+			if(includes(andrArr,"Platform Related Core") )
+			{
+				var but = document.getElementById("Platform Related Core_android");
+				andrArr.splice(andrArr.indexOf("Platform Related Core"),1);
+				but.style.backgroundColor = "";
+				but.style.color = "";
+				but.blur();
+				selectedIDS.splice(selectedIDS.indexOf("Platform Related Core_android"),1);
+			}
+			if(includes(iosArr,"Platform Related Core"))
+			{
+				var but = document.getElementById("Platform Related Core_ios");
+				iosArr.splice(iosArr.indexOf("Platform Related Core"),1);
+				but.style.backgroundColor = "";
+				but.style.color = "";
+				but.blur();
+				selectedIDS.splice(selectedIDS.indexOf("Platform Related Core_ios"),1);
+			}
+		}
+
+		else
+		{
+
+			var ifAndroid = includes(andrArr,item);
+			var ifIos = includes(iosArr,item);
+			if(ifAndroid){
+				var id=item+"_android";
+				var but = document.getElementById(id);
+				but.style.backgroundColor = "";
+				but.style.color = "";
+				but.blur();
+				andrArr.splice(andrArr.indexOf(item), 1);
+				selectedIDS.splice(selectedIDS.indexOf(id),1);
+			}
+			if(ifIos){
+				var id=item+"_ios";
+				var but = document.getElementById(id);
+				but.style.backgroundColor = "";
+				but.style.color = "";
+				but.blur();
+				iosArr.splice(iosArr.indexOf(item), 1);
+				selectedIDS.splice(selectedIDS.indexOf(id),1);
+			}
+
+
+			/*if(ifAndroid)
+			{
+				var rows = document.getElementById("myTable").rows;
+				for(var i = 0 ; i<rows.length ; i++ )
+				{
+					if(rows[i].cells[1].innerHTML == item)
+					{
+						var id = "a"+ (i-1);
+						var but = document.getElementById(id);
+						but.style.backgroundColor = "";
+						but.style.color = "";
+						but.blur();
+						andrArr.splice(andrArr.indexOf(item), 1);
+						selectedIDS.splice(selectedIDS.indexOf(id),1);
+					}
+
+				}
+			}
+
+
+			if(ifIos)
+			{
+				var rows = document.getElementById("myTable").rows;
+				for(var i = 0 ; i<rows.length ; i++ )
+				{
+					if(rows[i].cells[1].innerHTML == item)
+					{
+						var id = "i"+ (i-1);
+						var but = document.getElementById(id);
+						but.style.backgroundColor = "";
+						but.style.color = "";
+						but.blur();
+						iosArr.splice(iosArr.indexOf(item), 1);
+						selectedIDS.splice(selectedIDS.indexOf(id),1);
+					}
+
+				}
+			}*/
+
+		}
+
+		update();
+	}
+
+
+	function toggleAdNetworkStatus(id)
+	{
+		if(id=='core_unity')
+		{
+			var unityBut = document.getElementById('core_unity');
+
+			if(uFlag==0)
+			{
+
+				unityBut.style.backgroundColor = "#2196F3";
+				unityBut.style.color = "#ffffff";
+				uFlag=1;
+				selectedIDS.push(id);
+			}
+			else if(uFlag==1)
+			{
+
+				unityBut.style.backgroundColor = "";
+				unityBut.style.color = "";
+				unityBut.blur();
+				uFlag=0;
+				selectedIDS.splice(selectedIDS.indexOf(id),1);
+			}
+			update();
+
+		}
+
+		else
+		{
+			var ifAndroid = (id.split("_")[1] == "android")
+			var but = document.getElementById(id);
+
+			if(ifAndroid == true)
+			{
+				var listElement = id.split("_")[0];
+				if(includes(andrArr,listElement) == false)
+				{
+					but.style.backgroundColor = "#43A047";
+					but.style.color = "#ffffff";
+					andrArr.push(listElement);
+					selectedIDS.push(id);
+
+					if(includes(andrArr,"Platform Related Core")==false)
+					{
+						toggleAdNetworkStatus("Platform Related Core_android");
+					}
+						if(uFlag==0)
+					{
+						toggleAdNetworkStatus("core_unity");
+					}
+				}
+				else
+				{
+					but.style.backgroundColor = "";
+					but.style.color = "";
+					but.blur();
+					andrArr.splice(andrArr.indexOf(listElement), 1);
+					selectedIDS.splice(selectedIDS.indexOf(id),1);
+				}
+
+				update();
+			}
+			else
+			{
+				var listElement = id.split("_")[0];
+				if(includes(iosArr,listElement) == false)
+				{
+					but.style.backgroundColor = "#777777"
+					but.style.color = "#ffffff";
+					iosArr.push(listElement);
+					selectedIDS.push(id);
+
+					if(includes(iosArr,"Platform Related Core")==false)
+					{
+						toggleAdNetworkStatus("Platform Related Core_ios");
+					}
+						if(uFlag==0)
+					{
+						toggleAdNetworkStatus("core_unity");
+					}
+				}
+				else
+				{
+					but.style.backgroundColor = "";
+					but.style.color = "";
+					but.blur();
+					iosArr.splice(iosArr.indexOf(listElement), 1);
+					selectedIDS.splice(selectedIDS.indexOf(id),1);
+				}
+
+				update();
+			}
+
+			/*var ifAndroid = (id.substring(0,1) == 'a');
+			var buttonAndSpanId;
+
+			if (id.length == 4)
+				buttonAndSpanId = id[1];
+
+			else
+			{
+				buttonAndSpanId = id[1];
+				buttonAndSpanId+= id[2];
+			}
+
+			var but = document.getElementById(id);
+
+
+
+			if(ifAndroid == true)
+			{
+				var listElement = document.getElementById("myTable").rows[parseInt(buttonAndSpanId)+1].cells[1].innerHTML;
+				if(includes(andrArr,listElement) == false)
+				{
+					but.style.backgroundColor = "#43A047";
+					but.style.color = "#ffffff";
+					andrArr.push(listElement);
+					selectedIDS.push(id);
+					if(includes(andrArr,"Platform Related Core")==false)
+					{
+						toggleAdNetworkStatus("a1");
+					}
+						if(uFlag==0)
+					{
+						toggleAdNetworkStatus("u1");
+					}
+				}
+				else
+				{
+					but.style.backgroundColor = "";
+					but.style.color = "";
+					but.blur();
+					andrArr.splice(andrArr.indexOf(listElement), 1);
+					selectedIDS.splice(selectedIDS.indexOf(id),1);
+				}
+
+				update();
+			}
+			else
+			{
+				var listElement = document.getElementById("myTable").rows[parseInt(buttonAndSpanId)+1].cells[1].innerHTML;
+				if(includes(iosArr,listElement) == false)
+				{
+					but.style.backgroundColor = "#777777"
+					but.style.color = "#ffffff";
+					iosArr.push(listElement);
+
+					selectedIDS.push(id);
+					if(includes(iosArr,"Platform Related Core")==false)
+					{
+						toggleAdNetworkStatus("i1");
+					}
+					if(uFlag==0)
+					{
+						toggleAdNetworkStatus("u1");
+					}
+
+
+
+				}
+				else
+				{
+					but.style.backgroundColor = ""
+					but.style.color = "";
+					but.blur();
+					iosArr.splice(iosArr.indexOf(listElement), 1);
+					selectedIDS.splice(selectedIDS.indexOf(id),1);
+				}
+
+				update();
+
+			}*/
+		}
+
+	}
+
+</script>
+
+</body>
+</html>

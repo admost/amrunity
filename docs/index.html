@@ -734,16 +734,18 @@ void Start()
     config.OfferWallIdAndroid = &quot;&lt;Your Android Offerwall Zone Id&gt;&quot;;
     config.OfferWallIdIOS = &quot;&lt;Your IOS Offerwall Zone Id&gt;&quot;;
 
-    //GDPR COMPLIANCE
-    config.UserConsent = "1";
-    config.SubjectToGDPR = "1";
-
     AMR.AMRSDK.startWithConfig(config);
 }
                 </code></pre>
 
             <h4 id="initgdpr">GDPR</h4>
-                <p> Once you have collected the user’s consent, you can pass it onto the SDK using the init configuration parameters shown above.  </p>
+                <p> Once you have collected the user’s consent, you can pass it onto the SDK using the init configuration parameters shown below.  </p>
+            <pre>
+<code>//GDPR COMPLIANCE
+config.UserConsent = "1";
+config.SubjectToGDPR = "1";</code>
+            </pre>
+
                  <p><code>UserConsent</code> has a boolean parameter. If you have the user’s consent, set it "1". If you do not have the user's consent, set it "0".</p>
                  <p><code>SubjectToGDPR</code> has a boolean parameter. If you know the user is subject to GDPR, set it "1". If you know the user is not subject to GDPR, set it "0". </p>
                 <p>If you don’t pass the user’s consent or subjectToGDPR to the SDK, the rules described in <a
@@ -1149,7 +1151,11 @@ AMR.AMRSDK.setUserId(&quot;&lt;applicationUserId&gt;&quot;);
                 </code></pre>
 
 				<h3 id="setadjustuserid">Setting Adjust User Id</h3>
-
+                <p>
+                    Follow the official <a target="_blank" href="https://github.com/adjust/unity_sdk#basic-integration">ADJUST</a>
+                    documents to integrate
+                    AdjustSDK in to your app.
+                </p>
                 <p>
                     You can use the following method to set adjust user id in Admost Analytics for enhanced tracking of your users. You have to call this method after initialization.
                 </p>

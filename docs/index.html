@@ -124,6 +124,7 @@
                         <li><a href="#iap">In App Purchase Tracking</a></li>
                         <li><a href="#senduserid">Setting Application User Id</a></li>
 						<li><a href="#setadjustuserid">Setting Adjust User Id</a></li>
+						<li><a href="#gdprcheck">GDPR Applicable Check</a></li>
                     </ul>
                 </li>
             </ul>
@@ -187,7 +188,7 @@
                             <td colspan="2" class="text-center">
                                <button type="button" onclick="toggleAdNetworkStatus('core_unity');" id="core_unity" class="btn btn-outline btn-block btn-primary"><i
 										style="padding-right: 16px;" class="fa fa-android"></i>/<i
-										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.6</button>
+										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.3.7</button>
                             </td>
                         </tr>
                         <tr>
@@ -197,7 +198,7 @@
 
                             <td class="text-right">
                                 <button type="button" onclick = "toggleAdNetworkStatus('Platform Related Core_android');" id="Platform Related Core_android" class="btn btn-outline btn-block btn-success"><i
-                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.9.0</button>
+                                            class="fa fa-android"></i>&nbsp;&nbsp;v.1.9.1</button>
 
                             </td>
                             <td class="text-right">
@@ -336,7 +337,7 @@
                                 <td>amr_android_appsamurai.unitypackage</br> Podfile</td>
 
                                 <td class="text-right"><button type="button" onclick="toggleAdNetworkStatus('Appsamurai_android');" id="Appsamurai_android"  class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.1.2.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.1.3.1</button>
 
                                 </td>
                                 <td class="text-right">
@@ -388,7 +389,7 @@
                             <td class="text-right">
 
 								<button type="button"  onclick="toggleAdNetworkStatus('Facebook_android');" id="Facebook_android" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.5.3.0</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.5.3.1</button>
 
                             </td>
                             <td class="text-right">
@@ -442,7 +443,7 @@
                             <td class="text-right">
 
 								<button type="button" onclick="toggleAdNetworkStatus('Inmobi_android');" id="Inmobi_android" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.7</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.7.2.8</button>
 
                             </td>
                             <td class="text-right">
@@ -460,7 +461,7 @@
                                                        <td class="text-right">
 
 								<button type="button" onclick="toggleAdNetworkStatus('Ironsource_android');" id="Ironsource_android" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.6.8.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.6.8.4</button>
 
                             </td>
                             <td class="text-right">
@@ -479,7 +480,7 @@
                             <td class="text-right">
 
 								<button type="button" onclick="toggleAdNetworkStatus('Mintegral_android');" id="Mintegral_android" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.9.10.0</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.9.11.0</button>
 
                             </td>
                             <td class="text-right">
@@ -606,7 +607,7 @@
                            <td class="text-right">
 
 								<button type="button" onclick="toggleAdNetworkStatus('Unity Ads_android');" id="Unity Ads_android" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.3.0.3</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.3.1.0</button>
 
                             </td>
                             <td class="text-right">
@@ -1140,6 +1141,32 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
 
                 </ul>
 
+				<div class="promo left small-icon">
+                    <h3>In App Purchase Tracking Callbacks</h3>
+                </div>
+				<p>You can listen callbacks of your in-app purchases for all platforms as shown below.</p>
+				<pre><code class="language-c">
+AMR.AMRSDK.setTrackPurchaseOnResult(trackPurchaseOnResult);
+// You will be notified about the result of your purchase
+public void trackPurchaseOnResult(string purchaseId, AMR.Enums.AMRSDKTrackPurchaseResult responseCode)
+{
+	Debug.Log("ADMOST - trackPurchaseOnResult : " + purchaseId + " " + responseCode);
+}
+
+                    </code></pre>
+					<p>Possible response codes you may have;</p>
+					<ul>
+					<li>
+					SuccessfullyValidated(0) : "Valid purchase" 
+					</li>
+					<li>
+					FailedToValidate(1) : "Invalid Purchase"
+					</li>
+					<li>
+					Exception(2) : "Temporary exception occurred, will be tried again later"
+					</li>
+					</ul>
+				
                 <h3 id="senduserid">Setting Application User Id</h3>
 
                 <p>
@@ -1164,6 +1191,20 @@ AMR.AMRSDK.setUserId(&quot;&lt;applicationUserId&gt;&quot;);
 AMR.AMRSDK.setAdjustUserId(&quot;&lt;adjustUserId&gt;&quot;);
                 </code></pre>
 
+				<h3 id="gdprcheck">GDPR Applicable Check</h3>
+				<p>
+                    You can use the following method to check if the user is in a country which is subject to GDPR.
+                </p>
+
+				<pre><code class="language-c">
+				
+AMR.AMRSDK.setGDPRIsApplicable(isGDPRApplicable);
+// The function below will be called just once when you subscribe the callback function as shown above
+public void isGDPRApplicable(bool isApplicable)
+{
+	Debug.Log("ADMOST - isGDPRApplicable : " + isApplicable);
+}                
+</code></pre>
             </section>
             <!-- End Extras -->
         </article>

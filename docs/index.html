@@ -711,6 +711,18 @@
                     After installation use <code>Unity-iPhone.xcworkspace</code> file to launch project.
                 </p>
 
+                <h5 id="xcode-setup">Xcode Setup</h5>
+                <p> Add following lines to your <code>plist</code> file.</p>
+
+                <pre><code class="language-markup">&lt;key&gt;NSAppTransportSecurity&lt;/key&gt;
+&lt;dict&gt;
+  &lt;key&gt;NSAllowsArbitraryLoads&lt;/key&gt;
+  &lt;true/&gt;
+&lt;/dict&gt;</code></pre>
+
+                <pre><code class="language-markup">&lt;key&gt;NSCalendarsUsageDescription&lt;/key&gt;
+&lt;string&gt;Some ad content may access calendar&lt;/string&gt;</code></pre>
+
                 <div class="callout callout-danger" role="alert">
                         <p><span class="label label-danger">Important</span> If you are using AdMob you must add your AdMob <code>App ID</code> to your <code>plist</code> file with <code>GADApplicationIdentifier</code> key as shown below. <br/>(Replace <code>ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX</code> with your own <code>App ID</code>)</p>
                         <pre>

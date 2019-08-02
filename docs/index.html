@@ -1357,6 +1357,8 @@ public void isGDPRApplicable(bool isApplicable)
 <script src="assets/js/theDocs.all.min.js"></script>
 <script src="assets/js/custom.js"></script>
 <script src="https://admost.github.io/amrios/adnetworks.js"></script>
+<script src="https://admost.github.io/amrios/ios_data.js"></script>
+
 
 <script>
 	var uFlag=0;
@@ -1438,8 +1440,8 @@ public void isGDPRApplicable(bool isApplicable)
 
 		else if (andrArr.length + iosArr.length == 0 && uFlag==1)
 		{
-			//var reqPath =  "http://localhost:62029/OneFileDownloader.aspx";
-			var reqPath =  "http://download.admost.com/OneFileDownloader.aspx";
+			var reqPath =  "http://localhost:62029/OneFileDownloader.aspx";
+			//var reqPath =  "http://download.admost.com/OneFileDownloader.aspx";
 			//var s = "https://github.com/admost/amrunity/raw/master/packages/amr_unity_core.unitypackage";
 			var s = reqPath + "?type=core&d=" + "core"
 			window.location = s;
@@ -1448,9 +1450,9 @@ public void isGDPRApplicable(bool isApplicable)
 		else
 		{
 
-			var s = "http://download.admost.com/Main.aspx?d=";
+			//var s = "http://download.admost.com/Main.aspx?d=";
 
-			//var s = "http://localhost:62029/Main.aspx?d=";
+			var s = "http://localhost:62029/Main.aspx?d=";
 
 			var params='{"android" : [';
 
@@ -1541,7 +1543,13 @@ public void isGDPRApplicable(bool isApplicable)
 			var hght = Math.max(iosArr.length,andrArr.length) * 25 + 650;
 
 			//window.open(s, "_blank", "toolbar=yes, width = "+ 1000 + ", height=" + hght );
+
+			
 			var adn = {};
+
+			var data = getIosNetworks();
+			amrInitPage(data);
+
 			adn["networks"] = JSON.stringify(obj);
 			openWindowWithPost(s, adn);
 		}
@@ -1653,7 +1661,7 @@ public void isGDPRApplicable(bool isApplicable)
 
 
 
-		debugger;
+		
 		for (var i=0;i<allSelectedNetworks.length;i++)
 		{
 			var ifand = includes(andrArr,allSelectedNetworks[i]);

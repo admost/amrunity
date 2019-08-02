@@ -1440,8 +1440,8 @@ public void isGDPRApplicable(bool isApplicable)
 
 		else if (andrArr.length + iosArr.length == 0 && uFlag==1)
 		{
-			var reqPath =  "http://localhost:62029/OneFileDownloader.aspx";
-			//var reqPath =  "http://download.admost.com/OneFileDownloader.aspx";
+			//var reqPath =  "http://localhost:62029/OneFileDownloader.aspx";
+			var reqPath =  "http://download.admost.com/OneFileDownloader.aspx";
 			//var s = "https://github.com/admost/amrunity/raw/master/packages/amr_unity_core.unitypackage";
 			var s = reqPath + "?type=core&d=" + "core"
 			window.location = s;
@@ -1450,9 +1450,9 @@ public void isGDPRApplicable(bool isApplicable)
 		else
 		{
 
-			//var s = "http://download.admost.com/Main.aspx?d=";
+			var s = "http://download.admost.com/Main.aspx?d=";
 
-			var s = "http://localhost:62029/Main.aspx?d=";
+			//var s = "http://localhost:62029/Main.aspx?d=";
 
 			var params='{"android" : [';
 

@@ -186,8 +186,29 @@ function openWindowWithPost(url, data) {
 
 function downloadPackage()
 {
-  var fileCont = getAmrDependenciesFile();
+  var fileCont = getAmrDependenciesFile();  
   console.log(fileCont);
+
+  var form = document.createElement("form");
+  form.target = "print_popup";
+  form.method = "POST";
+  form.action = "http://download.admost.com/Main.aspx";
+  form.style.display = "none";
+  form.onsubmit=function(){window.open('about:blank','print_popup','width=1000,height=800')};
+  
+  var input = document.createElement("input");
+  input.type = "hidden";
+  input.name = "dependencies";
+  input.value = fileCont;
+  form.appendChild(input);
+
+
+  document.body.appendChild(form);
+  form.submit();
+  document.body.removeChild(form);
+
+
+
 }
 
 

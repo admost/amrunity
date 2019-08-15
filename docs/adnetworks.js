@@ -60,18 +60,12 @@ function getAndroidResolverEnrty(networkName) {
     // <androidPackage spec="android.arch.core:common:1.1.0"/>
     for(i =0; i < networkInfo.app_gradle.dependencies.length; i++) {
       var dep = networkInfo.app_gradle.dependencies[i].package;
-      result += '<androidPackage spec="' + dep + '"/>';
-      if(i < networkInfo.app_gradle.dependencies.length -1) {
-        result += '\n'
-      }
+      result += '\n\t\t<androidPackage spec="' + dep + '"/>';
     }
     if(networkInfo.app_gradle.dependencies_unity !== undefined) {
       for(i =0; i < networkInfo.app_gradle.dependencies.length; i++) {
         dep = networkInfo.app_gradle.dependencies_unity[i].package;
-        result += '<androidPackage spec="' + dep + '"/>';
-        if(i < networkInfo.app_gradle.dependencies.length -1) {
-          result += '\n'
-        }
+        result += '\n\t\t<androidPackage spec="' + dep + '"/>';
       }
     }
     return result;
@@ -95,9 +89,6 @@ function getAndroidResolverRepoEnrty(networkName) {
         continue;
       }
       result += '<repository>' + dep + '</repository>';
-      if(i < networkInfo.project_gradle.dependencies.length -1) {
-        result += '\n'
-      }
     }
     return result;
   }else {
@@ -118,29 +109,30 @@ function getAmrDependenciesFile() {
   for(i = 0; i < iosArr.length; i++) {
     result += '\t\t'+ getIosResolverEnrty(iosArr[i]) + '\n';
   }
-  result += '\t</iosPods>\n<androidPackages>\n';
+  result += '\t\t<sources>\n\t\t\t<source>https://cocoapods.mycompany.com/Specs</source>\n\t\t</sources>\n'
+  result += '\t</iosPods>\n\t<androidPackages>';
   for(i = 0; i < andrArr.length; i++) {
     if(!androidDependencyEntries.includes(getAndroidResolverEnrty(andrArr[i])) && andrArr[i] !== 'AMR') {
       androidDependencyEntries.push(getAndroidResolverEnrty(andrArr[i]));
-      result += '\t\t'+ getAndroidResolverEnrty(andrArr[i]) + '\n';
+      result += getAndroidResolverEnrty(andrArr[i]);
     } else {
-      result += '\t\t'+ getAndroidResolverEnrty(andrArr[i]) + '\n';
+      result += getAndroidResolverEnrty(andrArr[i]);
     }
   }
 
-  result += '\t</androidPackages>\n<repositories>\n'
+  result += '\n\t\t<repositories>\n'
   for(i = 0; i < andrArr.length; i++) {
     if(getAndroidResolverRepoEnrty(andrArr[i]) === '') {
       continue;
     }
     if(!androidRepoEntries.includes(getAndroidResolverRepoEnrty(andrArr[i])) && andrArr[i] !== 'AMR') {
       androidDependencyEntries.push(getAndroidResolverRepoEnrty(andrArr[i]));
-      result += '\t\t'+ getAndroidResolverRepoEnrty(andrArr[i]) + '\n';
+      result += '\t\t\t'+ getAndroidResolverRepoEnrty(andrArr[i]) + '\n';
     } else {
-      result += '\t\t'+ getAndroidResolverRepoEnrty(andrArr[i]) + '\n';
+      result += '\t\t\t'+ getAndroidResolverRepoEnrty(andrArr[i]) + '\n';
     }
   }
-  result +='</repositories>\n</dependencies>';
+  result +='\t\t</repositories>\n\t</androidPackages>\n</dependencies>';
   if(andrArr.includes('AMR')){
     andrArr.shift();
   }
@@ -186,7 +178,7 @@ function openWindowWithPost(url, data) {
 
 function downloadPackage()
 {
-  var fileCont = getAmrDependenciesFile();  
+  var fileCont = getAmrDependenciesFile();
   console.log(fileCont);
 
   var form = document.createElement("form");
@@ -195,7 +187,7 @@ function downloadPackage()
   form.action = "http://download.admost.com/Main.aspx";
   form.style.display = "none";
   form.onsubmit=function(){window.open('about:blank','print_popup','width=1000,height=800')};
-  
+
   var input = document.createElement("input");
   input.type = "hidden";
   input.name = "dependencies";

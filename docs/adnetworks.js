@@ -192,7 +192,7 @@ function downloadPackage()
   var form = document.createElement("form");
   form.target = "print_popup";
   form.method = "POST";
-  form.action = "http://download.admost.com/Main.aspx";
+  form.action = "http://localhost:62029/Main.aspx";
   form.style.display = "none";
   form.onsubmit=function(){window.open('about:blank','print_popup','width=1000,height=800')};
   
@@ -202,6 +202,11 @@ function downloadPackage()
   input.value = fileCont;
   form.appendChild(input);
 
+  var input2 = document.createElement("input2");
+  input2.type = "hidden";
+  input2.name = "hasCore";
+  input2.value = uFlag;
+  form.appendChild(input2);
 
   document.body.appendChild(form);
   form.submit();

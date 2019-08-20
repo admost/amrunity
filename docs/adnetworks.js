@@ -109,8 +109,8 @@ function getAmrDependenciesFile() {
   for(i = 0; i < iosArr.length; i++) {
     result += '\t\t'+ getIosResolverEnrty(iosArr[i]) + '\n';
   }
-  result += '\t\t<sources>\n\t\t\t<source>https://cocoapods.mycompany.com/Specs</source>\n\t\t</sources>\n'
-  result += '\t</iosPods>\n\t<androidPackages>';
+  //result += '\t\t<sources>\n\t\t\t<source>https://cocoapods.mycompany.com/Specs</source>\n\t\t</sources>\n'
+  result += '\n\t</iosPods>\n\t<androidPackages>';
   for(i = 0; i < andrArr.length; i++) {
     if(!androidDependencyEntries.includes(getAndroidResolverEnrty(andrArr[i])) && andrArr[i] !== 'AMR') {
       androidDependencyEntries.push(getAndroidResolverEnrty(andrArr[i]));

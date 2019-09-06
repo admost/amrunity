@@ -146,7 +146,7 @@
                 <ul>
                     <li> Admost account <a href="http://dashboard.admost.com" target="_blank">Admost Mediation Dashboard.</a></li>
                     <li> Unity 5.x or later.</li>
-                    <li><span class="label label-teal">New</span> <a href="https://github.com/googlesamples/unity-jar-resolver" target="_blank">Unity Jar Resolver</a> package.</li>
+                    <li><span class="label label-teal">New</span> <a href="https://github.com/googlesamples/unity-jar-resolver" target="_blank">Unity Jar Resolver</a> package. (Recommended version: v1.2.124 and upwards )</li>
                     <li> Xcode 10.2.1 and iOS 8 or later for iOS.</a></li>
                     <li> <a href="https://cocoapods.org/" target="_blank">Cocoapods</a> for iOS.</li>
                 </ul>
@@ -789,8 +789,12 @@
                 </div>
 
                 <h3 id="androidsetupnotes">Android Setup Notes</h3>
-                <p>Gradle Custom Template is strongly recommended but not necessary. (In Unity Editor: Player Settings > Publishing Settings > <b>check</b> Custom Gradle Template).<p>
+                <p>Gradle Custom Template is strongly recommended to prevent library conflicts. (In Unity Editor: Player Settings > Publishing Settings > <b>check</b> Custom Gradle Template).</p>
                 <p>Android Resolver sould be run. (In Unity Editor: Assets > Play Services Resolver > Android Resolver > <b>click</b> Resolve or Force Resolve.</p><br>
+
+                <p><br><b>NOTE:</b> Recommended Gradle Build Tools Plugin version is 3.2.0 (e.g: in mainTemplate gradle check the line, classpath 'com.android.tools.build:gradle:3.2.0'). Other versions of 3.x.x and upwards could also be used. Usage of 2.x.x is valid but not tested well.</p>
+                <p>If you face with gradle related build errors, please check it: Gradle Build Tools Plugin version and Gradle version should be compatible <a href="https://developer.android.com/studio/releases/gradle-plugin#updating-gradle" target="_blank">version mapping</a></p>
+                <br>
                 <ul>
                     <li>
                         <h5 id="androidapplovinconfig">AppLovin Configuration</h5>

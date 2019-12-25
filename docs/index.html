@@ -124,7 +124,7 @@
                 </li>
                 <li><a href="#extras">Extras</a>
                     <ul>
-                        <li><a href="#multidex">Multidex</a></li>
+                        <!--<li><a href="#multidex">Multidex</a></li>-->
                         <li><a href="#testsuite">Test Suite</a></li>
                         <li><a href="#iap">In App Purchase Tracking</a></li>
                         <li><a href="#senduserid">Setting Application User Id</a></li>
@@ -815,11 +815,12 @@
 
                 <h3 id="androidsetupnotes">Android Setup Notes</h3>
                 <p>Gradle Custom Template is strongly recommended to prevent library conflicts. (In Unity Editor: Player Settings > Publishing Settings > <b>check</b> Custom Gradle Template).</p>
-                <p>Android Resolver sould be run. (In Unity Editor: Assets > Play Services Resolver > Android Resolver > <b>click</b> Resolve or Force Resolve.</p><br>
+                <p>Android Resolver sould be run. (In Unity Editor: Assets > Play Services Resolver > Android Resolver > <b>click</b> Resolve or Force Resolve.</p>
 
                 <p><br><b>NOTE:</b> Recommended Gradle Build Tools Plugin version is 3.2.0 (e.g: in mainTemplate.gradle file, check the line of classpath 'com.android.tools.build:gradle:3.2.0'). Other versions of 3.x.x and upwards could also be used. Usage of 2.x.x is valid but not tested well.</p>
                 <p>If you face with gradle related build errors, please check it: Gradle Build Tools Plugin version and Gradle version should be compatible <a href="https://developer.android.com/studio/releases/gradle-plugin#updating-gradle" target="_blank">version mapping</a></p>
                 <p><b>NOTE 2:</b> You may need to add <b>google()</b> repository to the repositories { } tag in mainTemplate.gradle file if not present.</p>
+                
                 <br>
                 <ul>
                     <li>
@@ -857,6 +858,53 @@
 
 					</li>
                 </ul>
+
+                <br>
+                    <h5 id="androidmultidexconfig">Multidex Configuration</h5>
+                    <p> You probably want to enable Multidex for your application since even the usage of several libraries extend the method limitation of Android. 
+                        More info related to Multidex: <a href="https://developer.android.com/studio/build/multidex">Android docs</a>
+                        <br>In order to make your application MultiDex, here is the steps:
+                        <ol>
+                            <li>Open <b>mainTemplate.gradle</b> file and add <b>multiDexEnabled true</b> and <b>multidex library</b> as below.<br>
+                                <pre><code>
+android { 
+    defaultConfig {
+        ....
+        <b>multiDexEnabled true</b>
+        ....
+}
+// NOTE: If your app's <b>minimum API level is greater than 20</b>, you can skip the remaining Multidex related configuration.
+
+// If you don't enabled AndroidX for your app, add the multidex library like below:
+dependencies {
+    .... 
+    implementation <b>'com.android.support:multidex:1.0.3'</b>
+    ....
+}
+// If you enabled AndroidX for your app use the below
+dependencies {
+    .... 
+    implementation <b>'androidx.multidex:multidex:2.0.1'</b>
+    .... 
+}
+                            </code></pre>
+                            </li>
+                            <li>Open AndroidManifest.xml file and add the <b>android:name</b> tag as below:
+    <pre><code>
+&lt;?xml version="1.0" encoding="utf-8"?&gt;
+&lt;manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amr.definition"&gt;
+    &lt;application
+        ...
+            <b>android:name="android.support.multidex.MultiDexApplication"</b> &gt;
+        ...
+        &lt;/application&gt;
+&lt;/manifest&gt;
+                                </code></pre>
+                            </li>
+                        </ol> 
+                    </p>
+                </p>
 
                 <h3 id="iossetupnotes">iOS Setup Notes</h3>
 
@@ -1198,7 +1246,7 @@ public void OnVirtualCurrencyDidSpend(string networkName, string currency, doubl
             <!-- Extras -->
             <section>
                 <h2 id="extras">Extras</h2>
-                <h3 id="multidex">Multidex</h3>
+                <!--<h3 id="multidex">Multidex</h3>
                 <p>
                     To enable Multidex on Android please follow the instructions below.
                 </p>
@@ -1232,6 +1280,7 @@ public void OnVirtualCurrencyDidSpend(string networkName, string currency, doubl
                 <img class="img-responsive"
                                  src="assets/img/multidex.png"
                                  alt="consent">
+            -->
 
                 <h3 id="testsuite">Test Suite</h3>
                 <p>

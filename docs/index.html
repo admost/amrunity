@@ -896,7 +896,11 @@ dependencies {
     package="com.amr.definition"&gt;
     &lt;application
         ...
+            //If you don't use AndroidX packages
             <b>android:name="android.support.multidex.MultiDexApplication"</b> &gt;
+
+            //If you use AndroidX packages
+            <b>android:name="androidx.multidex.MultiDexApplication"</b> &gt;
         ...
         &lt;/application&gt;
 &lt;/manifest&gt;

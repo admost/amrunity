@@ -187,7 +187,7 @@
                             <td colspan="2" class="text-center">
                                <button type="button" onclick="toggleAdNetworkStatus('core_unity');" id="core_unity" class="btn btn-outline btn-block btn-primary"><i
 										style="padding-right: 16px;" class="fa fa-android"></i>/<i
-										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.5.4</button>
+										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.5.5</button>
                             </td>
                         </tr>
                         <tr>
@@ -217,7 +217,7 @@
                             <td class="text-right">
 
 								<button type="button" onclick="toggleAdNetworkStatus('AdMob_ios');" id="AdMob_ios" class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.55.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.7.55.1</button>
 
                             </td>
                         </tr>
@@ -275,7 +275,7 @@
                             </td>
                             <td class="text-right">
 								<button type="button" onclick="toggleAdNetworkStatus('AppLovin_ios');" id="AppLovin_ios"  class="btn btn-outline btn-block btn-default"><i
-										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.11.0</button>
+										class="fa fa-apple"></i>&nbsp;&nbsp;v.6.11.3</button>
 
                             </td>
                         </tr>
@@ -531,7 +531,7 @@
                             <td>Mobfox</td>
                             <td class="text-right">
 								<button type="button" onclick="toggleAdNetworkStatus('Mobfox_android');" id="Mobfox_android" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.4.0.9</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.4.1.1</button>
 
                             </td>
                             <td class="text-right">
@@ -773,7 +773,7 @@
                             <td>Vungle</td>
 							<td class="text-right">
 								<button type="button" onclick="toggleAdNetworkStatus('Vungle_android');" id="Vungle_android" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.6.4.11</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.6.5.1</button>
                             </td>
                             <td class="text-right">
 								<button type="button" onclick="toggleAdNetworkStatus('Vungle_ios');" id="Vungle_ios" class="btn btn-outline btn-block btn-default"><i
@@ -1000,14 +1000,16 @@ void Start()
             <pre>
 <code>//GDPR COMPLIANCE
 config.UserConsent = "1";
-config.SubjectToGDPR = "1";</code>
+config.SubjectToGDPR = "1";
+config.IsUserChild = true;</code>
             </pre>
 
                  <p><code>UserConsent</code> has a boolean parameter. If you have the user’s consent, set it "1". If you do not have the user's consent, set it "0".</p>
                  <p><code>SubjectToGDPR</code> has a boolean parameter. If you know the user is subject to GDPR, set it "1". If you know the user is not subject to GDPR, set it "0". </p>
                 <p>If you don’t pass the user’s consent or subjectToGDPR to the SDK, the rules described in <a
                         href="gdpr.html#gdprrules">GDPR</a> have been applied. </p>
-
+                
+                <p><code>IsUserChild</code> has a boolean parameter. If you want to show age-restricted ads, set it true.</p>
 
                 <h3 id="banner-ads">Banner Ads</h3>
                 <p>To create and show a banner ad run the following code</p>

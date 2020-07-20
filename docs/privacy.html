@@ -7,7 +7,7 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
 
-    <title>AMR - Unity GDPR</title>
+    <title>AMR - Unity Privacy</title>
 
     <!-- Styles -->
     <link href="assets/css/theDocs.all.min.css" rel="stylesheet">
@@ -53,7 +53,7 @@
             <div id="navbar" class="navbar-collapse collapse" aria-expanded="true" role="banner">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="index.html">Documentation</a></li>
-                    <li class="active"><a href="gdpr.html">GDPR</a></li>
+                    <li class="active"><a href="privacy.html">Privacy</a></li>
                     <li><a href="release-notes.html">Release Notes</a></li>
                     <li><a href="faq.html">FAQ</a></li>
                     <li class="hero">
@@ -76,10 +76,12 @@
         <aside class="col-sm-2 sidebar">
             <ul class="nav sidenav dropable sticky">
                 <li>
-                    <a href="#gdpr">GDPR</a>
+                    <a href="#gdpr">Privacy</a>
                     <ul>
-                        <li><a href="#networkcomplience">Network GDPR Complience</a></li>
-                        <li><a href="#gdprrules">GDPR Rules</a></li>
+						<li><a href="#networkgdprcomplience">GDPR Complience</a></li>
+						<li><a href="#networkccpacomplience">CCPA Complience</a></li>
+						<li><a href="#gdprrules">GDPR Rules</a></li>
+						<li><a href="#ccparules">CCPA Rules</a></li>
                     </ul>
                 </li>
             </ul>
@@ -91,18 +93,18 @@
         <article class="col-sm-8 main-content" role="main">
             <!-- GDPR -->
             <section>
-                <h2 id="gdpr">GDPR</h2>
+                <h2 id="gdpr">Privacy</h2>
 
                 <p>We specified your responsibilities for obtaining consent from end-users of your apps in our updated
-                	<a href="https://resources.admost.com/privacy-policy/">Privacy Policy</a>. By updating GDPR compatible
+                	<a href="https://resources.admost.com/privacy-policy/">Privacy Policy</a>. By updating GDPR and CCPA compatible
                 	SDK you agree that you’re responsible for inform the end-users and take their consent.
-						Please note that the consent collection applies only to users located in the European Economic Area, the United Kingdom, and Switzerland.
+						Please note that the GDPR consent collection applies only to users located in the European Economic Area, the United Kingdom, and Switzerland, and CCPA consent collection applies only to users located in the California.
 						As data controller you should take consent of end-users by preparing consent window, you can find samples below. When you take end-user consent, the response will be passed to Admost SDK.
 						You can find the implementation  <a href="#init">here</a> </p>
 				<img class="img-responsive"
                                  src="assets/img/consent.png"
                                  alt="consent">
-				<h3 id="networkcomplience">Network GDPR Complience</h2>
+				<h3 id="networkgdprcomplience">Network GDPR Complience</h2>
 
 			   <table class="table table-bordered table-striped table-info" style = "width:300px ">
 			    <tr>
@@ -122,7 +124,7 @@
                   </tr>
                   <tr>
                     <td>Adtiming</td>
-                    <td></td>
+                    <td align="center"><input type="checkbox" disabled="disabled"><br></td>
                      <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
                   </tr>
 				  <tr>
@@ -139,11 +141,6 @@
 				    <td>Appnext</td>
 				    <td align="center"><input type="checkbox" disabled="disabled" ><br></td>
 					<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
-				  </tr>
-				  <tr>
-				  	<td>Appsamurai</td>
-				  	<td></td>
-				  	<td align="center"><input type="checkbox" disabled="disabled"><br></td>
 				  </tr>
 					<tr>
 				    <td>ChartBoost</td>
@@ -182,7 +179,7 @@
 				  </tr>
 					<tr>
 						<td>Inneractive</td>
-						<td></td>
+						<td align="center"><input type="checkbox" disabled="disabled"><br></td>
 						<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
 					</tr>
 				  <tr>
@@ -212,7 +209,7 @@
 					</tr>
 					<tr>
 						<td>MyTarget</td>
-						<td></td>
+						<td align="center"><input type="checkbox" disabled="disabled"><br></td>
 						<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
 					</tr>
 				  <tr>
@@ -227,7 +224,7 @@
 				  </tr>
 				  <tr>
 				  	<td>Pollfish</td>
-				  	<td></td>
+				  	<td align="center"><input type="checkbox" disabled="disabled"><br></td>
 				  	<td align="center"><input type="checkbox" disabled="disabled"><br></td>
 				  </tr>
 				  <tr>
@@ -247,13 +244,13 @@
 				  </tr>
 				  <tr>
 				  	<td>TapResearch</td>
-				  	<td></td>
+				  	<td align="center"><input type="checkbox" disabled="disabled"><br></td>
 				  	<td align="center"><input type="checkbox" disabled="disabled"><br></td>
 				  </tr>
 				  <tr>
 					<td>TikTok</td>
 					<td></td>
-					<td align="center"><input type="checkbox" disabled="disabled"><br></td>
+					<td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
 				   </tr>
 				  <tr>
 				    <td>UnityAds</td>
@@ -267,12 +264,12 @@
 				  </tr>
 					<tr>
 						<td>YandexAds</td>
-						<td></td>
+						<td align="center"><input type="checkbox" disabled="disabled"><br></td>
 						<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
 					</tr>
 					<tr>
 						<td>YouAppi</td>
-						<td></td>
+						<td align="center"><input type="checkbox" disabled="disabled"><br></td>
 						<td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
 					</tr>
 
@@ -280,6 +277,180 @@
 				  </tr>
 
 				</table>
+
+				<h3 id="networkccpacomplience">Network CCPA Complience</h2>
+
+					<table class="table table-bordered table-striped table-info" style = "width:300px ">
+					 <tr>
+						 <th align="center">Ad Network </th>
+						 <th align="center">Android</th>
+						 <th align="center">IOS</th>
+					   </tr>
+					   <tr>
+						 <td >AdColony</td>
+						 <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						 <td>AdMob</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						  <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						 <td>Adtiming</td>
+						 <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						  <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						 <td>Amazon</td>
+						 <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						 <td>AppLovin</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						 <td>Appnext</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" ><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled" ><br></td>
+					   </tr>
+						 <tr>
+						 <td>ChartBoost</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					 </tr>
+					 <tr>	
+						 <td>Criteo</td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td> 
+					 </tr>
+					   <tr>
+						 <td>Facebook</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						  <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+					   </tr>
+					   <tr>
+						 <td>Flurry</td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+					   </tr>
+					   <tr>
+						 <td>Fyber</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						 <td>HyprMX</td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+					   </tr>
+					   <tr>
+						 <td>InMobi</td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						  <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+					   </tr>
+						 <tr>
+							 <td>Inneractive</td>
+							 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+							 <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 </tr>
+					   <tr>
+						 <td>IronSource</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						 <td>LeadBolt</td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						 <td> </td>
+					   </tr>
+					   <tr>
+						 <td>LoopMe</td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						  <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+					   </tr>
+					   <tr>
+						 <td>Mobfox</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						 <td>Mopub</td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+							<td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						 </tr>
+						 <tr>
+							 <td>MyTarget</td>
+							 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+							 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 </tr>
+					   <tr>
+						 <td>Nexage</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" ><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled" ><br></td>
+					   </tr>
+					   <tr>
+						 <td>Ogury</td>
+						 <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 <td align="center"> <input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						   <td>Pollfish</td>
+						   <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						   <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+					   </tr>
+					   <tr>
+						 <td>Smaato</td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+					   </tr>
+					   <tr>
+						 <td>StartApp</td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+					   </tr>
+					   <tr>
+						 <td>Tapjoy</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						  <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						   <td>TapResearch</td>
+						   <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						   <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+					   </tr>
+					   <tr>
+						 <td>TikTok</td>
+						 <td></td>
+						 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						</tr>
+					   <tr>
+						 <td>UnityAds</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+					   <tr>
+						 <td>Vungle</td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+						 <td align="center"><input type="checkbox" disabled="disabled" checked="checked"><br></td>
+					   </tr>
+						 <tr>
+							 <td>YandexAds</td>
+							 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+							 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						 </tr>
+						 <tr>
+							 <td>YouAppi</td>
+							 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+							 <td align="center"><input type="checkbox" disabled="disabled"><br></td>
+						 </tr>
+	 
+					   </tr>
+					   </tr>
+	 
+					 </table>
 
 				<h3 id="gdprrules">GDPR Rules</h3>
 
@@ -290,6 +461,16 @@
 				<p>If the publisher does not use <code>config.UserConsent</code> method , userConsent status remains unknown. In this case, if the publisher provides <code>config.SubjectToGDPR = "1"</code>, the ad networks do not have ability to serve personalized ads.If the publisher provides <code> config.SubjectToGDPR = "0"</code>, the ad networks have ability to serve personalized ads.</p>
 				<p>If the publisher does not provide both <code>config.UserConsent</code>  and <code>config.SubjectToGDPR</code>, Admost decides whether the user is located  in EU or not which is totally under responsibility of the publisher. </p>
 				<p>If the publisher wants to obtain neither the user's consent nor any negative legal consequences, the publisher must set <code>config.UserConsent = "0"</code> for every user. In this case, Admost considers the user has no consent,  the ad networks are not allowed to serve personalized ads, except only the publisher does not provide <code>config.SubjectToGDPR = "0" </code>.</p>
+
+				<h3 id="ccparules">CCPA Rules</h3>
+
+				<p>Admost provides two methods for CCPA compatibility: <code>config.SubjectToCCPA</code> and <code>config.UserConsent</code>.</p>
+				<p>Publisher have to set <code>config.SubjectToCCPA = "1"</code> if the user is located in California. Otherwise, publisher have to set <code>config.SubjectToCCPA = "0"</code>  . If publisher does not use this method, SubjectToCCPA status remains as unknown. In this case, Admost SDK automatically determines whether the user is in California or not which is totally under responsibility of the publisher. If user is in California, networks are not allowed to show personalized ads. If the user is not located in California, the ad networks are allowed to show personalized ads. </p>
+				<p>On condition that, the publisher obtains neither user's SubjectToCCPA status nor any negative legal consequences, SubjectToCCPA must set <code>config.SubjectToCCPA = "1"</code>  for each user. In this case, Admost considers all users as subject to CCPA and if the consent is not allowed, Admost blocks ad networks to collect data from users. Which may cause a decrease on overall revenue performance apart from Admost. </p>
+				<p>If the publisher obtains user's consent and sets <code>config.UserConsent = "1"</code>, personalized ads would be shown to the users. Otherwise, the publisher sets <code>config.UserConsent = "0"</code> which would block the personalized ads, unless the user is not subject to CCPA.</p>
+				<p>If the publisher does not use <code>config.UserConsent</code> method , userConsent status remains unknown. In this case, if the publisher provides <code>config.SubjectToCCPA = "1"</code>, the ad networks do not have ability to serve personalized ads.If the publisher provides <code> config.SubjectToCCPA = "0"</code>, the ad networks have ability to serve personalized ads.</p>
+				<p>If the publisher does not provide both <code>config.UserConsent</code>  and <code>config.SubjectToCCPA</code>, Admost decides whether the user is located  in California or not which is totally under responsibility of the publisher. </p>
+				<p>If the publisher wants to obtain neither the user's consent nor any negative legal consequences, the publisher must set <code>config.UserConsent = "0"</code> for every user. In this case, Admost considers the user has no consent,  the ad networks are not allowed to serve personalized ads, except only the publisher does not provide <code>config.SubjectToCCPA = "0" </code>.</p>
             </section>
             <!-- End GDPR -->
         </article>

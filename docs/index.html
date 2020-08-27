@@ -955,14 +955,14 @@ dependencies {
                             <p><a href="https://www.pollfish.com/docs/ios" target="_blank">Pollfish Privacy Policy</a></p>
                          </div>
 
-                    <h5 id="ios14"><span class="label label-teal">New</span> iOS 14</h5>
-                    <p>To display the App Tracking Transparency authorization request for accessing the IDFA, you will need to add <code>NSUserTrackingUsageDescription</code> key to <code>Info.plist</code> file.</p>
-                    <pre>
-<code class="language-markup">
-&lt;key&gt;NSUserTrackingUsageDescription&lt;/key&gt;
-&lt;string&gt;YOUR_MESSAGE&lt;/string&gt;
-</code>
-                    </pre>
+                         <h5 id="ios14"><span class="label label-teal">New</span> iOS 14</h5>
+                         <p>Starting with iOS 14, apps will be required to ask users for permission to access IDFA. In order to ask for this permission and display the App Tracking Transparency authorization request for accessing the IDFA, you will need to add <code>NSUserTrackingUsageDescription</code> key to <code>Info.plist</code> file.</p>
+                         <pre>
+     <code class="language-markup">
+     &lt;key&gt;NSUserTrackingUsageDescription&lt;/key&gt;
+     &lt;string&gt;Your awesome message to encourage user to give permission to access IDFA&lt;/string&gt;
+     </code>
+                         </pre>
             </section>
             <!-- End Setup -->
 

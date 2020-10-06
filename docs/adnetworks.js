@@ -63,7 +63,7 @@ function getAndroidResolverEnrty(networkName) {
       result += '\n\t\t<androidPackage spec="' + dep + '"/>';
     }
     if(networkInfo.app_gradle.dependencies_unity !== undefined) {
-      for(i =0; i < networkInfo.app_gradle.dependencies.length; i++) {
+      for(i =0; i < networkInfo.app_gradle.dependencies_unity.length; i++) {
         dep = networkInfo.app_gradle.dependencies_unity[i].package;
         result += '\n\t\t<androidPackage spec="' + dep + '"/>';
       }

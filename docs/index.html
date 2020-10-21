@@ -106,7 +106,9 @@
                         <li><a href="#initialization">Initialization</a></li>
                             <ul style="display: block;">
                                 <li><a href="#initgdpr">Setup Privacy</a></li>
+                                <li><a href="#inithuawei">Huawei App Gallery</a></li>
                             </ul>
+
                         <li><a href="#banner-ads">Banner Ads</a></li>
                         <li><a href="#interstitial-ads">Interstitial Ads</a></li>
                             <ul style="display: block;">
@@ -183,7 +185,7 @@
                             <td colspan="2" class="text-center">
                                <button type="button" onclick="toggleAdNetworkStatus('core_unity');" id="core_unity" class="btn btn-outline btn-block btn-primary"><i
 										style="padding-right: 16px;" class="fa fa-android"></i>/<i
-										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.5.9</button>
+										style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;v.1.6.0</button>
                             </td>
                         </tr>
                         <tr>
@@ -223,7 +225,7 @@
                             <td>Admost</td>
                             <td class="text-right">
                             <button type="button" onclick="toggleAdNetworkStatus('Admost_android');" id="Admost_android" class="btn btn-outline btn-block btn-success"><i
-                                        class="fa fa-android"></i>&nbsp;&nbsp;v.1.3.1</button>
+                                        class="fa fa-android"></i>&nbsp;&nbsp;v.0.1.3</button>
 
                           </td>
                             <td class="text-right">
@@ -1020,7 +1022,7 @@ void Start()
 config.UserConsent = "1";
 config.SubjectToGDPR = "1";
 config.SubjectToCCPA = "1";
-config.IsUserChild = true;</code>
+config.IsUserChild = "1";</code>
             </pre>
 
                  <p><code>UserConsent</code> has a boolean parameter. If you have the user’s consent, set it "1". If you do not have the user's consent, set it "0".</p>
@@ -1032,7 +1034,11 @@ config.IsUserChild = true;</code>
                         <p>If you don’t pass the user’s consent or subjectToCCPA to the SDK, the rules described in <a
                                 href="https://admost.github.io/privacy.html#gdprrules">Privacy</a> have been applied. </p>
 
-                <p><code>IsUserChild</code> has a boolean parameter. If you want to show age-restricted ads, set it true.</p>
+                <p><code>IsUserChild</code> has a string parameter. If you want to show age-restricted ads, set it "1", otherwise no need to set it.</p>
+
+                <h4 id="inithuawei">Huawei App Gallery Configuration</h4>
+                <p><code>IsHuaweiApp</code> has a boolean parameter. If you want to submit your app to the Huawei AppGallery, set it true. For Huawei AppGallery applications, we are using OAID(Open Advertiser ID) instead of GAID(Google Advertising ID) for attribution purposes, so we need to know if the application is Huawei AppGallery application. You can use this config parameter during initialization, otherwise AdMost sdk will try to get GAID and fail.<br/>
+                It is recommended to create a new application and placement definitions on Admost dashboard instead of using existing one for Huawei App Gallery. Using HuaweiAds in a Huawei App Gallery application is also recommended.</p>
 
                 <h3 id="banner-ads">Banner Ads</h3>
                 <p>To create and show a banner ad run the following code</p>

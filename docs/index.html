@@ -210,7 +210,7 @@
                             <td>AdMob</td>
                               <td class="text-right">
 								<button type="button" onclick="toggleAdNetworkStatus('AdMob_android');" id="AdMob_android" class="btn btn-outline btn-block btn-success"><i
-										class="fa fa-android"></i>&nbsp;&nbsp;v.17.2.1</button>
+										class="fa fa-android"></i>&nbsp;&nbsp;v.18.3.0</button>
                             </td>
                             <td class="text-right">
 
@@ -820,12 +820,15 @@
                 </div>
 
                 <h3 id="androidsetupnotes">Android Setup Notes</h3>
-                <p>Gradle Custom Template is strongly recommended to prevent library conflicts. (In Unity Editor: Player Settings > Publishing Settings > <b>check</b> Custom Gradle Template).</p>
-                <p>Android Resolver sould be run. (In Unity Editor: Assets > Play Services Resolver > Android Resolver > <b>click</b> Resolve or Force Resolve.</p>
-
-                <p><br><b>NOTE:</b> Recommended Gradle Build Tools Plugin version is 3.2.0 (e.g: in mainTemplate.gradle file, check the line of classpath 'com.android.tools.build:gradle:3.2.0'). Other versions of 3.x.x and upwards could also be used. Usage of 2.x.x is valid but not tested well.</p>
-                <p>If you face with gradle related build errors, please check it: Gradle Build Tools Plugin version and Gradle version should be compatible <a href="https://developer.android.com/studio/releases/gradle-plugin#updating-gradle" target="_blank">version mapping</a></p>
-                <p><b>NOTE 2:</b> You may need to add <b>google()</b> repository to the repositories { } tag in mainTemplate.gradle file if not present.</p>
+				<ul>
+					<li>Gradle Custom Template is strongly recommended to prevent library conflicts. (In Unity Editor: Player Settings > Publishing Settings > <b>check</b> Custom Gradle Template).</p></li>
+					<li>You need to use Android Resolver. Unity Editor > Android Resolver > Settings, please enable AndroidX and Jetifier.</li>
+					<li>Android Resolver sould be run. (Unity Editor >  Assets > Play Services Resolver > Android Resolver > <b>click</b> Resolve or Force Resolve.</li>
+					<li>Recommended Gradle Build Tools Plugin version is 3.2.0 (e.g: in mainTemplate.gradle file, check the line of classpath 'com.android.tools.build:gradle:3.2.0'). Other versions of 3.x.x and upwards could also be used. Usage of 2.x.x is valid but not tested well.</li>
+					<li>If you face with gradle related build errors, please check it: Gradle Build Tools Plugin version and Gradle version should be compatible <a href="https://developer.android.com/studio/releases/gradle-plugin#updating-gradle" target="_blank">version mapping</a></li>
+					<li>You may need to add <b>google()</b> repository to the repositories { } tag in mainTemplate.gradle file if not present.</li>
+				</ul>
+              
 
                 <br>
                 <ul>
@@ -1037,8 +1040,8 @@ config.IsUserChild = "1";</code>
                 <p><code>IsUserChild</code> has a string parameter. If you want to show age-restricted ads, set it "1", otherwise no need to set it.</p>
 
                 <h4 id="inithuawei">Huawei App Gallery Configuration</h4>
-                <p><code>IsHuaweiApp</code> has a boolean parameter. If you want to submit your app to the Huawei AppGallery, set it true. For Huawei AppGallery applications, we are using OAID(Open Advertiser ID) instead of GAID(Google Advertising ID) for attribution purposes, so we need to know if the application is Huawei AppGallery application. You can use this config parameter during initialization, otherwise AdMost sdk will try to get GAID and fail.<br/>
-                It is recommended to create a new application and placement definitions on Admost dashboard instead of using existing one for Huawei App Gallery. Using HuaweiAds in a Huawei App Gallery application is also recommended.</p>
+                <p><code>IsHuaweiApp</code> has a boolean parameter. If you want to submit your app to the Huawei AppGallery, set it true. For Huawei AppGallery applications, we are using OAID(Open Advertiser ID) instead of GAID(Google Advertising ID) for attribution purposes, so we need to know if the application is Huawei AppGallery application. You can use this config parameter during initialization, otherwise AdMost sdk will try to get GAID and fail.</p>
+                <p>It is recommended to create a new application and placement definitions on Admost dashboard instead of using existing one for Huawei App Gallery. Using HuaweiAds in a Huawei App Gallery application is also recommended.</p>
 
                 <h3 id="banner-ads">Banner Ads</h3>
                 <p>To create and show a banner ad run the following code</p>
@@ -1059,17 +1062,17 @@ config.IsUserChild = "1";</code>
 AMR.AMRSDK.hideBanner();
                 </code></pre>
 
-                <p>You can subscribe onBannerReady, onBannerFail or onBannerClick callback functions to catch banner events.</p>
+                <p>You can subscribe OnBannerReady, OnBannerFail or OnBannerClick callback functions to catch banner events.</p>
 
                 <pre><code class="language-c">
 // Banner Callbacks - Optional
-AMR.AMRSDK.setOnBannerReady(onBannerReady);
-AMR.AMRSDK.setOnBannerFail(onBannerFail);
-AMR.AMRSDK.setOnBannerClick(onBannerClick);
+AMR.AMRSDK.setOnBannerReady(OnBannerReady);
+AMR.AMRSDK.setOnBannerFail(OnBannerFail);
+AMR.AMRSDK.setOnBannerClick(OnBannerClick);
 
-public void onBannerReady(string networkName, double ecpm) {}
-public void onBannerFail(string error) {}
-public void onBannerClick(string networkName) {}
+public void OnBannerReady(string networkName, double ecpm) {}
+public void OnBannerFail(string error) {}
+public void OnBannerClick(string networkName) {}
                 </code></pre>
 
                 <h3 id="interstitial-ads">Interstitial Ads</h3>

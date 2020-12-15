@@ -132,6 +132,7 @@
                         <li><a href="#senduserid">Setting Application User Id</a></li>
 						<li><a href="#setadjustuserid">Setting Adjust User Id</a></li>
 						<li><a href="#privacycheck">Privacy Consent Required</a></li>
+                        <li><a href="#appprivacy">Apple App Privacy <span class="label label-teal">New</span></a></li>
                     </ul>
                 </li>
             </ul>
@@ -1531,6 +1532,26 @@ public void privacyConsentRequired(string consentType)
 	// Possible consentType values: "CCPA" , "GDPR" , "None"
 }
 </code></pre>
+
+<h3 id="appprivacy">Apple App Privacy </h3>
+
+                <p>                
+Starting December 8, 2020, Apple has announced a privacy disclosure for the App Store, You must define which data are collected by your apps and any SDKs you have integrated. To improve the performance of AdMost, the AMRSDK may collect following information from your apps:
+                </p>
+
+                <ul>
+                    <li><b>User ID</b> – If you are using <code>setUserId</code> method to identify users with your custom app user ID, you will need to select 'User ID'
+                    </li>
+                    <li><b>Purchases</b> – If you are using in app purchase trackings methods, you will need to select 'Purchases'
+                    </li>
+                    <li><b>Coarse Location</b> – To estimate the general location of a device
+                    </li>
+                    <li><b>Product Interaction</b> – Analytics purposes
+                    </li>
+                    <li><b>Advertising Data</b> – Analytics purposes
+                    </li>
+                </ul>
+
             </section>
             <!-- End Extras -->
         </article>

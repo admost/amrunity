@@ -7,6 +7,7 @@ var adNetworkArrayAndroid;
 var adNetworkArrayIos;
 var androidDependencyEntries =[];
 var androidRepoEntries =[];
+var data14 = [];
 
 function amrInitAndroid(android_data) {
   adNetworkArrayAndroid = android_data;
@@ -14,6 +15,7 @@ function amrInitAndroid(android_data) {
 
 function amrInitIos(ios_data) {
   adNetworkArrayIos = ios_data;
+  data14 = getIos14Keys();
 }
 
 function getSelectedAndroidNetworks() {
@@ -306,7 +308,7 @@ function update()
 
   }
 
-
+  fillIos14FileCode();
 }
 
 function deleteTableItem(item)
@@ -430,6 +432,41 @@ function toggleAdNetworkStatus(id)
 
       update();
     }
+  }  
+}
+
+function fillIos14FileCode(){
+  var finalValues = [];
+
+  var sortedArr = iosArr.sort();
+
+  for(var i=0;i<sortedArr.length;i++){
+    for(var j = 0 ; j<data14.length;j++){
+      if(data14[j].name == sortedArr[i]){
+        for(k = 0; k < data14[j].skAdNetwork.length;k++){
+          if(!includesUpper(finalValues,data14[j].skAdNetwork[k])){
+              finalValues.push(data14[j].skAdNetwork[k]);
+          }
+        }
+      }
+    }
   }
 
+  var finalXMLStr =  "<key>SKAdNetworkItems</key>\n<array>\n";
+
+  for(var i=0 ; i<finalValues.length ; i++){
+      finalXMLStr+="\t<dict>\n\t\t<key>SKAdNetworkIdentifier</key>\n\t\t<string>"+ finalValues[i] + "</string>\n\t</dict>\n";
+  }
+
+  finalXMLStr+="</array>\n"
+
+  $('#file-ios-14').text(finalXMLStr);    
+}
+
+function includesUpper(arr,item)
+{
+  for(var i=0;i<arr.length;i++){
+      if(arr[i].toUpperCase() == item.toUpperCase()) return true;
+  }
+  return false;
 }

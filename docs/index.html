@@ -1139,6 +1139,7 @@ void Start()
 
     AMR.AMRSDK.setOnInterstitialReady(OnInterstitialReady);
     AMR.AMRSDK.setOnInterstitialFail(OnInterstitialFail);
+    AMR.AMRSDK.setOnInterstitialFailToShow(OnInterstitialFailToShow);
     AMR.AMRSDK.setOnInterstitialShow(OnInterstitialShow);
     AMR.AMRSDK.setOnInterstitialClick(OnInterstitialClick);
     AMR.AMRSDK.setOnInterstitialDismiss(OnInterstitialDismiss);
@@ -1150,6 +1151,9 @@ public void OnInterstitialReady(string networkName, double ecpm) {}
 
 // It indicates that the interstitial ad received no-fill response from all of its placements. Therefore, the ad can not be shown. You may choose to try loading it again.
 public void OnInterstitialFail(string errorMessage) {}
+
+// It indicates that the interstitial ad is failed to show.
+public void OnInterstitialFailToShow() {}
 
 // It indicates that the loaded interstitial ad is shown to the user.
 public void OnInterstitialShow() {}
@@ -1215,6 +1219,7 @@ void Start()
     // Rewarded Video Callbacks - Optional
     AMR.AMRSDK.setOnRewardedVideoReady(OnVideoReady);
     AMR.AMRSDK.setOnRewardedVideoFail(OnVideoFail);
+    AMR.AMRSDK.setOnRewardedVideoFailToShow(OnVideoFailToShow);
     AMR.AMRSDK.setOnRewardedVideoShow(OnVideoShow);
     AMR.AMRSDK.setOnRewardedVideoClick(OnVideoClick);
     AMR.AMRSDK.setOnRewardedVideoDismiss(OnVideoDismiss);
@@ -1232,6 +1237,9 @@ public void OnVideoFail(string errorMessage) {}
 // It indicates that the loaded rewarded video ad is shown to the user.(Note: It does not mean that the user deserves a reward)
 // It is immediately called after the loaded ad is shown to the user using AMR.AMRSDK.showRewardedVideo()
 public void OnVideoShow() {}
+
+// It indicates that the rewarded video ad is failed to show.
+public void OnVideoFailToShow() {}
 
 // It indicates that the rewarded video ad is clicked.
 public void OnVideoClick(string networkName) {}

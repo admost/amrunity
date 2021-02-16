@@ -186,7 +186,7 @@ function downloadPackage()
   var form = document.createElement("form");
   form.target = "print_popup";
   form.method = "POST";
-  form.action = "http://download.admost.com/Main.aspx";
+  form.action = "https://download.admost.com/Main.aspx";
   form.style.display = "none";
   form.onsubmit=function(){window.open('about:blank','print_popup','width=1000,height=800')};
 

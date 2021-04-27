@@ -7,15 +7,18 @@ var adNetworkArrayAndroid;
 var adNetworkArrayIos;
 var androidDependencyEntries =[];
 var androidRepoEntries =[];
-var data14 = [];
 
 function amrInitAndroid(android_data) {
   adNetworkArrayAndroid = android_data;
 }
 
-function amrInitIos(ios_data) {
-  adNetworkArrayIos = ios_data;
-  data14 = getIos14Keys();
+function amrInitIos() {
+  response = httpGet("https://admost.github.io/amrios/adnetwork.json");
+  adNetworkArrayIos = getNetworks(response)['adNetworks'];
+}
+
+function getNetworks(obj){
+  return JSON.parse(obj);
 }
 
 function getSelectedAndroidNetworks() {
@@ -37,7 +40,7 @@ function getNetworkInfo(isAndroid, networkName) {
       }
     }else {
       for(i = 0; i < adNetworkArrayIos.length; i++) {
-        if (adNetworkArrayIos[i].name.toLowerCase() === networkName.toLowerCase()) {
+        if (adNetworkArrayIos[i].displayName.toLowerCase() === networkName.toLowerCase()) {
             return adNetworkArrayIos[i];
         }
       }
@@ -48,7 +51,7 @@ function getNetworkInfo(isAndroid, networkName) {
 function getIosResolverEnrty(networkName) {
   var networkInfo = getNetworkInfo(false, networkName);
   if(networkInfo !== undefined) {
-    return '<iosPod name="' + networkInfo['pod'] + '" version="' + '~> ' + networkInfo['version'] + '" minTargetSdk="' + networkInfo['minTargetSdk'] + '"/>';
+    return '<iosPod name="' + networkInfo['adapterName'] + '" version="' + '~> ' + networkInfo['podVersion'] + '" minTargetSdk="' + networkInfo['minTargetSdk'] + '"/>';
   }else {
     return "ERROR ios: " + networkName;
   }
@@ -441,11 +444,11 @@ function fillIos14FileCode(){
   var sortedArr = iosArr.sort();
 
   for(var i=0;i<sortedArr.length;i++){
-    for(var j = 0 ; j<data14.length;j++){
-      if(data14[j].name == sortedArr[i]){
-        for(k = 0; k < data14[j].skAdNetwork.length;k++){
-          if(!includesUpper(finalValues,data14[j].skAdNetwork[k])){
-              finalValues.push(data14[j].skAdNetwork[k]);
+    for(var j = 0 ; j<adNetworkArrayIos.length;j++){
+      if(adNetworkArrayIos[j].displayName == sortedArr[i]){
+        for(k = 0; k < adNetworkArrayIos[j].skadnetworkIDS.length;k++){
+          if(!includesUpper(finalValues,adNetworkArrayIos[j].skadnetworkIDS[k])){
+              finalValues.push(adNetworkArrayIos[j].skadnetworkIDS[k]);
           }
         }
       }
@@ -469,4 +472,12 @@ function includesUpper(arr,item)
       if(arr[i].toUpperCase() == item.toUpperCase()) return true;
   }
   return false;
+}
+
+function httpGet(theUrl)
+{
+    var xmlHttp = new XMLHttpRequest();
+    xmlHttp.open( "GET", theUrl, false ); // false for synchronous request
+    xmlHttp.send( null );
+    return xmlHttp.responseText;
 }

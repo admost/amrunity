@@ -12,9 +12,9 @@ function amrInitAndroid(android_data) {
   adNetworkArrayAndroid = android_data;
 }
 
-function amrInitIos() {
-  response = httpGet("https://admost.github.io/amrios/adnetwork.json");
-  adNetworkArrayIos = getNetworks(response)['adNetworks'];
+function amrInitIos(data) {
+  adNetworkArrayIos = data['adNetworks'];
+  console.log(data['adNetworks']);
 }
 
 function getNetworks(obj){

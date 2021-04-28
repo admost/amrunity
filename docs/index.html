@@ -21,7 +21,7 @@
     <!-- Scripts -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://admost.github.io/amrios/ios_data.js"></script>
-    <script src="https://admost.github.io/amrios/adnetworks.js?v=15"></script>
+    <script src="https://admost.github.io/amrios/networks.js?v=15"></script>
     <script src="https://admost.github.io/amrandroid/android_data.js?v=2.3.1"></script>
 
 
@@ -1680,17 +1680,24 @@ Starting December 8, 2020, Apple has announced a privacy disclosure for the App 
 }
 </script>
 
-<script src="adnetworks.js?v=16"></script>
+<script src="networks.js?v=16"></script>
 <script>
     var android_networks = getAndroidNetworks()['ad_networks'];
     amrInitAndroid(android_networks);
-    amrInitIos();
+
+    var jsonpath = 'https://admost.github.io/amrios/networks.json';
+
+    $.getJSON(jsonpath, function( data ) {
+        console.log(data);
+        amrInitIos(data);
+    });
 
     //var ios = getIosResolverEnrty("AdColony");
     //var android = getAndroidResolverEnrty("AMR");
 
-
 </script>
+
+
 
 <script src="assets/js/theDocs.all.min.js"></script>
 <script src="assets/js/custom.js"></script>

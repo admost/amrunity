@@ -1685,10 +1685,9 @@ Starting December 8, 2020, Apple has announced a privacy disclosure for the App 
     var android_networks = getAndroidNetworks()['ad_networks'];
     amrInitAndroid(android_networks);
 
-    var jsonpath = 'https://admost.github.io/amrios/adnetwork.json';
+    var jsonpath = 'https://admost.github.io/amrios/networks.json';
 
     $.getJSON(jsonpath, function( data ) {
-        console.log(data);
         amrInitIos(data);
     });
 

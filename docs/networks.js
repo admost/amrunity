@@ -14,7 +14,6 @@ function amrInitAndroid(android_data) {
 
 function amrInitIos(data) {
   adNetworkArrayIos = data['adNetworks'];
-  console.log(data['adNetworks']);
 }
 
 function getNetworks(obj){

@@ -293,7 +293,7 @@ function update()
     var cell0 = row.insertCell(0);
 
 
-    cell3.innerHTML = allSelectedNetworks[i];
+    cell3.innerHTML = allSelectedNetworks[i].replace("-17.2.0","");
     cell0.innerHTML = '<span class="fa fa-remove" style="color:red; cursor:pointer;" onclick="deleteTableItem(\'' + allSelectedNetworks[i] + '\');" ></span>';
 
     if(ifand)

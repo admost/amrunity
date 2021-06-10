@@ -80,6 +80,7 @@
                 <ul class="nav sidenav dropable sticky">
                     <li><a href="#release-notes">Version List</a>
                         <ul>
+                            <li><a href="#v.1.6.3"> Version 1.6.3</a></li>
                             <li><a href="#v.1.6.2"> Version 1.6.2</a></li>
                             <li><a href="#v.1.6.0"> Version 1.6.0</a></li>
                             <li><a href="#v.1.5.9"> Version 1.5.9</a></li>
@@ -118,6 +119,35 @@
                     </section>
 
                     <section id="versions">
+                        <h3 id="v.1.6.3">Version 1.6.3
+                            <small class="release-date">June 10, 2021</small>
+                        </h3>
+                        <table class="table table-bordered table-striped table-changelog">
+                                <thead>
+                                    <tr>
+                                        <th>Action</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="change change-added"></span></td>
+                                        <td>
+                                            <p>Initialization callbacks added. You can set a function as the initialization callback listener as like below.</p>
+                                            <code>
+                                                AMR.AMRSDK.startWithConfig(config, OnSDKDidInitialize);
+                                                
+                                            </code>
+                                            <br/><br/>
+                                            <code>
+                                                void OnSDKDidInitialize(bool success, String error) { }
+                                            </code>
+                                        </td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+
                         <h3 id="v.1.6.2">Version 1.6.2
                             <small class="release-date">June 08, 2021</small>
                         </h3>

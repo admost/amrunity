@@ -132,7 +132,10 @@
                         <li><a href="#senduserid">Setting Application User Id</a></li>
 						<li><a href="#setadjustuserid">Setting Adjust User Id</a></li>
 						<li><a href="#privacycheck">Privacy Consent Required</a></li>
-                        <li><a href="#appprivacy">Apple App Privacy <span class="label label-teal">New</span></a></li>
+                        <li><a href="#appprivacy">Apple App Privacy</li>
+                        <li><a href="#remoteconfig">Remote Config <span class="label label-teal">New</span></a>
+                        <li><a href="#abtest">A/B Test <span class="label label-teal">New</span></a>
+                        </li>
                     </ul>
                 </li>
             </ul>
@@ -1628,6 +1631,41 @@ Starting December 8, 2020, Apple has announced a privacy disclosure for the App 
                     <li><b>Advertising Data</b> – Analytics purposes
                     </li>
                 </ul>
+
+<h3 id="remoteconfig">Remote Config</h3>
+                    <p>
+                        Admost Remote config is a feature for defining and updating server side parameters from the Admost dashboard. You can define the parameters in long, double, boolean and string types. To define parameters on Admost dashboard, click on settings icon on My Apps page and select Remote Config item from the list. The following page will pop up. You can define your parameters in this page in JSON format.
+                    </p>
+                    <br/>
+
+                    <img class="img-responsive" src="assets/img/remote_config.png?v=1"
+                                    alt="android-test-suite screenshot">
+                    <br/>
+
+                    <p>
+                        To read the parameter values in your app, you can use the following methods of the Admost sdk. It is suggested to use these methods after admost initialization completed, otherwise default values will be returned.
+                    </p>
+
+                    <pre><code class="language-java">
+AMR.AMRRemoteConfig.getLong("closePopupInSeconds");
+AMR.AMRRemoteConfig.getString("version");
+AMR.AMRRemoteConfig.getDouble("price");
+AMR.AMRRemoteConfig.getBoolean("isDebug");
+                </code></pre>
+
+                    <p>
+                        You can also run A/B tests for remote config parameters bundling with other mediation related test parameters. You do not have to do anything to run or join these tests on client side, random percentile targeting feature of the sdk will handle it itself. You can define these tests and target your audiences from the dashboard's A/B test menu.  
+                    </p>
+
+                    <h3 id="abtest">A/B Test</h3>
+                    <p>
+                        AdMost A/B test feature is capable of doing in-game feature tests with remote config parameters as well beyond monetisation tests.
+                    </p>
+                    <p>
+                    For using A/B test feature, you don't need to do anything on client side. All settings can be done over the AdMost Dashboard. </p>
+                    <p style="display:none">
+                    <a href="#">Click here</a> to see the documentation about the capabilities of Admost A/B test.  
+                    </p> 
 
             </section>
             <!-- End Extras -->

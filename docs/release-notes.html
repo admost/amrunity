@@ -80,6 +80,7 @@
                 <ul class="nav sidenav dropable sticky">
                     <li><a href="#release-notes">Version List</a>
                         <ul>
+                            <li><a href="#v.1.6.4"> Version 1.6.4</a></li>
                             <li><a href="#v.1.6.3"> Version 1.6.3</a></li>
                             <li><a href="#v.1.6.2"> Version 1.6.2</a></li>
                             <li><a href="#v.1.6.0"> Version 1.6.0</a></li>
@@ -119,6 +120,36 @@
                     </section>
 
                     <section id="versions">
+                        <h3 id="v.1.6.4">Version 1.6.4
+                            <small class="release-date">June 16, 2021</small>
+                        </h3>
+                        <table class="table table-bordered table-striped table-changelog">
+                                <thead>
+                                    <tr>
+                                        <th>Action</th>
+                                        <th>Description</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td><span class="change change-updated"></span></td>
+                                        <td>
+                                            <p>Default parameters added to the remote config methods.</p>
+                                            <code>
+                                            
+                                            AMR.AMRRemoteConfig.getLong("closePopupInSeconds", 3);
+                                            AMR.AMRRemoteConfig.getString("version", "2.3.1");
+                                            AMR.AMRRemoteConfig.getDouble("price", 1.24);
+                                            AMR.AMRRemoteConfig.getBoolean("isDebug", false);
+                                                
+                                            </code>
+                                            
+                                        </td>
+                                        
+                                    </tr>
+                                </tbody>
+                            </table>
+
                         <h3 id="v.1.6.3">Version 1.6.3
                             <small class="release-date">June 10, 2021</small>
                         </h3>

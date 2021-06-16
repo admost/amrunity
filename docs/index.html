@@ -1643,14 +1643,14 @@ Starting December 8, 2020, Apple has announced a privacy disclosure for the App 
                     <br/>
 
                     <p>
-                        To read the parameter values in your app, you can use the following methods of the Admost sdk. It is suggested to use these methods after admost initialization completed, otherwise default values will be returned.
+                        To read the parameter values in your app, you can use the following methods of the Admost sdk. It is suggested to use these methods after admost initialization completed, otherwise default values you set will be returned.
                     </p>
 
                     <pre><code class="language-java">
-AMR.AMRRemoteConfig.getLong("closePopupInSeconds");
-AMR.AMRRemoteConfig.getString("version");
-AMR.AMRRemoteConfig.getDouble("price");
-AMR.AMRRemoteConfig.getBoolean("isDebug");
+AMR.AMRRemoteConfig.getLong("closePopupInSeconds", 3);
+AMR.AMRRemoteConfig.getString("version", "2.3.1");
+AMR.AMRRemoteConfig.getDouble("price", 1.24);
+AMR.AMRRemoteConfig.getBoolean("isDebug", false);
                 </code></pre>
 
                     <p>

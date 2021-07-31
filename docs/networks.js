@@ -9,7 +9,7 @@ var androidDependencyEntries =[];
 var androidRepoEntries =[];
 
 function amrInitAndroid(android_data) {
-  adNetworkArrayAndroid = android_data;
+  adNetworkArrayAndroid = android_data['ad_networks'];
 }
 
 function amrInitIos(data) {

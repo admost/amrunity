@@ -1754,9 +1754,12 @@ AMR.AMRRemoteConfig.getBoolean("isDebug", false);
 </script>
 
 <script src="networks.js?v=16"></script>
-<script>
-    var android_networks = getAndroidNetworks()['ad_networks'];
-    amrInitAndroid(android_networks);
+<script>    
+    var jsonpath_android = 'https://admost.github.io/amrandroid/android_data.json' + Date.now();
+
+    $.getJSON(jsonpath_android, function( data ) {
+        amrInitAndroid(data);
+    });
 
     var jsonpath = 'https://admost.github.io/amrios/networks.json';
 

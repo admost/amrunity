@@ -22,7 +22,6 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="https://admost.github.io/amrios/ios_data.js"></script>
     <script src="https://admost.github.io/amrios/networks.js?v=15"></script>
-    <script src="https://admost.github.io/amrandroid/android_data.js?v=2.3.5"></script>
 
 
 
@@ -1755,7 +1754,7 @@ AMR.AMRRemoteConfig.getBoolean("isDebug", false);
 
 <script src="networks.js?v=16"></script>
 <script>    
-    var jsonpath_android = 'https://admost.github.io/amrandroid/android_data.json' + Date.now();
+    var jsonpath_android = 'https://admost.github.io/amrandroid/android_data.json?' + Date.now();
 
     $.getJSON(jsonpath_android, function( data ) {
         amrInitAndroid(data);

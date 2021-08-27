@@ -1025,9 +1025,16 @@ dependencies {
 &lt;string&gt;ca-app-pub-XXXXXXXXXXXXXXXX~XXXXXXXXXX&lt;/string&gt;
 </code>
                         </pre>
-
+                        
                         <p>Your <code>App ID</code> can be found on AdMob dashboard -> Apps -> App settings -> App info.</p>
-                        <p><img class="img-responsive" src="assets/img/admob_appid.png" alt="admob_appid.png"></p>
+                        <p><img class="img-responsive" src="assets/img/admob_appid.png" alt="admob_appid.png"></p><br>
+                        <p><span class="label label-danger">Important</span> For Unity 2020 and later versions, you should also add following code to your <code>podfile</code>.</p>
+                        <pre>
+<code class="language-markup">
+use_frameworks! :linkage => :static
+</code>
+                        </pre>
+
                     </div>
 
                     <div class="callout callout-danger" role="alert">

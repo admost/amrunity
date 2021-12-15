@@ -151,7 +151,7 @@
                 <ul>
                     <li> Admost account <a href="http://dashboard.admost.com" target="_blank">Admost Mediation Dashboard.</a></li>
                     <li> Unity 5.x or later.</li>
-                    <li><span class="label label-teal">New</span> <a href="https://github.com/googlesamples/unity-jar-resolver" target="_blank">Unity Jar Resolver</a> package. (Recommended version: v1.2.124 and upwards )</li>
+                    <li><span class="label label-teal">New</span> <a href="https://developers.google.com/unity/archive#:~:text=Tools-,External%20Dependency%20Manager%20for%20Unity,-com.google.external" target="_blank">Unity Jar Resolver</a> package. (Recommended version: v1.2.124 and upwards )</li>
                     <li> Xcode 12.5 and iOS 9 or later for iOS.</li>
                     <li> <a href="https://cocoapods.org/" target="_blank">Cocoapods</a> for iOS.</li>
                 </ul>
@@ -878,8 +878,10 @@
 
                 <h3 id="androidsetupnotes">Android Setup Notes</h3>
 				<ul>
-					<li>Gradle Custom Template is strongly recommended to prevent library conflicts. (In Unity Editor: Player Settings > Publishing Settings > <b>check</b> Custom Gradle Template).</p></li>
-					<li>You need to use Android Resolver. Unity Editor > Android Resolver > Settings, please enable AndroidX and Jetifier.</li>
+					<li>Gradle Custom Template is strongly recommended to prevent library conflicts. (In Unity Editor: Player Settings > Publishing Settings > <b>check</b> Custom Main Manifest, Custom Main Gradle Template, and Custom Gradle Properties Template. ).</p></li>
+					<li>You need to use Android Resolver. Unity Editor > Android Resolver > Settings, please enable AndroidX and Jetifier by adding the lines below to Custom Gradle Properties Template file. </li>
+                    <code>android.useAndroidX=true </code>
+                    <br/><code>android.enableJetifier=true </code>
 					<li>Android Resolver sould be run. (Unity Editor >  Assets > Play Services Resolver > Android Resolver > <b>click</b> Resolve or Force Resolve.</li>
 					<li>Recommended Gradle Build Tools Plugin version is 3.2.0 (e.g: in mainTemplate.gradle file, check the line of classpath 'com.android.tools.build:gradle:3.2.0'). Other versions of 3.x.x and upwards could also be used. Usage of 2.x.x is valid but not tested well.</li>
 					<li>If you face with gradle related build errors, please check it: Gradle Build Tools Plugin version and Gradle version should be compatible <a href="https://developer.android.com/studio/releases/gradle-plugin#updating-gradle" target="_blank">version mapping</a></li>

@@ -7,9 +7,11 @@ var adNetworkArrayAndroid;
 var adNetworkArrayIos;
 var androidDependencyEntries =[];
 var androidRepoEntries =[];
+var resultValue = {};
 
 function amrInitAndroid(android_data) {
   adNetworkArrayAndroid = android_data['ad_networks'];
+  setupData();
 }
 
 function amrInitIos(data) {
@@ -26,6 +28,65 @@ function getSelectedAndroidNetworks() {
 
 function getSelectedIosNetworks() {
   return iosArr;
+}
+
+function setupData() {
+  for (var i = 1; i < adNetworkArrayIos.length; i++) {
+    if(adNetworkArrayIos[i].unitySupport == true) {
+      if(!resultValue.hasOwnProperty(adNetworkArrayIos[i].displayName)){
+        resultValue[adNetworkArrayIos[i].displayName] =  {};
+      }
+      resultValue[adNetworkArrayIos[i].displayName].iosVersion = adNetworkArrayIos[i].SDKVersion;
+      resultValue[adNetworkArrayIos[i].displayName].iosTagAdded = adNetworkArrayIos[i].displayName + "_ios";
+    }
+  }
+  for (var i = 1; i < adNetworkArrayAndroid.length; i++) {
+    if(adNetworkArrayAndroid[i].unity_support == true) {
+      if(!resultValue.hasOwnProperty(adNetworkArrayAndroid[i].name)){
+        resultValue[adNetworkArrayAndroid[i].name] =  {};
+      }
+      resultValue[adNetworkArrayAndroid[i].name].androidVersion = adNetworkArrayAndroid[i].adapter_version;
+      resultValue[adNetworkArrayAndroid[i].name].androidTagAdded = adNetworkArrayAndroid[i].name + "_android";
+    }
+  }
+  createNetworkTable();
+}
+
+function createNetworkTable() {
+  networkTable = '<table class="table table-info">';
+    networkTable = networkTable + '<thead><tr>';
+    networkTable = networkTable + '<th rowspan="2">Status<br></br></th>';
+    networkTable = networkTable + '<th rowspan="2">Network Name<br></br></th>';
+    networkTable = networkTable + '<th colspan="4" class="text-center">Download Links<tr><td class="text-center">Android</td><td class="text-center">iOS</td></tr></th>';
+    networkTable = networkTable + '</tr></thead>';
+
+    networkTable = networkTable + '<tr>';
+        networkTable = networkTable + '<td><span class="label label-danger">' + "Required" + '</span></td>';
+        networkTable = networkTable + '<td>Unity Core</td>';
+          networkTable = networkTable + '<th colspan="2"><button type="button" onclick="toggleAdNetworkStatus(\'' + "core_unity" + '\');;" id="core_unity" class="btn btn-outline btn-block btn-primary"><i style="padding-right: 16px;" class="fa fa-android"></i>/<i style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;' + "" + '</button></th>';
+    networkTable = networkTable + '</tr>';
+  
+
+  Object.keys(resultValue).sort().forEach(function (key) {
+    changedAndroidButton = "";
+    if(resultValue[key].androidVersion) {
+      changedAndroidButton = resultValue[key].androidVersion.replace(resultValue[key].androidVersion, '<button type="button" onclick="toggleAdNetworkStatus(\'' + resultValue[key].androidTagAdded + '\');" id=\'' + resultValue[key].androidTagAdded + '\' class="btn btn-outline btn-block btn-success"><i class="fa fa-android"></i>&nbsp;&nbsp;v.' + (resultValue[key].androidVersion || "") + '</button>');
+    } 
+
+    changedIosButton = "";
+    if(resultValue[key].iosVersion) {
+      changedIosButton = resultValue[key].iosVersion.replace(resultValue[key].iosVersion, '<button type="button" onclick="toggleAdNetworkStatus(\'' + resultValue[key].iosTagAdded + '\');" id=\'' + resultValue[key].iosTagAdded + '\' class="btn btn-outline btn-block btn-default"><i class="fa fa-apple"></i>&nbsp;&nbsp;v.' + (resultValue[key].iosVersion || "") + '</button>');
+    }
+    
+    networkTable = networkTable + '<tr>';
+        networkTable = networkTable + '<td><span class="label label-success">' + "Optional" + '</span></td>';
+        networkTable = networkTable + '<td>' + key + '</td>';
+        networkTable = networkTable + '<td>' + changedAndroidButton + '</td>';
+        networkTable = networkTable + '<td>' + changedIosButton + '</td>';
+    networkTable = networkTable + '</tr>';
+  });
+  networkTable = networkTable + '</table>';
+  $("#network-list").html(networkTable);
 }
 
 function getNetworkInfo(isAndroid, networkName) {

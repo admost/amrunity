@@ -7,9 +7,11 @@ var adNetworkArrayAndroid;
 var adNetworkArrayIos;
 var androidDependencyEntries =[];
 var androidRepoEntries =[];
+var allAdNetworks = {};
 
 function amrInitAndroid(android_data) {
   adNetworkArrayAndroid = android_data['ad_networks'];
+  setupData();
 }
 
 function amrInitIos(data) {
@@ -26,6 +28,84 @@ function getSelectedAndroidNetworks() {
 
 function getSelectedIosNetworks() {
   return iosArr;
+}
+
+function setupData() {  
+  for (var i = 1; i < adNetworkArrayIos.length; i++) {
+    var iOSNetwork = adNetworkArrayIos[i];
+
+    if (iOSNetwork.unitySupport == false) { continue; }
+    if (allAdNetworks.hasOwnProperty(iOSNetwork.displayName.toLowerCase())) { continue; }
+
+    var network = {
+      name: iOSNetwork.displayName,
+      iosVersion: iOSNetwork.adapterVersion,
+      iosId: iOSNetwork.displayName + "_ios"
+    };
+
+    allAdNetworks[network.name.toLowerCase()] = network;
+  }
+
+  for (var i = 1; i < adNetworkArrayAndroid.length; i++) {
+    var androidNetwork = adNetworkArrayAndroid[i];
+
+    if (androidNetwork.unity_support == false) { continue; }
+    
+    var androidName = androidNetwork.name.toLowerCase();
+
+    if (androidName in allAdNetworks) {
+      allAdNetworks[androidNetwork.name.toLowerCase()].androidVersion = androidNetwork.adapter_version;
+      allAdNetworks[androidNetwork.name.toLowerCase()].androidId = androidNetwork.name + "_android";
+      continue;
+    }
+
+      var network = {
+        name: androidNetwork.name,
+        androidVersion: androidNetwork.adapter_version,
+        androidId: androidNetwork.name + "_android"
+      };
+  
+      allAdNetworks[network.name.toLowerCase()] = network;
+  }
+
+  createNetworkTable();
+}
+
+function createNetworkTable() {
+  networkTable = '<table class="table table-info">';
+    networkTable = networkTable + '<thead><tr>';
+    networkTable = networkTable + '<th rowspan="2">Status<br></br></th>';
+    networkTable = networkTable + '<th rowspan="2">Network Name<br></br></th>';
+    networkTable = networkTable + '<th colspan="4" class="text-center">Download Links<tr><td class="text-center">Android</td><td class="text-center">iOS</td></tr></th>';
+    networkTable = networkTable + '</tr></thead>';
+
+    networkTable = networkTable + '<tr>';
+        networkTable = networkTable + '<td><span class="label label-danger">' + "Required" + '</span></td>';
+        networkTable = networkTable + '<td>Unity Core</td>';
+          networkTable = networkTable + '<th colspan="2"><button type="button" onclick="toggleAdNetworkStatus(\'' + "core_unity" + '\');;" id="core_unity" class="btn btn-outline btn-block btn-primary"><i style="padding-right: 16px;" class="fa fa-android"></i>/<i style="padding-left: 16px;" class="fa fa-apple"></i>&nbsp;&nbsp;' + "" + '</button></th>';
+    networkTable = networkTable + '</tr>';
+  
+
+  Object.keys(allAdNetworks).sort().forEach(function (key) {
+    changedAndroidButton = "";
+    if(allAdNetworks[key].androidVersion) {
+      changedAndroidButton = allAdNetworks[key].androidVersion.replace(allAdNetworks[key].androidVersion, '<button type="button" onclick="toggleAdNetworkStatus(\'' + allAdNetworks[key].androidId + '\');" id=\'' + allAdNetworks[key].androidId + '\' class="btn btn-outline btn-block btn-success"><i class="fa fa-android"></i>&nbsp;&nbsp;v.' + (allAdNetworks[key].androidVersion || "") + '</button>');
+    } 
+
+    changedIosButton = "";
+    if(allAdNetworks[key].iosVersion) {
+      changedIosButton = allAdNetworks[key].iosVersion.replace(allAdNetworks[key].iosVersion, '<button type="button" onclick="toggleAdNetworkStatus(\'' + allAdNetworks[key].iosId + '\');" id=\'' + allAdNetworks[key].iosId + '\' class="btn btn-outline btn-block btn-default"><i class="fa fa-apple"></i>&nbsp;&nbsp;v.' + (allAdNetworks[key].iosVersion || "") + '</button>');
+    }
+    
+    networkTable = networkTable + '<tr>';
+        networkTable = networkTable + '<td><span class="label label-success">' + "Optional" + '</span></td>';
+        networkTable = networkTable + '<td>' + allAdNetworks[key].name + '</td>';
+        networkTable = networkTable + '<td>' + changedAndroidButton + '</td>';
+        networkTable = networkTable + '<td>' + changedIosButton + '</td>';
+    networkTable = networkTable + '</tr>';
+  });
+  networkTable = networkTable + '</table>';
+  $("#network-list").html(networkTable);
 }
 
 function getNetworkInfo(isAndroid, networkName) {

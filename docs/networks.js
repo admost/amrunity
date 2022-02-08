@@ -7,7 +7,7 @@ var adNetworkArrayAndroid;
 var adNetworkArrayIos;
 var androidDependencyEntries =[];
 var androidRepoEntries =[];
-var resultValue = {};
+var allAdNetworks = {};
 
 function amrInitAndroid(android_data) {
   adNetworkArrayAndroid = android_data['ad_networks'];
@@ -30,25 +30,44 @@ function getSelectedIosNetworks() {
   return iosArr;
 }
 
-function setupData() {
+function setupData() {  
   for (var i = 1; i < adNetworkArrayIos.length; i++) {
-    if(adNetworkArrayIos[i].unitySupport == true) {
-      if(!resultValue.hasOwnProperty(adNetworkArrayIos[i].displayName)){
-        resultValue[adNetworkArrayIos[i].displayName] =  {};
-      }
-      resultValue[adNetworkArrayIos[i].displayName].iosVersion = adNetworkArrayIos[i].SDKVersion;
-      resultValue[adNetworkArrayIos[i].displayName].iosTagAdded = adNetworkArrayIos[i].displayName + "_ios";
-    }
+    var iOSNetwork = adNetworkArrayIos[i];
+
+    if (iOSNetwork.unitySupport == false) { continue; }
+    if (allAdNetworks.hasOwnProperty(iOSNetwork.displayName.toLowerCase())) { continue; }
+
+    var network = {
+      name: iOSNetwork.displayName,
+      iosVersion: iOSNetwork.adapterVersion,
+      iosId: iOSNetwork.displayName + "_ios"
+    };
+
+    allAdNetworks[network.name.toLowerCase()] = network;
   }
+
   for (var i = 1; i < adNetworkArrayAndroid.length; i++) {
-    if(adNetworkArrayAndroid[i].unity_support == true) {
-      if(!resultValue.hasOwnProperty(adNetworkArrayAndroid[i].name)){
-        resultValue[adNetworkArrayAndroid[i].name] =  {};
-      }
-      resultValue[adNetworkArrayAndroid[i].name].androidVersion = adNetworkArrayAndroid[i].adapter_version;
-      resultValue[adNetworkArrayAndroid[i].name].androidTagAdded = adNetworkArrayAndroid[i].name + "_android";
+    var androidNetwork = adNetworkArrayAndroid[i];
+
+    if (androidNetwork.unity_support == false) { continue; }
+    
+    var androidName = androidNetwork.name.toLowerCase();
+
+    if (androidName in allAdNetworks) {
+      allAdNetworks[androidNetwork.name.toLowerCase()].androidVersion = androidNetwork.adapter_version;
+      allAdNetworks[androidNetwork.name.toLowerCase()].androidId = androidNetwork.name + "_android";
+      continue;
     }
+
+      var network = {
+        name: androidNetwork.name,
+        androidVersion: androidNetwork.adapter_version,
+        androidId: androidNetwork.name + "_android"
+      };
+  
+      allAdNetworks[network.name.toLowerCase()] = network;
   }
+
   createNetworkTable();
 }
 
@@ -67,20 +86,20 @@ function createNetworkTable() {
     networkTable = networkTable + '</tr>';
   
 
-  Object.keys(resultValue).sort().forEach(function (key) {
+  Object.keys(allAdNetworks).sort().forEach(function (key) {
     changedAndroidButton = "";
-    if(resultValue[key].androidVersion) {
-      changedAndroidButton = resultValue[key].androidVersion.replace(resultValue[key].androidVersion, '<button type="button" onclick="toggleAdNetworkStatus(\'' + resultValue[key].androidTagAdded + '\');" id=\'' + resultValue[key].androidTagAdded + '\' class="btn btn-outline btn-block btn-success"><i class="fa fa-android"></i>&nbsp;&nbsp;v.' + (resultValue[key].androidVersion || "") + '</button>');
+    if(allAdNetworks[key].androidVersion) {
+      changedAndroidButton = allAdNetworks[key].androidVersion.replace(allAdNetworks[key].androidVersion, '<button type="button" onclick="toggleAdNetworkStatus(\'' + allAdNetworks[key].androidId + '\');" id=\'' + allAdNetworks[key].androidId + '\' class="btn btn-outline btn-block btn-success"><i class="fa fa-android"></i>&nbsp;&nbsp;v.' + (allAdNetworks[key].androidVersion || "") + '</button>');
     } 
 
     changedIosButton = "";
-    if(resultValue[key].iosVersion) {
-      changedIosButton = resultValue[key].iosVersion.replace(resultValue[key].iosVersion, '<button type="button" onclick="toggleAdNetworkStatus(\'' + resultValue[key].iosTagAdded + '\');" id=\'' + resultValue[key].iosTagAdded + '\' class="btn btn-outline btn-block btn-default"><i class="fa fa-apple"></i>&nbsp;&nbsp;v.' + (resultValue[key].iosVersion || "") + '</button>');
+    if(allAdNetworks[key].iosVersion) {
+      changedIosButton = allAdNetworks[key].iosVersion.replace(allAdNetworks[key].iosVersion, '<button type="button" onclick="toggleAdNetworkStatus(\'' + allAdNetworks[key].iosId + '\');" id=\'' + allAdNetworks[key].iosId + '\' class="btn btn-outline btn-block btn-default"><i class="fa fa-apple"></i>&nbsp;&nbsp;v.' + (allAdNetworks[key].iosVersion || "") + '</button>');
     }
     
     networkTable = networkTable + '<tr>';
         networkTable = networkTable + '<td><span class="label label-success">' + "Optional" + '</span></td>';
-        networkTable = networkTable + '<td>' + key + '</td>';
+        networkTable = networkTable + '<td>' + allAdNetworks[key].name + '</td>';
         networkTable = networkTable + '<td>' + changedAndroidButton + '</td>';
         networkTable = networkTable + '<td>' + changedIosButton + '</td>';
     networkTable = networkTable + '</tr>';

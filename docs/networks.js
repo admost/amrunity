@@ -54,14 +54,14 @@ function setupData() {
     var androidName = androidNetwork.name.toLowerCase();
 
     if (androidName in allAdNetworks) {
-      allAdNetworks[androidNetwork.name.toLowerCase()].androidVersion = androidNetwork.adapter_version;
+      allAdNetworks[androidNetwork.name.toLowerCase()].androidVersion = androidNetwork.sdk_version;
       allAdNetworks[androidNetwork.name.toLowerCase()].androidId = androidNetwork.name + "_android";
       continue;
     }
 
       var network = {
         name: androidNetwork.name,
-        androidVersion: androidNetwork.adapter_version,
+        androidVersion: androidNetwork.sdk_version,
         androidId: androidNetwork.name + "_android"
       };
   

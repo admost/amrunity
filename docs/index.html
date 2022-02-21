@@ -1050,11 +1050,12 @@ AMR.AMRRemoteConfig.getBoolean("isDebug", false);
 
     $.getJSON(jsonpath, function( data ) {
         amrInitIos(data);
+        $.getJSON(jsonpath_android, function( data ) {
+            amrInitAndroid(data);
+        });
     });
 
-    $.getJSON(jsonpath_android, function( data ) {
-        amrInitAndroid(data);
-    });
+    
 
     //var ios = getIosResolverEnrty("AdColony");
     //var android = getAndroidResolverEnrty("AMR");

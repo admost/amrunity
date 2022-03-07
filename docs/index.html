@@ -764,9 +764,10 @@ public void OnVirtualCurrencyDidSpend(string networkName, string currency, doubl
 
                 <pre><code class="language-c">
                     //Product refers UnityEngine.Purchasing class object
-AMR.AMRSDK.trackPurchaseForAndroid( product.receipt,
+AMR.AMRSDK.trackIAPForAndroid( product.receipt,
 				product.metadata.localizedPrice,
-				product.metadata.isoCurrencyCode);
+				product.metadata.isoCurrencyCode,
+                tags);
                     </code></pre>
 
                 <p>Explanation of parameters:</p>
@@ -778,9 +779,8 @@ AMR.AMRSDK.trackPurchaseForAndroid( product.receipt,
                     </li>
 
                     <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
-
                     </li>
-
+                    <li><b>tags</b> – Distinction value for in-app purchase that used in multiple purposes.</li>
 
                 </ul>
 
@@ -791,9 +791,10 @@ AMR.AMRSDK.trackPurchaseForAndroid( product.receipt,
 
                 <pre><code class="language-c">
                     //Product refers UnityEngine.Purchasing class object
-AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
+AMR.AMRSDK.trackIAPForIOS( product.transactionID,
 				product.metadata.localizedPrice,
-				product.metadata.isoCurrencyCode);
+				product.metadata.isoCurrencyCode,
+                tags);
                     </code></pre>
                 <ul>
                     <li><b>transactionID</b> – A unique identifier for this product's transaction
@@ -803,9 +804,8 @@ AMR.AMRSDK.trackPurchaseForIOS( product.transactionID,
                     </li>
 
                     <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
-
                     </li>
-
+                    <li><b>tags</b> – Distinction value for in-app purchase that used in multiple purposes.</li>
 
                 </ul>
 

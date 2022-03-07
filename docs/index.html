@@ -1044,15 +1044,18 @@ AMR.AMRRemoteConfig.getBoolean("isDebug", false);
 <script>    
     var jsonpath_android = 'https://admost.github.io/amrandroid/android_data.json?' + Date.now();
 
-    $.getJSON(jsonpath_android, function( data ) {
-        amrInitAndroid(data);
-    });
+
 
     var jsonpath = 'https://admost.github.io/amrios/networks.json';
 
     $.getJSON(jsonpath, function( data ) {
         amrInitIos(data);
+        $.getJSON(jsonpath_android, function( data ) {
+            amrInitAndroid(data);
+        });
     });
+
+    
 
     //var ios = getIosResolverEnrty("AdColony");
     //var android = getAndroidResolverEnrty("AMR");

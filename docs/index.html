@@ -472,8 +472,8 @@ if (AMR.AMRSDK.isInterstitialReady())
                 </code></pre>
 
                 <p>
-                    You can subscribe to 6 callback functions OnInterstitialReady, OnInterstitialFail,
-                    OnInterstitialShow, OnInterstitialClick and OnInterstitialDismiss to catch interstitial events.
+                    You can subscribe to 7 callback functions OnInterstitialReady, OnInterstitialFail,
+                    OnInterstitialShow, OnInterstitialImpression, OnInterstitialClick and OnInterstitialDismiss to catch interstitial events.
                 </p>
 
                 <pre><code class="language-c">
@@ -486,6 +486,7 @@ void Start()
     AMR.AMRSDK.setOnInterstitialFail(OnInterstitialFail);
     AMR.AMRSDK.setOnInterstitialFailToShow(OnInterstitialFailToShow);
     AMR.AMRSDK.setOnInterstitialShow(OnInterstitialShow);
+    AMR.AMRSDK.setOnInterstitialImpression(OnInterstitialImpression);
     AMR.AMRSDK.setOnInterstitialClick(OnInterstitialClick);
     AMR.AMRSDK.setOnInterstitialDismiss(OnInterstitialDismiss);
     AMR.AMRSDK.setOnInterstitialStatusChange(OnInterstitialStatusChange);
@@ -502,6 +503,9 @@ public void OnInterstitialFailToShow() {}
 
 // It indicates that the loaded interstitial ad is shown to the user.
 public void OnInterstitialShow() {}
+
+// It indicates that the impression counted by the ad network and ad revenue paid.
+public void OnInterstitialImpression(AMR.AMRAd ad) {}
 
 // It indicates that the interstitial ad is clicked.
 public void OnInterstitialClick(string networkName) {}
@@ -555,7 +559,7 @@ if (AMR.AMRSDK.isRewardedVideoReady())
 	AMR.AMRSDK.showRewardedVideo("MyTag");
                 </code></pre>
 
-                <p>You can subscribe to 7 callback functions OnRewardedVideoReady, OnRewardedVideoFail, OnRewardedVideoShow, OnRewardedVideoClick,
+                <p>You can subscribe to 9 callback functions OnRewardedVideoReady, OnRewardedVideoFail, OnRewardedVideoShow, OnRewardedVideoClick,
                     OnVideoDismiss and OnVideoComplete to catch rewarded video events.</p>
                 <pre><code class="language-c">
 
@@ -566,6 +570,7 @@ void Start()
     AMR.AMRSDK.setOnRewardedVideoFail(OnVideoFail);
     AMR.AMRSDK.setOnRewardedVideoFailToShow(OnVideoFailToShow);
     AMR.AMRSDK.setOnRewardedVideoShow(OnVideoShow);
+    AMR.AMRSDK.setOnRewardedVideoImpression(OnVideoImpression);
     AMR.AMRSDK.setOnRewardedVideoClick(OnVideoClick);
     AMR.AMRSDK.setOnRewardedVideoDismiss(OnVideoDismiss);
     AMR.AMRSDK.setOnRewardedVideoComplete(OnVideoComplete);
@@ -585,6 +590,9 @@ public void OnVideoShow() {}
 
 // It indicates that the rewarded video ad is failed to show.
 public void OnVideoFailToShow() {}
+
+// It indicates that the impression has been counted by the ad network and ad revenue got paid.
+public void OnVideoImpression(AMR.AMRAd ad) {}
 
 // It indicates that the rewarded video ad is clicked.
 public void OnVideoClick(string networkName) {}
@@ -833,6 +841,29 @@ AMR.AMRSDK.trackIAPForIOS( product.transactionID,
 
 
                 </ul>
+
+                <div class="promo left small-icon">
+                    <i class="fa fa-android" style="color: #00af97"></i>
+                    <h3>Huawei App Gallery</h3>
+                </div>
+
+                <pre><code class="language-c">
+                    
+AMR.AMRSDK.trackIAPForHuawei( receipt,
+                signature,
+                tags);
+                    </code></pre>
+
+                <p>Explanation of parameters:</p>
+                <ul>
+                    <li><b>receipt</b> – The purchase receipt for this product
+                    </li>
+                    <li><b>signature</b> – String containing the signature of the purchase data that the developer signed with their private key. It is returned by the system after you make the purchase call.
+                    </li>
+                    <li><b>tags</b> – Distinction value for in-app purchase that used in multiple purposes.</li>
+
+                </ul>
+
 
 				<div class="promo left small-icon">
                     <h3>In App Purchase Tracking Callbacks</h3>

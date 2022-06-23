@@ -181,10 +181,10 @@ function getAndroidResolverRepoEnrty(networkName) {
 }
 
 function getAmrDependenciesFile() {
-  if(!andrArr.includes('AMR') && andrArr.length !== 0) {
+  if(!andrArr.includes('AMR')) {
     andrArr.unshift('AMR');
   }
-  if(!iosArr.includes('AMR') && iosArr.length !== 0) {
+  if(!iosArr.includes('AMR')) {
     iosArr.unshift('AMR');
   }
   var i;

@@ -184,7 +184,7 @@ function getAmrDependenciesFile() {
   if(!andrArr.includes('AMR') && andrArr.length !== 0) {
     andrArr.unshift('AMR');
   }
-  if(!iosArr.includes('AMR') && iosArr.length !== 0) {
+  if(!iosArr.includes('AMR')) {
     iosArr.unshift('AMR');
   }
   var i;

@@ -442,10 +442,12 @@ AMR.AMRSDK.hideBanner();
 AMR.AMRSDK.setOnBannerReady(OnBannerReady);
 AMR.AMRSDK.setOnBannerFail(OnBannerFail);
 AMR.AMRSDK.setOnBannerClick(OnBannerClick);
+AMR.AMRSDK.setOnBannerImpression(OnBannerImpression);
 
 public void OnBannerReady(string networkName, double ecpm) {}
 public void OnBannerFail(string error) {}
 public void OnBannerClick(string networkName) {}
+public void OnBannerImpression(AMR.AMRAd ad) {}
                 </code></pre>
 
                 <h3 id="interstitial-ads">Interstitial Ads</h3>

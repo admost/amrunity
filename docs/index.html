@@ -126,6 +126,7 @@
                         <li><a href="#iap">In App Purchase Tracking</a></li>
                         <li><a href="#senduserid">Setting Application User Id</a></li>
 						<li><a href="#setadjustuserid">Setting Adjust User Id</a></li>
+                        <li><a href="#sscallbacks">Server to Server Callbacks</a></li>
 						<li><a href="#privacycheck">Privacy Consent Required</a></li>
                         <li><a href="#appprivacy">Apple App Privacy</li>
                         <li><a href="#remoteconfig">Remote Config <span class="label label-teal">New</span></a>
@@ -915,6 +916,27 @@ AMR.AMRSDK.setUserId(&quot;&lt;applicationUserId&gt;&quot;);
 
 				<pre><code class="language-c">
 AMR.AMRSDK.setAdjustUserId(&quot;&lt;adjustUserId&gt;&quot;);
+                </code></pre>
+                <h3 id="sscallbacks">Server to Server Callbacks</h3>
+
+                    <p>
+                        For rewarded video ads, you can use Server to Server Callbacks for rewarding users after
+                        successful completion of video ads. Please consult your business contact person for enabling it
+                        and setting required parameters like callback URL, request verification token and method.
+                        <br>
+                        To use this feature, only requirement on application side is setting your application user id as
+                        described <a href="#senduserid">here</a>. You may also add new custom parameters to the callback
+                        URL by setting custom data to the rewarded video object as shown in the
+                        sample code below. This method has to be called before showing ad.
+                    </p>
+
+                    <pre><code class="language-java">
+IDictionary<string, string> parameters = new Dictionary<string, string>();
+parameters.Add("param1","One"); 
+parameters.Add("param2","Two");
+parameters.Add("param3","Three");
+
+AMR.AMRSDK.setRewardedSSVCustomData(parameters);
                 </code></pre>
 
 				<h3 id="privacycheck">Privacy Consent Required</h3>

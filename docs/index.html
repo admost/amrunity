@@ -129,8 +129,10 @@
                         <li><a href="#sscallbacks">Server to Server Callbacks</a></li>
 						<li><a href="#privacycheck">Privacy Consent Required</a></li>
                         <li><a href="#appprivacy">Apple App Privacy</li>
-                        <li><a href="#remoteconfig">Remote Config <span class="label label-teal">New</span></a>
-                        <li><a href="#abtest">A/B Test <span class="label label-teal">New</span></a>
+                        <li><a href="#remoteconfig">Remote Config</a>
+                        <li><a href="#abtest">A/B Test</a>
+                        <li><a href="#umpintegration">CMP Integration <span class="label label-teal">NEW</span></a>
+                        <li style="display:none"><a href="#thirdpartyexperiment">Third Party A/B test <span class="label label-teal">NEW</span></a>
                         </li>
                     </ul>
                 </li>
@@ -922,7 +924,7 @@ AMR.AMRSDK.setAdjustUserId(&quot;&lt;adjustUserId&gt;&quot;);
                         sample code below. This method has to be called before showing ad.
                     </p>
 
-                    <pre><code class="language-java">
+                    <pre><code class="language-markup">
 IDictionary<string, string> parameters = new Dictionary<string, string>();
 parameters.Add("param1","One"); 
 parameters.Add("param2","Two");
@@ -980,7 +982,7 @@ Starting December 8, 2020, Apple has announced a privacy disclosure for the App 
                         To read the parameter values in your app, you can use the following methods of the Admost sdk. It is suggested to use these methods after admost initialization completed, otherwise default values you set will be returned.
                     </p>
 
-                    <pre><code class="language-java">
+                    <pre><code class="language-markup">
 AMR.AMRRemoteConfig.getLong("closePopupInSeconds", 3);
 AMR.AMRRemoteConfig.getString("version", "2.3.1");
 AMR.AMRRemoteConfig.getDouble("price", 1.24);
@@ -999,7 +1001,64 @@ AMR.AMRRemoteConfig.getBoolean("isDebug", false);
                     For using A/B test feature, you don't need to do anything on client side. All settings can be done over the AdMost Dashboard. </p>
                     <p style="display:none">
                     <a href="#">Click here</a> to see the documentation about the capabilities of Admost A/B test.  
+                    </p>
+                    <h3 id="umpintegration">CMP(Consent Management Platform) Integration</h3>
+                    <p>
+                         Starting January 16, 2024 Publishers and developers using Google AdSense, Ad Manager, or AdMob will be required to use a Consent Management Platform (CMP) that has been certified by Google and has integrated with the IAB's Transparency and Consent Framework (TCF) when serving ads to users in the European Economic Area or the UK.
+                    </p>
+                    <p>
+                        As Admost, we have integration with Google’s CMP tool User Messaging Platform (UMP). As a publisher, if you chose to continue with the UMP, you have to be sure about the following steps; 
+                    </p>
+                    <ul>
+                        <li>Add UMP SDK into your app and complete the integration according to the UMP integration documentation.</li>
+                        <li>Create a proper GDPR message for your app on the UMP dashboard.</li>
+                        <li>Select all active ad networks and "Admost" as Vendor on the UMP dashboard.</li>
+                        <li>Check Auto UMP Detection checkbox on Admost dashboard application edit popup.</li>
+                        <li>Inform Admost SDK about the result of the Consent flow with the following lines
+                            <p>
+                                Before Initialization;
+                                <pre><code class="language-markup">
+                                config.CanRequestAds = consentInformation.canRequestAds ? "1" : "0";
+                                </code></pre>
+                                After Initialization;
+                                <pre><code class="language-markup">
+                                AMR.AMRSDK.setCanRequestAds(consentInformation.canRequestAds);
+                                </code></pre>
+                            </p>
+
+
+                        </li>
+                    </ul>
+                    <p>
+                        If you are using CMP tool other than UMP, after completing the integration with the CMP tool you have to inform Admost SDK about the consent result of Custom Vendors including ADMOST before Admost initialization. Custom vendors can be any ad network used for monetization which are created manually and are not registered with IAB. Even if you don't have any extra custom vendors in your application, you have to add ADMOST as a custom vendor. You can use the following code snippet; 
+                    </p>
+                    <p>
+                        <pre><code class="language-markup">
+Dictionary<string, bool> parameters = new Dictionary<string, bool>();
+parameters.Add("ADMOST",CONSENT_RESULT_BOOLEAN); 
+parameters.Add("APPLOVIN",CONSENT_RESULT_BOOLEAN);
+AMR.AMRSDK.setCustomVendors(parameters);
+                        </code></pre>
                     </p> 
+                    <div  style="display:none">
+                    <h3 id="thirdpartyexperiment">Third Party A/B Test</h3>
+                    <p>
+                         If you are running an A/B test on another platform and want to track A/B test users on Admost cohort analysis page, you have to follow the following steps; 
+                    </p>
+                    <ul>
+                        <li>Create an A/B test on Admost dashboard and connect your external A/B test with the new one</li>
+                        <li>Call the following method as soon as you get the proper A/B test and group id from the external platform
+                            <p>
+                                Call this method after Admost initialization
+                                <pre><code class="language-markup">
+                                AMR.AMRSDK.setThirdPartyExperiment("A/B test Id", "Group Id");
+                                </code></pre>
+                                If the A/B test doesn't match with the id given on Admost dashboard, A/B test will not be followed on dashboard. <br/>
+                                Group Id is free text field, it can have any value like "A", "B", "Group A" etc. 
+                            </p>
+                        </li>
+                    </ul>
+                </div>
 
             </section>
             <!-- End Extras -->

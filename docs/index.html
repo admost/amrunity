@@ -133,6 +133,7 @@
                         <li><a href="#abtest">A/B Test</a>
                         <li><a href="#umpintegration">CMP Integration <span class="label label-teal">NEW</span></a>
                         <li style="display:none"><a href="#thirdpartyexperiment">Third Party A/B test <span class="label label-teal">NEW</span></a>
+                        <li><a href="#trackadmobrevenue">Track Admob Med. Rev.<span class="label label-teal">NEW</span></a>
                         </li>
                     </ul>
                 </li>
@@ -1058,8 +1059,18 @@ AMR.AMRSDK.setCustomVendors(parameters);
                             </p>
                         </li>
                     </ul>
-                </div>
-
+                   </div>
+                   <h3 id="trackadmobrevenue">Track Admob Mediation Revenue</h3>
+                    <p>
+                         If you are using Admob Mediation platform, you can send impression-level revenue data to Admost analytics. To be able to do that, first, you have to configure impression-level ad revenue (ILAR) in Admob. Afterward, you can listen to the impression level revenue callbacks of Admob ads and share it with Admost as shown in the following code snippet using the data provided by the callbacks.
+                    </p>
+                    <p>
+                        Call this method after Admost initialization
+                        <pre><code class="language-markup">
+                        AMR.AMRSDK.trackAdmobMediationRevenue(AMR.Enums.AMRSDKAdFormat.REWARDED, revenue, "placementId", "adUnitId");
+                        </code></pre>
+                    </p>
+            
             </section>
             <!-- End Extras -->
         </article>

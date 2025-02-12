@@ -136,7 +136,7 @@ function getIosResolverEnrty(networkName) {
   }
 }
 
-function getAndroidResolverEnrty(networkName) {
+function getAndroidResolverEnrty(networkName, appharbrSelected) {
   var i;
   var result ='';
   var networkInfo = getNetworkInfo(true, networkName);
@@ -144,11 +144,21 @@ function getAndroidResolverEnrty(networkName) {
     // <androidPackage spec="android.arch.core:common:1.1.0"/>
     for(i =0; i < networkInfo.app_gradle.dependencies.length; i++) {
       var dep = networkInfo.app_gradle.dependencies[i].package;
+
+      if (appharbrSelected == true && networkInfo?.appharbr_adapter_version != null) {
+          dep = dep.replace(networkInfo.adapter_version, networkInfo.appharbr_adapter_version);
+      }
+
       result += '\n\t\t<androidPackage spec="' + dep + '"/>';
     }
     if(networkInfo.app_gradle.dependencies_unity !== undefined) {
       for(i =0; i < networkInfo.app_gradle.dependencies_unity.length; i++) {
         dep = networkInfo.app_gradle.dependencies_unity[i].package;
+
+        if (appharbrSelected == true && networkInfo?.appharbr_adapter_version != null) {
+          dep = dep.replace(networkInfo.adapter_version, networkInfo.appharbr_adapter_version);
+        }
+
         result += '\n\t\t<androidPackage spec="' + dep + '"/>';
       }
     }
@@ -187,6 +197,11 @@ function getAmrDependenciesFile() {
   if(!iosArr.includes('AMR')) {
     iosArr.unshift('AMR');
   }
+  var appharbrSelected = false;
+  if(andrArr.includes('Appharbr')) {
+    appharbrSelected = true;
+  }
+
   var i;
   var result = '<dependencies>\n';
   result += '\t<iosPods>\n';
@@ -196,11 +211,11 @@ function getAmrDependenciesFile() {
   //result += '\t\t<sources>\n\t\t\t<source>https://cocoapods.mycompany.com/Specs</source>\n\t\t</sources>\n'
   result += '\n\t</iosPods>\n\t<androidPackages>';
   for(i = 0; i < andrArr.length; i++) {
-    if(!androidDependencyEntries.includes(getAndroidResolverEnrty(andrArr[i])) && andrArr[i] !== 'AMR') {
-      androidDependencyEntries.push(getAndroidResolverEnrty(andrArr[i]));
-      result += getAndroidResolverEnrty(andrArr[i]);
+    if(!androidDependencyEntries.includes(getAndroidResolverEnrty(andrArr[i],appharbrSelected)) && andrArr[i] !== 'AMR') {
+      androidDependencyEntries.push(getAndroidResolverEnrty(andrArr[i],appharbrSelected));
+      result += getAndroidResolverEnrty(andrArr[i],appharbrSelected);
     } else {
-      result += getAndroidResolverEnrty(andrArr[i]);
+      result += getAndroidResolverEnrty(andrArr[i],appharbrSelected);
     }
   }
 

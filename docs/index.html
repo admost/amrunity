@@ -773,7 +773,8 @@ public void OnVirtualCurrencyDidSpend(string networkName, string currency, doubl
 AMR.AMRSDK.trackIAPForAndroid( product.receipt,
 				product.metadata.localizedPrice,
 				product.metadata.isoCurrencyCode,
-                tags);
+                tags,
+                isDebug);
                     </code></pre>
 
                 <p>Explanation of parameters:</p>
@@ -787,6 +788,7 @@ AMR.AMRSDK.trackIAPForAndroid( product.receipt,
                     <li><b>isoCurrencyCode</b> – Product currency in ISO 4217 format; e.g. TRY or USD.
                     </li>
                     <li><b>tags</b> – Distinction value for in-app purchase that used in multiple purposes.</li>
+                    <li><b>isDebug</b> – It is an optional parameter. Default value is false. Set true for test purchases.</li>
 
                 </ul>
 
